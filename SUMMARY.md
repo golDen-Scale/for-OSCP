@@ -32,6 +32,9 @@
 ## 5️⃣ 工具 - TOOLS
 
 * [✔️ Nmap](gong-ju-tools/nmap.md)
+* [✔️ Dirsearch](gong-ju-tools/dirsearch.md)
+* [✔️ mimikatz](gong-ju-tools/mimikatz.md)
+* [✔️ Proxychains](gong-ju-tools/proxychains.md)
 
 ## 6️⃣ 漏洞 - Vulnerabilities
 

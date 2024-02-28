@@ -11,7 +11,7 @@
 
 ## 2️⃣ 高级 - ADVANCED
 
-* [Page 3](gao-ji-advanced/page-3.md)
+* [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
 
 ## 3️⃣ HackTheBox
 

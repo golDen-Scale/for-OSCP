@@ -22,12 +22,12 @@
 * [✔️ Windows权限提升 - Windows Privilege Escalation](gao-ji-advanced/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 * [✔️ 横向移动 - Lateral Movement](gao-ji-advanced/heng-xiang-yi-dong-lateral-movement.md)
 * [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
+* [✔️ 域控制器 - Domain Controller](gao-ji-advanced/yu-kong-zhi-qi-domain-controller.md)
 * [✔️ 哈希传递 - Pass The Hash](gao-ji-advanced/ha-xi-chuan-di-pass-the-hash.md)
 * [✔️ 绕过哈希 - Overpass The Hash](gao-ji-advanced/rao-guo-ha-xi-overpass-the-hash.md)
 * [✔️ 票据传递 - Pass The Ticket](gao-ji-advanced/piao-ju-chuan-di-pass-the-ticket.md)
 * [✔️ 黄金票据 - Golden Ticket](gao-ji-advanced/huang-jin-piao-ju-golden-ticket.md)
 * [✔️ 白银票据 - Silver Ticket](gao-ji-advanced/bai-yin-piao-ju-silver-ticket.md)
-* [✔️ 域控制器 - Domain Controller](gao-ji-advanced/yu-kong-zhi-qi-domain-controller.md)
 
 ## 3️⃣ HackTheBox
 

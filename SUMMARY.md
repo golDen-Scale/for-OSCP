@@ -3,7 +3,8 @@
 ## 0️⃣ 基础 - BASIC
 
 * [📝 MEMO.](README.md)
-* [✔️ 命令行](ji-chu-basic/ming-ling-hang.md)
+* [✔️ 命令行](ji-chu-basic/page-1.md)
+* [✔️ Shell脚本编程](ji-chu-basic/shell-jiao-ben-bian-cheng.md)
 
 ## 1️⃣ 进阶 - INTERMEDIATE
 

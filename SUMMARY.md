@@ -20,6 +20,7 @@
 
 * [✔️ Linux权限提升 - Linux Privilege Escalation](gao-ji-advanced/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
 * [✔️ Windows权限提升 - Windows Privilege Escalation](gao-ji-advanced/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
+* [✔️ 横向移动 - Lateral Movement](gao-ji-advanced/heng-xiang-yi-dong-lateral-movement.md)
 * [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
 
 ## 3️⃣ HackTheBox

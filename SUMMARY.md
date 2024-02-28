@@ -7,7 +7,7 @@
 
 ## 1️⃣ 进阶 - INTERMEDIATE
 
-* [Page 2](jin-jie-intermediate/page-2.md)
+* [✔️ 端口转发 -Port Forwarding](jin-jie-intermediate/duan-kou-zhuan-fa-port-forwarding.md)
 
 ## 2️⃣ 高级 - ADVANCED
 

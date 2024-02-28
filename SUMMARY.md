@@ -7,6 +7,7 @@
 * [✔️ Shell脚本编程](ji-chu-basic/shell-jiao-ben-bian-cheng.md)
 * [✔️ PowerShell](ji-chu-basic/powershell.md)
 * [✔️ 信息收集和枚举 - Information Gathering](ji-chu-basic/xin-xi-shou-ji-he-mei-ju-information-gathering.md)
+* [✔️ 端口和服务 - Ports and Services](ji-chu-basic/duan-kou-he-fu-wu-ports-and-services.md)
 
 ## 1️⃣ 进阶 - INTERMEDIATE
 

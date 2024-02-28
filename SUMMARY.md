@@ -2,7 +2,7 @@
 
 ## 0️⃣ 基础 - BASIC
 
-* [Page](README.md)
+* [📝 MEMO.](README.md)
 * [Page 1](ji-chu-basic/page-1.md)
 
 ## 1️⃣ 进阶 - INTERMEDIATE

@@ -23,7 +23,7 @@
 * [✔️ 横向移动 - Lateral Movement](gao-ji-advanced/heng-xiang-yi-dong-lateral-movement.md)
 * [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
 * [✔️ 哈希传递 - Pass The Hash](gao-ji-advanced/ha-xi-chuan-di-pass-the-hash.md)
-* [Page](gao-ji-advanced/page.md)
+* [✔️ 绕过哈希 - Overpass The Hash](gao-ji-advanced/rao-guo-ha-xi-overpass-the-hash.md)
 * [✔️ 票据传递 - Pass The Ticket](gao-ji-advanced/piao-ju-chuan-di-pass-the-ticket.md)
 * [✔️ 黄金票据 - Golden Ticket](gao-ji-advanced/huang-jin-piao-ju-golden-ticket.md)
 * [✔️ 白银票据 - Silver Ticket](gao-ji-advanced/bai-yin-piao-ju-silver-ticket.md)

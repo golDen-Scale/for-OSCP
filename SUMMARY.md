@@ -25,3 +25,7 @@
 ## 5️⃣ 工具 - TOOLS
 
 * [Page 3](gong-ju-tools/page-3.md)
+
+## 6️⃣ 漏洞 - Vulnerabilities
+
+* [Page 2](lou-dong-vulnerabilities/page-2.md)

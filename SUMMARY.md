@@ -5,6 +5,7 @@
 * [📝 MEMO.](README.md)
 * [✔️ 命令行](ji-chu-basic/page-1.md)
 * [✔️ Shell脚本编程](ji-chu-basic/shell-jiao-ben-bian-cheng.md)
+* [✔️ PowerShell](ji-chu-basic/powershell.md)
 
 ## 1️⃣ 进阶 - INTERMEDIATE
 

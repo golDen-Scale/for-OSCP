@@ -15,11 +15,11 @@
 * [✔️ SQL注入 - SQL Injection](jin-jie-intermediate/sql-zhu-ru-sql-injection.md)
 * [✔️ 端口转发 - Port Forwarding](jin-jie-intermediate/duan-kou-zhuan-fa-port-forwarding.md)
 * [✔️ 隧道 - Tunneling](jin-jie-intermediate/sui-dao-tunneling.md)
+* [✔️ Linux权限提升 - Linux Privilege Escalation](jin-jie-intermediate/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
+* [✔️ Windows权限提升 - Windows Privilege Escalation](jin-jie-intermediate/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 
 ## 2️⃣ 高级 - ADVANCED
 
-* [✔️ Linux权限提升 - Linux Privilege Escalation](gao-ji-advanced/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
-* [✔️ Windows权限提升 - Windows Privilege Escalation](gao-ji-advanced/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 * [✔️ 横向移动 - Lateral Movement](gao-ji-advanced/heng-xiang-yi-dong-lateral-movement.md)
 * [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
 * [✔️ 域控制器 - Domain Controller](gao-ji-advanced/yu-kong-zhi-qi-domain-controller.md)

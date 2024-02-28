@@ -9,11 +9,11 @@
 *
 
 {% hint style="warning" %}
-<mark style="color:red;">**不让使用的工具（商业版、大规模自动化）：【包括但不限于，具体问官方】**</mark>
+<mark style="color:red;">**不让使用的工具（商业版、大规模自动化、AI）：【包括但不限于，具体问官方】**</mark>
 
 * <mark style="color:red;">**SQLmap**</mark>
 * <mark style="color:red;">**Metasploit**</mark>
-*
+* <mark style="color:red;">**ChatGPT**</mark>
 {% endhint %}
 
 

@@ -12,6 +12,7 @@
 ## 1️⃣ 进阶 - INTERMEDIATE
 
 * [✔️ 端口转发 - Port Forwarding](jin-jie-intermediate/duan-kou-zhuan-fa-port-forwarding.md)
+* [✔️ 隧道 - Tunneling](jin-jie-intermediate/sui-dao-tunneling.md)
 
 ## 2️⃣ 高级 - ADVANCED
 

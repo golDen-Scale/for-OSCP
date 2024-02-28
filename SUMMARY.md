@@ -33,6 +33,8 @@
 
 * [✔️ Nmap](gong-ju-tools/nmap.md)
 * [✔️ Dirsearch](gong-ju-tools/dirsearch.md)
+* [✔️ Hashcat](gong-ju-tools/hashcat.md)
+* [✔️ John The Ripper](gong-ju-tools/john-the-ripper.md)
 * [✔️ Mimikatz](gong-ju-tools/mimikatz.md)
 * [✔️ Proxychains](gong-ju-tools/proxychains.md)
 

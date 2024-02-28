@@ -3,7 +3,7 @@
 ## 0️⃣ 基础 - BASIC
 
 * [📝 MEMO.](README.md)
-* [Page 1](ji-chu-basic/page-1.md)
+* [✔️ 命令行](ji-chu-basic/ming-ling-hang.md)
 
 ## 1️⃣ 进阶 - INTERMEDIATE
 

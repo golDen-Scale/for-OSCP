@@ -52,3 +52,7 @@
 ## 6️⃣ 漏洞 - Vulnerabilities
 
 * [Page 2](lou-dong-vulnerabilities/page-2.md)
+
+## 7️⃣ 其他 - Others
+
+* [📝 辅助学习资料](qi-ta-others/fu-zhu-xue-xi-zi-liao.md)

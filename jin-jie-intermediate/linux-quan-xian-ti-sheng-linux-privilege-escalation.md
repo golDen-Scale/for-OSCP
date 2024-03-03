@@ -8,8 +8,13 @@ description: 通过收集目标系统本地信息，可以辅助查找到合适�
 
 #### 版本 - Version
 
-* 内核版本
-* 系统版本
+1. Linux 发行版信息：（用于后续查找对应发行版名称和版本号的已知公开漏洞、是否及时更新补丁程序）
+
+```
+cat /etc/os-release
+```
+
+2.
 
 #### 软件 & 服务 - Applications & Services
 

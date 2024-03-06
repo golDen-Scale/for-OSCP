@@ -16,6 +16,7 @@
 * [✔️ 端口转发 - Port Forwarding](jin-jie-intermediate/duan-kou-zhuan-fa-port-forwarding.md)
 * [✔️ 隧道 - Tunneling](jin-jie-intermediate/sui-dao-tunneling.md)
 * [✔️ 横向移动 - Lateral Movement](jin-jie-intermediate/heng-xiang-yi-dong-lateral-movement.md)
+* [✔️ Linux文件传输 - Linux File Transfers](jin-jie-intermediate/linux-wen-jian-chuan-shu-linux-file-transfers.md)
 * [✔️ Linux权限提升 - Linux Privilege Escalation](jin-jie-intermediate/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
 * [✔️ Windows权限提升 - Windows Privilege Escalation](jin-jie-intermediate/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 

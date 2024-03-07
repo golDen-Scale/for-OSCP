@@ -18,6 +18,7 @@
 * [✔️ 横向移动 - Lateral Movement](jin-jie-intermediate/heng-xiang-yi-dong-lateral-movement.md)
 * [✔️ Linux文件传输 - Linux File Transfers](jin-jie-intermediate/linux-wen-jian-chuan-shu-linux-file-transfers.md)
 * [✔️ Linux权限提升 - Linux Privilege Escalation](jin-jie-intermediate/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
+* [✔️ Windows文件传输 - Windows File Transfer](jin-jie-intermediate/windows-wen-jian-chuan-shu-windows-file-transfer.md)
 * [✔️ Windows权限提升 - Windows Privilege Escalation](jin-jie-intermediate/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 
 ## 2️⃣ 高级 - ADVANCED

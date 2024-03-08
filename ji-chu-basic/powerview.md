@@ -8,7 +8,18 @@ description: 适用于：信息收集、域枚举、权限提升、权限维持�
 
 ### 信息收集
 
+收集目标系统上的用户、组、组成员、主机相关信息：
 
+```powershell
+Get-NetGroup -AdminCount
+Get-NetGroup -UserName admin123
+Get-NetGroupMember -GroupName "Administrators"
+Get-NetComputer -Ping
+Get-NetComputer -fulldata
+Get-NetComputer -fulldata | select cn operatingsystem
+Get-NetUser
+
+```
 
 
 
@@ -16,7 +27,21 @@ description: 适用于：信息收集、域枚举、权限提升、权限维持�
 
 ### 域枚举
 
+枚举目标域内各类信息，以及查找自己当前在目标域内拥有哪些主机的管理员权限：
 
+```powershell
+Get-NetDomain
+Get-DomainSID
+Get-DomainPolicy
+Get-NetDomainController
+Find-LocalAdminAccess
+Invoke-EnumerateLocalAdmin
+Get-NetGPO
+Get-NetLoggedOn -ComputerName Domain-controller.CONTROLLER.local
+Get-LastLoggedOn -ComputerName Domain-controller.CONTROLLER.local
+Get-NetRDPSession -ComputerName Domain-controller.CONTROLLER.local
+
+```
 
 
 

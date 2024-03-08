@@ -18,12 +18,8 @@ Get-NetComputer -Ping
 Get-NetComputer -fulldata
 Get-NetComputer -fulldata | select cn operatingsystem
 Get-NetUser
-
+Get-NetUser | select cn 
 ```
-
-
-
-
 
 ### 域枚举
 
@@ -37,10 +33,10 @@ Get-NetDomainController
 Find-LocalAdminAccess
 Invoke-EnumerateLocalAdmin
 Get-NetGPO
-Get-NetLoggedOn -ComputerName Domain-controller.CONTROLLER.local
-Get-LastLoggedOn -ComputerName Domain-controller.CONTROLLER.local
+Get-NetLoggedon -ComputerName Domain-controller.CONTROLLER.local
+Get-LastLoggedon -ComputerName Domain-controller.CONTROLLER.local
 Get-NetRDPSession -ComputerName Domain-controller.CONTROLLER.local
-
+Invoke-ShareFinder
 ```
 
 

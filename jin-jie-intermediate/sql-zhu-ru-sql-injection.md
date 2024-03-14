@@ -42,13 +42,15 @@ administrator'--
 
 #### UNION注入
 
+使用 `UNION` 关键字从数据库中的其他表检索数据，能够执行一个或多个附加SELECT查询并将结果附加到原始查询：
 
+```sql
+// 查询多个表中的数据
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2
+```
 
-
-
-
-
-
+1. 各个查询必须返回相同数量的列
+2. 每列中的数据类型必须在各个查询之间兼
 
 ### 盲注
 

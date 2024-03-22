@@ -14,6 +14,7 @@
 ## 1️⃣ 进阶 - INTERMEDIATE
 
 * [✔️ SQL注入 - SQL Injection](jin-jie-intermediate/sql-zhu-ru-sql-injection.md)
+* [✔️ SQL注入CheatSheet](jin-jie-intermediate/sql-zhu-ru-cheatsheet.md)
 * [✔️ 端口转发 - Port Forwarding](jin-jie-intermediate/duan-kou-zhuan-fa-port-forwarding.md)
 * [✔️ 隧道 - Tunneling](jin-jie-intermediate/sui-dao-tunneling.md)
 * [✔️ 横向移动 - Lateral Movement](jin-jie-intermediate/heng-xiang-yi-dong-lateral-movement.md)

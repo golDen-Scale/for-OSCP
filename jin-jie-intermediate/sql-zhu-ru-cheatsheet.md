@@ -27,7 +27,14 @@ SELECT banner FROM v$version
 SELECT version FROM v$instance
 ```
 
-### 数据库内容
+### 查询数据库内容
+
+```sql
+// 列出数据库中所有的表
+SELECT * FROM all_tables
+// 列出数据库中某个表中的所有列
+SELECT * FROM all_tab_columns WHERE table_name = '表名'
+```
 
 ### 条件错误
 
@@ -73,7 +80,14 @@ SELECT @@version
 ' UNION SELECT @@version--
 ```
 
-### 数据库内容
+### 查询数据库内容
+
+```sql
+// 列出数据库中所有的表
+SELECT * FROM information_schema.tables
+// 列出数据库中某个表中的所有列
+SELECT * FROM information_schema.columns WHERE table_name = '表名'
+```
 
 ### 条件错误
 
@@ -116,7 +130,14 @@ SUBSTRING('sdaggrfsgrh', 4, 2)
 SELECT version()
 ```
 
-### 数据库内容
+### 查询数据库内容
+
+```sql
+// 列出数据库中所有的表
+SELECT * FROM information_schema.tables
+// 列出数据库中某个表中的所有列
+SELECT * FROM information_schema.columns WHERE table_name = '表名'
+```
 
 ### 条件错误
 
@@ -161,7 +182,14 @@ SELECT @@version
 ' UNION SELECT @@version--
 ```
 
-### 数据库内容
+### 查询数据库内容
+
+```sql
+// 列出数据库中所有的表
+SELECT * FROM information_schema.tables
+// 列出数据库中某个表中的所有列
+SELECT * FROM information_schema.columns WHERE table_name = '表名'
+```
 
 ### 条件错误
 

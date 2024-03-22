@@ -4,13 +4,28 @@
 
 ### 字符串连接
 
+```sql
+// Some code
+'aaa' || 'bbb'
+```
 
+### 截取字符串
 
-### 子字符串
+```sql
+// Some code
+SUBSTR('asdsfsdgf', 4, 2)
+```
 
 ### 评论
 
-### 数据库版本
+### 数据库类型和版本查询
+
+```sql
+// Some code
+SELECT * FROM v$version
+SELECT banner FROM v$version
+SELECT version FROM v$instance
+```
 
 ### 数据库内容
 
@@ -36,11 +51,27 @@
 
 ### 字符串连接
 
-### 子字符串
+```sql
+// Some code
+'aaa' || 'bbb'
+```
+
+### 截取字符串
+
+```sql
+// Some code
+SUBSTRING('fcsasff', 4, 2)
+```
 
 ### 评论
 
-### 数据库版本
+### 数据库类型和版本查询
+
+```sql
+// Some code
+SELECT @@version
+' UNION SELECT @@version--
+```
 
 ### 数据库内容
 
@@ -64,11 +95,26 @@
 
 ### 字符串连接
 
-### 子字符串
+```sql
+// Some code
+'aaa' || 'bbb'
+```
+
+### 截取字符串
+
+```sql
+// Some code
+SUBSTRING('sdaggrfsgrh', 4, 2)
+```
 
 ### 评论
 
-### 数据库版本
+### 数据库类型和版本查询
+
+```sql
+// Some code
+SELECT version()
+```
 
 ### 数据库内容
 
@@ -92,11 +138,28 @@
 
 ### 字符串连接
 
-### 子字符串
+```sql
+// 字符串之间是有空格的
+'aaa' 'bbb'
+CONCAT('aaa','bbb')
+```
+
+### 截取字符串
+
+```sql
+// Some code
+SUBSTRING('afdgghtr', 4, 2)
+```
 
 ### 评论
 
-### 数据库版本
+### 数据库类型和版本查询
+
+```sql
+// Some code
+SELECT @@version
+' UNION SELECT @@version--
+```
 
 ### 数据库内容
 

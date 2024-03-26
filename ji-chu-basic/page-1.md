@@ -2,7 +2,8 @@
 
 ## Linux
 
-<pre class="language-bash"><code class="lang-bash">// 连接SSH服务
+```sh
+// 连接SSH服务
 ssh 用户名@目标IP
 // 批量创建文件
 touch 自定义文件名{1..10}
@@ -53,57 +54,57 @@ tail abcd.txt
 cmp 文件1.txt 文件2.txt
 diff 文件1.txt 文件2.txt
 // 按照字母顺序对指定内容进行排序
-<strong>cat abcd.txt | sort 
-</strong><strong>// 让指定文件可执行
-</strong><strong>chmod +x abcd.sh
-</strong><strong>// 更改指定文件的所有权（使指定用户拥有对指定文件的完全控制权）
-</strong><strong>chown 用户名 abcd.sh
-</strong><strong>// 过滤（grep/awk/）
-</strong><strong>ip address | grep eth0
-</strong><strong>ip address | grep eth0 | grep inet | awk '{print $2}'
-</strong><strong>// 查找目标系统的DNS解析配置状态
-</strong><strong>cat /etc/resolv.conf
-</strong><strong>resolvectl status
-</strong><strong>// ping一下目标，指定发送自定义个数的数据包和数据包大小（字节）
-</strong><strong>ping -c 5 -s 600 目标域名地址.com
-</strong><strong>// 跟踪目标路由路线
-</strong><strong>traceroute 目标域名地址.com
-</strong><strong>// 显示目标网络统计信息和连接状态的命令
-</strong><strong>netstat -tulpn
-</strong><strong>ss -tulpn
-</strong><strong>// 查看目标系统防火墙情况
-</strong><strong>sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-</strong><strong>// 用于配置和管理 Linux 系统上的防火墙规则
-</strong><strong>sudo ufw allow 80
-</strong>sudo ufw enable
-<strong>sudo ufw status
-</strong><strong>// 查看当前本机信息（使用neofetch需要先安装：apt install neofetch）
-</strong><strong>uname -a
-</strong><strong>neofetch
-</strong><strong>// 在终端中进行一些运算
-</strong><strong>echo "33+66+99" | bc
-</strong><strong>// 查看当前本机上的剩余内存
-</strong><strong>free
-</strong><strong>// 查看当前本机上的磁盘剩余情况
-</strong><strong>df -H
-</strong><strong>// 显示当前系统上所有进程的详细信息
-</strong><strong>ps -aux
-</strong><strong>// 监视当前系统的进程和资源使用情况
-</strong><strong>top
-</strong><strong>htop
-</strong><strong>// 杀掉指定的某个进程（pkill不需要知道进程号）
-</strong><strong>kill -9 进程号
-</strong><strong>pkill -f 脚本名
-</strong><strong>// 开启、停止、关闭指定的某服务
-</strong><strong>systemctl stop 服务名
-</strong><strong>systemctl start 服务名
-</strong><strong>systemctl restart 服务名
-</strong><strong>systemctl status 服务名
-</strong><strong>// 其他
-</strong><strong>history
-</strong><strong>sudo reboot
-</strong><strong>sudo shutdown -h now
-</strong></code></pre>
+cat abcd.txt | sort 
+// 让指定文件可执行
+chmod +x abcd.sh
+// 更改指定文件的所有权（使指定用户拥有对指定文件的完全控制权）
+chown 用户名 abcd.sh
+// 过滤（grep/awk/）
+ip address | grep eth0
+ip address | grep eth0 | grep inet | awk '{print $2}'
+// 查找目标系统的DNS解析配置状态
+cat /etc/resolv.conf
+resolvectl status
+// ping一下目标，指定发送自定义个数的数据包和数据包大小（字节）
+ping -c 5 -s 600 目标域名地址.com
+// 跟踪目标路由路线
+traceroute 目标域名地址.com
+//显示目标网络统计信息和连接状态的命令
+netstat -tulpn
+ss -tulpn
+// 查看目标系统防火墙情况
+sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+// 用于配置和管理 Linux 系统上的防火墙规则
+sudo ufw allow 80
+sudo ufw enable
+sudo ufw status
+// 查看当前本机信息（使用neofetch需要先安装：apt install neofetch）
+uname -a
+neofetch
+// 在终端中进行一些运算
+echo "33+66+99" | bc
+// 查看当前本机上的剩余内存
+free
+// 查看当前本机上的磁盘剩余情况
+df -H
+// 显示当前系统上所有进程的详细信息
+ps -aux
+// 监视当前系统的进程和资源使用情况
+top
+htop
+// 杀掉指定的某个进程（pkill不需要知道进程号）
+kill -9 进程号
+pkill -f 脚本名
+// 开启、停止、关闭指定的某服务
+systemctl stop 服务名
+systemctl start 服务名
+systemctl restart 服务名
+systemctl status 服务名
+// 其他
+history
+sudo reboot
+sudo shutdown -h now
+```
 
 
 

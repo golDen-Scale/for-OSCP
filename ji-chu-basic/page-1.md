@@ -73,6 +73,7 @@ diff 文件1.txt 文件2.txt
 </strong><strong>ss -tulpn
 </strong><strong>// 查看目标系统防火墙情况
 </strong><strong>sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+</strong><strong>// 用于配置和管理 Linux 系统上的防火墙规则
 </strong><strong>sudo ufw allow 80
 </strong>sudo ufw enable
 <strong>sudo ufw status
@@ -83,9 +84,25 @@ diff 文件1.txt 文件2.txt
 </strong><strong>echo "33+66+99" | bc
 </strong><strong>// 查看当前本机上的剩余内存
 </strong><strong>free
+</strong><strong>// 查看当前本机上的磁盘剩余情况
 </strong><strong>df -H
-</strong><strong>// 
+</strong><strong>// 显示当前系统上所有进程的详细信息
 </strong><strong>ps -aux
+</strong><strong>// 监视当前系统的进程和资源使用情况
+</strong><strong>top
+</strong><strong>htop
+</strong><strong>// 杀掉指定的某个进程（pkill不需要知道进程号）
+</strong><strong>kill -9 进程号
+</strong><strong>pkill -f 脚本名
+</strong><strong>// 开启、停止、关闭指定的某服务
+</strong><strong>systemctl stop 服务名
+</strong><strong>systemctl start 服务名
+</strong><strong>systemctl restart 服务名
+</strong><strong>systemctl status 服务名
+</strong><strong>// 其他
+</strong><strong>history
+</strong><strong>sudo reboot
+</strong><strong>sudo shutdown -h now
 </strong></code></pre>
 
 

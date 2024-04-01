@@ -73,11 +73,33 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2
 
 
 
+#### 带外盲注
 
+1. 先确定目标系统是否可以带外交互
+2. 构造Payload，实施具体测试
+3. 通道依赖于不同类型的数据库所支持的功能，因此并不是通用的
 
-####
+```sql
+// DNS（适用于：PostgreSQL/SQL Server/Oracle）
 
+```
 
+```sql
+// e-mail（从数据库内部发送：SQL Server/Oracle）
+
+```
+
+```sql
+// HTTP - Oracle
+UTL_HTTP
+HTTPURITYPE
+
+```
+
+```sql
+// 数据库连接（）
+
+```
 
 
 

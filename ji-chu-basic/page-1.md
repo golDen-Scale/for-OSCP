@@ -112,8 +112,7 @@ sudo shutdown -h now
 
 ## Windows
 
-```powershell
-// 将一个目录文件合并到一个图片中，并生成一个新的图片（意味着可在这个图片中放入任何内容）
+<pre class="language-powershell"><code class="lang-powershell">// 将一个目录文件合并到一个图片中，并生成一个新的图片（意味着可在这个图片中放入任何内容）
 copy /b hellokitty.jpg+secrets.zip secretphoto.jpg
 // 加密当前目录中的每个文件
 cipher /E
@@ -127,5 +126,30 @@ netsh wlan show profile
 netsh wlan show profile wifinetwork=clear | findstr "Key Content"
 netsh wlan show profile "SeaButterfly" key= clear
 // 
-```
+<strong>for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @if "%j" NEQ "" (echo SSID:%j &#x26; netsh wlan show profiles %j key=clear | findstr "Key Content") &#x26; echo.
+</strong><strong>//
+</strong>for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @if "%j" NEQ "" (echo SSID:%j &#x26; netsh wlan show profiles %j key=clear | findstr "Key Content") >> wifipassword.txt
+// 查找当前系统上的所有信息
+systeminfo
+// 将指定文件安全的复制到远程服务器上的具体位置（:后面的）
+scp hellokitty.jpg root@143.112.x.xx:~/hellokitty.jpg
+// 在文件夹的地址栏删掉原地址，直接输入cmd，可在当前文件夹开启一个终端
+// 从终端中弹出当前（终端）所在的文件夹
+explorer .
+// 将当前系统上的任何文件夹，映射成已安装的Disk
+subst s: "C:\Users\heidi\Documents\具体目录名"
+// 撤销上面的操作（在已经映射的文件夹中执行）
+subst /d s:
+// 给终端设置背景色（更改数值）
+color 02
+color /?
+// 更改终端的前缀内容（还原）
+prompt {hello kitty}$G
+prompt
+// 修改终端的title
+title hellokitty
+// curl
+curl wttr.in/Singapore
+
+</code></pre>
 

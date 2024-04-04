@@ -1,3 +1,7 @@
+---
+description: 有用的命令（并非OSCP必需）
+---
+
 # ✔️ 命令行 - Commands
 
 ## Linux
@@ -106,11 +110,22 @@ sudo reboot
 sudo shutdown -h now
 ```
 
-
-
-
-
 ## Windows
 
-
+```powershell
+// 将一个目录文件合并到一个图片中，并生成一个新的图片（意味着可在这个图片中放入任何内容）
+copy /b hellokitty.jpg+secrets.zip secretphoto.jpg
+// 加密当前目录中的每个文件
+cipher /E
+// 隐藏指定的目录
+attrib +h +s +r 目录名
+// 显示已隐藏的指定的目录
+attrib -h -s -r 目录名
+// 显示当前主机曾经连接过的所有WIFI网络
+netsh wlan show profile
+// 显示当前主机连接过的所有WIFI的密码
+netsh wlan show profile wifinetwork=clear | findstr "Key Content"
+netsh wlan show profile "SeaButterfly" key= clear
+// 
+```
 

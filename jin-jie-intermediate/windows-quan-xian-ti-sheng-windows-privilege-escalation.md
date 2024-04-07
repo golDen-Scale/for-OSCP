@@ -7,6 +7,7 @@
 ```powershell
 // 枚举系统信息
 systeminfo
+systeminfo | finder /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 hostname
 wmic qfe
 wmic qfe get caption,Description,HotFixID,InstalledOn
@@ -17,11 +18,24 @@ wmic logicaldisk get caption,description,providername
 whoami
 whoami /priv
 whoami /groups
-net user
+net users
 net user administrator
 net localgroup
 net localgroup administrators
 
+// 枚举网络信息
+ipconfig /all
+route print
+arp -A
+netstat -ano
+netsh firewall show state
+netsh firewall show config
+
+// 枚举计划任务、正在运行的进程
+schtasks /query /fo LIST /v
+tasklist /SVC
+net start
+DRIVERQUERY
 ```
 
 

@@ -42,7 +42,15 @@ DRIVERQUERY
 
 ### 工具枚举
 
-
+* [ ] winPEAS.exe
+* [ ] Seatbelt.exe
+* [ ] Watson.exe
+* [ ] SharpUp.exe
+* [ ] sherlock.ps1
+* [ ] PowerUp.ps1
+* [ ] jaws-enum.ps1
+* [ ] windows-exploit-suggester.py
+* [ ] Exploit Suggester （Metasploit）
 
 
 

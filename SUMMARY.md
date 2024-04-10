@@ -39,7 +39,7 @@
 
 ## 4️⃣ OFFSEC
 
-* [👍 DC-1](offsec/dc-1.md)
+* [✔️ DC-1](offsec/dc-1.md)
 
 ## 5️⃣ 工具 - TOOLS
 

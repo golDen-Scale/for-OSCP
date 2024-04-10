@@ -39,8 +39,7 @@
 
 ## 4️⃣ OFFSEC
 
-* [Page 6](offsec/page-6.md)
-* [Page 5](offsec/page-5.md)
+* [👍 DC-1](offsec/dc-1.md)
 
 ## 5️⃣ 工具 - TOOLS
 

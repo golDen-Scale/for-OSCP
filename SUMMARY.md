@@ -9,6 +9,7 @@
 * [✔️ PowerView](ji-chu-basic/powerview.md)
 * [✔️ 信息收集和枚举 - Information Gathering](ji-chu-basic/xin-xi-shou-ji-he-mei-ju-information-gathering.md)
 * [✔️ 内网信息收集 - Internal Network Information Gathering](ji-chu-basic/nei-wang-xin-xi-shou-ji-internal-network-information-gathering.md)
+* [✔️ 域内信息收集 - Domain Information Gathering](ji-chu-basic/yu-nei-xin-xi-shou-ji-domain-information-gathering.md)
 * [✔️ 端口和服务 - Ports and Services](ji-chu-basic/duan-kou-he-fu-wu-ports-and-services.md)
 * [✔️ 升级Shell](ji-chu-basic/sheng-ji-shell.md)
 

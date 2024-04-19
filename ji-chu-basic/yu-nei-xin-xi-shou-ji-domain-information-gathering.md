@@ -19,8 +19,16 @@ net group /domain
 ## 查找域控制器
 
 ```bash
-// Some code
-
+// 列出指定域或工作组中的域控制器的名称和 IP 地址列表
+nltest /DCLIST:xxx
+// 获取域控制器的当前时间（因为主域控制器通常也会充当时间服务器的角色）
+net time /domain
+// 查询域中名为Domain Controllers的组的成员信息（包含了所有的域控制器的计算机账户）
+net group "Domain Controllers" /domain
+// 查询 DNS 中的 SRV 记录，以获取 LDAP 服务在域中的位置信息
+nslookup -type=SRV _ldap._tcp
+// 于查询当前域的主域控制器（PDC）的名称
+netdom query pdc
 ```
 
 

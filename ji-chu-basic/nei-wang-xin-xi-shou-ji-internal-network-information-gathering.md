@@ -23,6 +23,9 @@ wmic qfe get Caption,Description,HotFixID,InstalledOn
 wmic share get name,path,status
 // 系统/域内所有用户的详细信息（具体根据上下文环境，在域控中查返回域内信息，在本机查返回本地信息）
 wmic useraccount get /all
+// 查询所有本地组对应的SID，组描述及其组成员
+wmic group get name,sid,member,description
+// 
 ```
 
 ### Powershell命令

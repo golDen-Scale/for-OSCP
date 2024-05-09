@@ -43,6 +43,7 @@
 
 * [✔️ DC-1](offsec/dc-1.md)
 * [✔️ Exghost](offsec/exghost.md)
+* [✔️ RubyDome](offsec/rubydome.md)
 
 ## 5️⃣ 工具 - TOOLS
 

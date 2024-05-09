@@ -42,6 +42,7 @@
 ## 4️⃣ OFFSEC
 
 * [✔️ DC-1](offsec/dc-1.md)
+* [✔️ Exghost](offsec/exghost.md)
 
 ## 5️⃣ 工具 - TOOLS
 

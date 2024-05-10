@@ -1,0 +1,108 @@
+---
+description: Linux - Easy：CODOFORM V.5.1.105
+---
+
+# ✔️ Codo
+
+## 建立立足点
+
+### 信息枚举
+
+使用Nmap对目标系统进行开放端口扫描，获得2个端口：22和80
+
+```bash
+nmap -sC -sV -p- -oA codo 192.168.200.23 --open  
+```
+
+<figure><img src="../.gitbook/assets/1 (3).png" alt=""><figcaption></figcaption></figure>
+
+检查80端口上的Web页面：
+
+<figure><img src="../.gitbook/assets/2 (3).png" alt=""><figcaption></figcaption></figure>
+
+尝试枚举80端口上的隐藏文件/目录，并在**/admin**路径上发现登录界面：
+
+```bash
+dirsearch -u http://192.168.200.23
+```
+
+<figure><img src="../.gitbook/assets/3 (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
+
+尝试用弱口令<mark style="color:red;">**admin:admin**</mark>登录成功：
+
+<figure><img src="../.gitbook/assets/5 (3).png" alt=""><figcaption></figcaption></figure>
+
+并且发现目标正在使用的是：CODOFORM V.5.1.105
+
+<figure><img src="../.gitbook/assets/6 (3).png" alt=""><figcaption></figcaption></figure>
+
+### 漏洞查阅
+
+查找相关漏洞发现其有一个远程命令执行的漏洞可以利用：
+
+```bash
+searchsploit codoforum 5.1
+searchsploit -m 50978.py .
+```
+
+<figure><img src="../.gitbook/assets/7 (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/8 (4).png" alt=""><figcaption></figcaption></figure>
+
+### 漏洞利用
+
+根据该脚本的使用方法所构造的命令确认无误后，发现仍然利用不成功。但仍然从该脚本中获取到了重要的信息：**可在admin设置中上传脚本**
+
+<figure><img src="../.gitbook/assets/9 (3).png" alt=""><figcaption></figcaption></figure>
+
+决定直接在admin后台中上传反弹shell来get shell。
+
+* 先在全局设置中的可上传文件类型中**添加.php**，以方便后续上传**php-reverse-shell.php脚本**
+
+<figure><img src="../.gitbook/assets/10 (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/11 (2).png" alt=""><figcaption></figcaption></figure>
+
+* 然后准备好php-reverse-shell.php脚本，修改好反弹shell监听的主机IP和端口号，并在Kali本机监听好端口：
+
+```bash
+// Kali本机监听
+nc -lvnp 1234
+```
+
+<figure><img src="../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
+
+* 在用户->管理用户->admin的设置页面中，找到头像上传项，并将准备好的反弹shell脚本上传后，点save键触发脚本：
+
+<figure><img src="../.gitbook/assets/13 (2).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/14 (2).png" alt=""><figcaption></figcaption></figure>
+
+### GET SHELL
+
+成功获得反弹shell，并获得local.txt：
+
+<figure><img src="../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
+
+## 权限提升
+
+### 本地信息枚举
+
+
+
+
+
+### 漏洞利用
+
+
+
+
+
+### ROOT
+
+
+
+
+

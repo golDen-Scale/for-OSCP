@@ -53,7 +53,7 @@ searchsploit -m 50978.py .
 
 ### 漏洞利用
 
-根据该脚本的使用方法所构造的命令确认无误后，发现仍然利用不成功。但仍然从该脚本中获取到了重要的信息：**可在admin设置中上传脚本**
+根据该脚本的使用方法所构造的命令确认无误后，发现始终无法利用成功。但仍然从该脚本中获取到了重要的信息：**可在admin设置中上传脚本**
 
 <figure><img src="../.gitbook/assets/9 (3).png" alt=""><figcaption></figcaption></figure>
 

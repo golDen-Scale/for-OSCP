@@ -198,13 +198,18 @@ find / -perm -g=s -o -perm -u=s -type f 2>/dev/null    # SGID or SUID
 for i in `locate -r "bin$"`; do find $i \( -perm -4000 -o -perm -2000 \) -type f 2>/dev/null; done    # Looks in 'common' places: /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, /usr/local/sbin and any other *bin, for SGID or SUID (Quicker search)
 # find starting at root (/), SGID or SUID, not Symbolic links, only 3 folders deep, list with more detail and hide any errors (e.g. permission denied)
 find / -perm -g=s -o -perm -4000 ! -type l -maxdepth 3 -exec ls -ld {} \; 2>/dev/null
-find / -writable -type d 2>/dev/null      # world-writeable folders
-find / -perm -222 -type d 2>/dev/null     # world-writeable folders
-find / -perm -o w -type d 2>/dev/null     # world-writeable folders
-find / -perm -o x -type d 2>/dev/null     # world-executable folders
-find / \( -perm -o w -perm -o x \) -type d 2>/dev/null   # world-writeable & executable folders
-find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print   # world-writeable files
-find /dir -xdev \( -nouser -o -nogroup \) -print   # Noowner files
+// 查找对所有用户都具有写入权限的目录
+find / -writable -type d 2>/dev/null     
+find / -perm -222 -type d 2>/dev/null     
+find / -perm -o w -type d 2>/dev/null 
+// 查找对所有用户都具有执行权限的目录 
+find / -perm -o x -type d 2>/dev/null   
+// 查找对所有用户都具有读取和执行权限的目录 
+find / \( -perm -o w -perm -o x \) -type d 2>/dev/null 
+// 查找对所有用户都具有写入权限的文件  
+find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print  
+// 查找没有属主的文件和目录
+find /dir -xdev \( -nouser -o -nogroup \) -print  
 ```
 
 

@@ -33,3 +33,25 @@ xterm
 stty rows 56 columns 213
 ```
 
+## Perl
+
+```bash
+perl -e '/bin/bash'
+```
+
+
+
+## Node.js
+
+```bash
+node -e 'var exec=require("child_process").exec;exec("cat ~/key.txt",function(error,stdOut,stdErr){console.log(stdOut);});'
+```
+
+
+
+## Ruby
+
+```bash
+ruby -e 'require "irb";IRB.start(__FILE__)'
+```
+

@@ -28,6 +28,7 @@
 ## 2️⃣ 高级 - ADVANCED
 
 * [✔️ 活动目录 - Active Directory](gao-ji-advanced/huo-dong-mu-lu-active-directory.md)
+* [✔️ AS-REP Roasting](gao-ji-advanced/as-rep-roasting.md)
 * [✔️ 域控制器 - Domain Controller](gao-ji-advanced/yu-kong-zhi-qi-domain-controller.md)
 * [✔️ 哈希传递 - Pass The Hash](gao-ji-advanced/ha-xi-chuan-di-pass-the-hash.md)
 * [✔️ 绕过哈希 - Overpass The Hash](gao-ji-advanced/rao-guo-ha-xi-overpass-the-hash.md)

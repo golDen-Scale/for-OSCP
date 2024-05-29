@@ -1,10 +1,15 @@
 # 📝 辅助学习资料
 
+## AD
+
+* [https://www.youtube.com/playlist?list=PLk6vOUIjcauXQy0xJ9zrf4B99XkicA8cO](https://www.youtube.com/playlist?list=PLk6vOUIjcauXQy0xJ9zrf4B99XkicA8cO)
+*
 
 
 
+## Windows权限提升
 
-
+*
 
 
 

@@ -28,8 +28,9 @@
 ## 2️⃣ 高级 - ADVANCED <a href="#advanced" id="advanced"></a>
 
 * [✔️ 活动目录 - Active Directory](advanced/huo-dong-mu-lu-active-directory.md)
-* [✔️ AS-REP Roasting](advanced/as-rep-roasting.md)
 * [✔️ 域控制器 - Domain Controller](advanced/yu-kong-zhi-qi-domain-controller.md)
+* [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)
+* [✔️ AS-REP Roasting](advanced/as-rep-roasting.md)
 * [✔️ 哈希传递 - Pass The Hash](advanced/ha-xi-chuan-di-pass-the-hash.md)
 * [✔️ 绕过哈希 - Overpass The Hash](advanced/rao-guo-ha-xi-overpass-the-hash.md)
 * [✔️ 票据传递 - Pass The Ticket](advanced/piao-ju-chuan-di-pass-the-ticket.md)

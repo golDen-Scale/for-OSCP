@@ -32,11 +32,9 @@
 * [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)
 * [✔️ AS-REP Roasting](advanced/as-rep-roasting.md)
+* [✔️ 票据传递攻击 - Pass The Ticket](advanced/piao-ju-chuan-di-gong-ji-pass-the-ticket.md)
 * [✔️ 哈希传递 - Pass The Hash](advanced/ha-xi-chuan-di-pass-the-hash.md)
 * [✔️ 绕过哈希 - Overpass The Hash](advanced/rao-guo-ha-xi-overpass-the-hash.md)
-* [✔️ 票据传递 - Pass The Ticket](advanced/piao-ju-chuan-di-pass-the-ticket.md)
-* [✔️ 黄金票据 - Golden Ticket](advanced/huang-jin-piao-ju-golden-ticket.md)
-* [✔️ 白银票据 - Silver Ticket](advanced/bai-yin-piao-ju-silver-ticket.md)
 
 ## 3️⃣ HackTheBox
 

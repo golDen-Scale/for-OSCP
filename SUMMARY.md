@@ -29,6 +29,7 @@
 
 * [✔️ 活动目录 - Active Directory](advanced/huo-dong-mu-lu-active-directory.md)
 * [✔️ 域控制器 - Domain Controller](advanced/yu-kong-zhi-qi-domain-controller.md)
+* [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)
 * [✔️ AS-REP Roasting](advanced/as-rep-roasting.md)
 * [✔️ 哈希传递 - Pass The Hash](advanced/ha-xi-chuan-di-pass-the-hash.md)
@@ -61,6 +62,7 @@
 * [✔️ Mimikatz](tools/mimikatz.md)
 * [✔️ Rubeus](tools/rubeus.md)
 * [✔️ Proxychains](tools/proxychains.md)
+* [✔️ Kerbrute](tools/kerbrute.md)
 
 ## 6️⃣ 漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
 

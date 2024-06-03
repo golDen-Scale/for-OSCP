@@ -28,6 +28,7 @@
 * [✔️ 枚举AD环境](advanced/mei-ju-ad-huan-jing/README.md)
   * [✔️ 域内信息收集 - Domain Information Gathering](advanced/mei-ju-ad-huan-jing/yu-nei-xin-xi-shou-ji-domain-information-gathering.md)
   * [✔️ PowerView](advanced/mei-ju-ad-huan-jing/powerview.md)
+  * [✔️ Powershell](advanced/mei-ju-ad-huan-jing/powershell.md)
 * [✔️ 域控制器 - Domain Controller](advanced/yu-kong-zhi-qi-domain-controller.md)
 * [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)

@@ -156,3 +156,9 @@ Invoke-Mimikatz：执行 Mimikatz 工具进行内存中凭证的提取，用于�
 Invoke-ACLScanner：扫描目标系统的访问控制列表（ACL），查找潜在的权限问题。
 Find-LocalAdminAccess：搜索域中具有本地管理员权限的系统。
 ```
+
+{% hint style="info" %}
+* PowerShell 是一个任务自动化和配置管理框架，它包括一个命令行shell和一个相关的脚本语言，主要用于系统管理和自动化。
+* 而PowerView是一个用于Active Directory信息收集和渗透测试的PowerShell脚本库。专门用于Active Directory环境的信息收集和渗透测试。它是PowerSploit工具套件的一部分，广泛用于渗透测试和红队操作。
+* 它们相关，但不同。
+{% endhint %}

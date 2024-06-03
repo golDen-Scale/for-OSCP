@@ -50,10 +50,32 @@ net group "Enterprise Admins" /domain
 
 ## 定位域管理员
 
-```powershell
-# Some code
+### 方法
 
+1. **日志**：本地机器的管理员日志
+2. **会话**：域内每台机器的登录会话
+
+### 工具
+
+#### psloggedon.exe
+
+```bash
+PsLoggedon.exe \\DC
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 查找域管理进程
 
@@ -61,3 +83,10 @@ net group "Enterprise Admins" /domain
 # Some code
 
 ```
+
+
+
+
+
+
+

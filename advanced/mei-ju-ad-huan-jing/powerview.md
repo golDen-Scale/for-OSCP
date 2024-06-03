@@ -111,18 +111,6 @@ Get-NetLoggedon -ComputerName "comp1.example.com"
 Get-DomainTrust
 ```
 
-### 权限提升
-
-
-
-
-
-### 权限维持
-
-
-
-
-
 ### 分析目标域中的攻击路径
 
 

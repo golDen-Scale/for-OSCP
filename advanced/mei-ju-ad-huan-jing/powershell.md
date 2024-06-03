@@ -1,5 +1,5 @@
 ---
-description: 适用于在AD环境中尽心域内信息枚举
+description: 适用于在AD环境中进行域内信息枚举
 ---
 
 # ✔️ Powershell

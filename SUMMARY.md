@@ -28,6 +28,7 @@
 ## 2️⃣ 高级 - ADVANCED <a href="#advanced" id="advanced"></a>
 
 * [✔️ 活动目录 - Active Directory](advanced/huo-dong-mu-lu-active-directory.md)
+* [✔️ 枚举AD环境](advanced/mei-ju-ad-huan-jing.md)
 * [✔️ 域控制器 - Domain Controller](advanced/yu-kong-zhi-qi-domain-controller.md)
 * [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)

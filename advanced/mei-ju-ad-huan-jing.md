@@ -48,11 +48,43 @@ Foreach($obj in $Result)
 {
     Foreach($prop in $obj.Properties)
     {
-        $prop
+        $prop                                     # 可根据实际需求修改
     }
     Write-Host "----------------------"
 }
 ```
+
+* 过滤嵌套组：
+
+```powershell
+$Searcher.filter = "(objectClass=Group)"
+$Result = $Searcher.FindAll()
+Foreach($obj in $Result)
+{
+    $obj.Properties.name
+}
+```
+
+* 过滤Secret\_Group组成员：
+
+```powershell
+$Searcher.filter = "(name=Secret_Group)"
+$Result = $Searcher.FindAll()
+Foreach($obj in $Result)
+{
+    $obj.Properties.member
+}
+```
+
+* 过滤Nested\_Group组成员：
+
+```powershell
+$Searcher.filter = "(name=Nested_Group)"
+```
+
+* 以此类推。
+
+
 
 
 

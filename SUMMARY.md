@@ -32,11 +32,15 @@
   * [✔️ 查找当前已登录的用户账户](advanced/mei-ju-ad-huan-jing/cha-zhao-dang-qian-yi-deng-lu-de-yong-hu-zhang-hu.md)
 * [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)
+* [✔️ AS-REP Roasting攻击](advanced/asrep-roasting-gong-ji.md)
+* [✔️ Kerberoasting攻击](advanced/kerberoasting-gong-ji.md)
 * [✔️ 横向移动 - Lateral Movement](advanced/heng-xiang-yi-dong-lateral-movement/README.md)
   * [✔️ 哈希传递 - Pass The Hash](advanced/heng-xiang-yi-dong-lateral-movement/ha-xi-chuan-di-pass-the-hash.md)
   * [✔️ 绕过哈希 - Overpass The Hash](advanced/heng-xiang-yi-dong-lateral-movement/rao-guo-ha-xi-overpass-the-hash.md)
   * [✔️ 票据传递攻击 - Pass The Ticket](advanced/heng-xiang-yi-dong-lateral-movement/piao-ju-chuan-di-gong-ji-pass-the-ticket.md)
-* [✔️ AS-REP Roasting攻击](advanced/asrep-roasting-gong-ji.md)
+* [✔️ 权限维持](advanced/quan-xian-wei-chi/README.md)
+  * [✔️ 票据传递](advanced/quan-xian-wei-chi/piao-ju-chuan-di.md)
+  * [✔️ 委派](advanced/quan-xian-wei-chi/wei-pai.md)
 
 ## 3️⃣ HackTheBox
 
@@ -66,7 +70,14 @@
 
 ## 6️⃣ 漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
 
-* [Page 2](vulnerabilities/page-2.md)
+* [✔️ 提权漏洞利用](vulnerabilities/ti-quan-lou-dong-li-yong.md)
+* [✔️ 域内漏洞利用](vulnerabilities/yu-nei-lou-dong-li-yong/README.md)
+  * [✔️ MS14-068 权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/ms14068-quan-xian-ti-sheng.md)
+  * [✔️ CVE-20119-1040 NTLM MIC绕过](vulnerabilities/yu-nei-lou-dong-li-yong/cve201191040-ntlm-mic-rao-guo.md)
+  * [✔️ CVE-2020-1472 NetLogon权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/cve20201472-netlogon-quan-xian-ti-sheng.md)
+  * [✔️ Exchange ProxyLogon攻击利用链](vulnerabilities/yu-nei-lou-dong-li-yong/exchange-proxylogon-gong-ji-li-yong-lian.md)
+  * [✔️ Exchange ProxyShell攻击利用链](vulnerabilities/yu-nei-lou-dong-li-yong/exchange-proxyshell-gong-ji-li-yong-lian.md)
+  * [✔️ Windows Print Spooler权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/windows-print-spooler-quan-xian-ti-sheng.md)
 
 ## 7️⃣ 其他 - Others <a href="#others" id="others"></a>
 

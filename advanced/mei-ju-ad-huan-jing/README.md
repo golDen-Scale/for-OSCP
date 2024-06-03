@@ -30,7 +30,7 @@ net group /domain
 
 * Powershell的Get-ADUer很好用，不过它通常只默认安装在域控上，也有可能安装在Win 7及以上的Windows机器中，但是需要管理权限才能执行。
 * 用Powershell编写一个可枚举域内AD用户以及这些账户所有属性的脚本：
-  * 依赖的组件：LDAP / .NET类 / 目标域控制器名称 / 目标域名
+  * 依赖的组件：LDAP / ADSI搜索器 / 目标域控制器名称 / 目标域名
 
 ```powershell
 $domainObj = [System.DirectoryService.ActiveDirectory.Domain]::GetCurrentDomian()

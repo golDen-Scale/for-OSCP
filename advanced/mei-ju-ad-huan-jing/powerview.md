@@ -39,7 +39,77 @@ Get-NetRDPSession -ComputerName Domain-controller.CONTROLLER.local
 Invoke-ShareFinder
 ```
 
+#### 枚举域用户
 
+```powershell
+# 列出目标域中所有的用户
+Get-DomainUser
+# 列出禁用的账户
+Get-DomainUser -LDAPFilter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
+```
+
+#### 枚举域组
+
+```powershell
+# 列出所有域组
+Get-DomainGroup
+# 列出特定组Domain Admins的成员
+Get-DomainGroupMember -Identity "Domain Admins"
+# 列出指定用户所属的所有组
+Get-DomainUser -Identity "用户名" | Get-DomainGroup
+```
+
+#### 枚举计算机
+
+```powershell
+# 列出所有的域内计算机
+Get-DomainComputer
+# 列出最近登录的计算机
+Get-DomainComputer | ? { $_.lastlogontimestamp -ne $null } | Sort-Object lastlogontimestamp -Descending
+```
+
+#### 枚举组织单元（OU）
+
+```powershell
+# 列出所有的组织单元
+Get-DomainOU
+# 列出特定OU中的所有计算机
+Get-DomainOU | Get-DomainComputer
+```
+
+#### 枚举组策略对象（GPO）
+
+```powershell
+# 列出所有的GPO
+Get-DomainGPO
+# 列出特定OU所应用的GPO
+Get-DomainOU | Get-DomainGPO
+```
+
+#### 枚举ACL权限
+
+```powershell
+# 列出所有的域对象的ACL
+Get-DomainObjectAcl
+# 列出指定用户的ACL
+Get-DomainObjectAcl -Identity "用户名"
+```
+
+#### 枚举会话和登录信息
+
+```powershell
+# 列出指定计算机上的会话
+Get-NetSession -ComputerName "comp1.example.com"
+# 列出指定计算机的登录信息
+Get-NetLoggedon -ComputerName "comp1.example.com"
+```
+
+#### 枚举域信任关系
+
+```powershell
+# 列出所有域信任关系
+Get-DomainTrust
+```
 
 ### 权限提升
 

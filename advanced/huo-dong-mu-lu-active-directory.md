@@ -24,10 +24,10 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 * [x] 活动目录账户：
 * [x] 本地组
 * [x] 域组
-* [ ] 目录分区
-* [ ] 服务主体名称
-* [ ] 域中的组策略
-* [ ] 域中的访问控制列表
+* [x] 目录分区
+* [x] 服务主体名称
+* [x] 域中的组策略
+* [x] 域中的访问控制列表
 * [x] 域控制器（DC）：是AD的核心，存储了有关如何配置AD的特定实例的所有信息；强制执行了各类规则，这些规则规定了目标域内的对象之间如何交互，以及最终用户可以使用哪些服务和工具。
 
 ## 工具
@@ -53,8 +53,8 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 * [ ] Kerberos Bronze Bit
 * [ ] NTLM Relay
 * [ ] 滥用DCSync
-* [ ] PTH
-* [ ] 定位用户登录的主机
+* [x] PTH
+* [x] 定位用户登录的主机
 * [ ] 域林渗透
 
 ## 漏洞利用

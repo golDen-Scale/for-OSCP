@@ -30,6 +30,7 @@
   * [✔️ PowerView](advanced/mei-ju-ad-huan-jing/powerview.md)
   * [✔️ 域内信息收集 - Domain Information Gathering](advanced/mei-ju-ad-huan-jing/yu-nei-xin-xi-shou-ji-domain-information-gathering.md)
   * [✔️ 查找当前已登录的用户账户](advanced/mei-ju-ad-huan-jing/cha-zhao-dang-qian-yi-deng-lu-de-yong-hu-zhang-hu.md)
+  * [✔️ 通过服务主体名进行枚举（SPN）](advanced/mei-ju-ad-huan-jing/tong-guo-fu-wu-zhu-ti-ming-jin-hang-mei-ju-spn.md)
 * [✔️ 获取域内有效凭证](advanced/huo-qu-yu-nei-you-xiao-ping-zheng.md)
 * [✔️ 暴力破解域密码](advanced/bao-li-po-jie-yu-mi-ma.md)
 * [✔️ AS-REP Roasting攻击](advanced/asrep-roasting-gong-ji.md)

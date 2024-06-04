@@ -80,13 +80,10 @@ Foreach($obj in $Result)
 
 ```powershell
 $Searcher.filter = "(name=Nested_Group)"
+$Searcher.filter = "(name=Another_Nested_Group)"
 ```
 
 * 以此类推。
-
-
-
-
 
 {% hint style="info" %}
 * 从技术上讲，该属性称为PdcRoleOwner，具有此属性的域控制器总是拥有关于用户登录和身份验证的最新信息
@@ -94,10 +91,3 @@ $Searcher.filter = "(name=Nested_Group)"
 * 该脚本非常灵活，可根据需要添加特性和函数
 * 管理员通常倾向于在用户名中添加前缀或后缀，从而通过其功能来识别帐户
 {% endhint %}
-
-
-
-
-
-
-

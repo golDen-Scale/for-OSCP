@@ -78,6 +78,7 @@
   * [✔️ Exchange ProxyLogon攻击利用链](vulnerabilities/yu-nei-lou-dong-li-yong/exchange-proxylogon-gong-ji-li-yong-lian.md)
   * [✔️ Exchange ProxyShell攻击利用链](vulnerabilities/yu-nei-lou-dong-li-yong/exchange-proxyshell-gong-ji-li-yong-lian.md)
   * [✔️ Windows Print Spooler权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/windows-print-spooler-quan-xian-ti-sheng.md)
+  * [✔️ CVE-2022-33679权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/cve202233679-quan-xian-ti-sheng.md)
 
 ## 7️⃣ 其他 - Others <a href="#others" id="others"></a>
 

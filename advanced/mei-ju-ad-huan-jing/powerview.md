@@ -59,6 +59,8 @@ Get-DomainGroupMember -Identity "Domain Admins"
 Get-DomainUser -Identity "用户名" | Get-DomainGroup
 ```
 
+*
+
 #### 枚举计算机
 
 ```powershell
@@ -144,6 +146,9 @@ Invoke-Mimikatz：执行 Mimikatz 工具进行内存中凭证的提取，用于�
 Invoke-ACLScanner：扫描目标系统的访问控制列表（ACL），查找潜在的权限问题。
 Find-LocalAdminAccess：搜索域中具有本地管理员权限的系统。
 ```
+
+* [x] Local Group Memberships
+* [x] Global Group Memberships
 
 {% hint style="info" %}
 * PowerShell 是一个任务自动化和配置管理框架，它包括一个命令行shell和一个相关的脚本语言，主要用于系统管理和自动化。

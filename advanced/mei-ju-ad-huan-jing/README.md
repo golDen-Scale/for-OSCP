@@ -54,6 +54,25 @@ Foreach($obj in $Result)
 }
 ```
 
+* 过滤指定用户对象的属性：
+
+```powershell
+$Searcher.filter = "name=Jeff_Admin"     # 可根据实际需求修改
+$Searcher.FindAll()
+Foreach($obj in $Result)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop                                 
+    }
+    Write-Host "----------------------"
+}
+```
+
+* [x] memberof
+
+<!---->
+
 * 过滤嵌套组：
 
 ```powershell

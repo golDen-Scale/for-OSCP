@@ -40,9 +40,9 @@
   * [✔️ 哈希传递 - Pass The Hash](advanced/heng-xiang-yi-dong-lateral-movement/ha-xi-chuan-di-pass-the-hash.md)
   * [✔️ 绕过哈希 - Overpass The Hash](advanced/heng-xiang-yi-dong-lateral-movement/rao-guo-ha-xi-overpass-the-hash.md)
   * [✔️ 票据传递攻击 - Pass The Ticket](advanced/heng-xiang-yi-dong-lateral-movement/piao-ju-chuan-di-gong-ji-pass-the-ticket.md)
-* [✔️ 权限维持](advanced/quan-xian-wei-chi/README.md)
-  * [✔️ 票据传递](advanced/quan-xian-wei-chi/piao-ju-chuan-di.md)
-  * [✔️ 委派](advanced/quan-xian-wei-chi/wei-pai.md)
+* [✔️ 权限维持 - Active Directory Persistence](advanced/quan-xian-wei-chi-active-directory-persistence/README.md)
+  * [✔️ 票据传递](advanced/quan-xian-wei-chi-active-directory-persistence/piao-ju-chuan-di.md)
+  * [✔️ 委派](advanced/quan-xian-wei-chi-active-directory-persistence/wei-pai.md)
 
 ## 3️⃣ HackTheBox
 

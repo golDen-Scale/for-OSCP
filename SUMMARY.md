@@ -69,6 +69,7 @@
 * [✔️ Rubeus](tools/rubeus.md)
 * [✔️ Proxychains](tools/proxychains.md)
 * [✔️ Kerbrute](tools/kerbrute.md)
+* [✔️ CrackMapExec](tools/crackmapexec.md)
 
 ## 6️⃣ 漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
 

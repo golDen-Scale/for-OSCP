@@ -66,6 +66,7 @@
 * [✔️ Dirsearch](tools/dirsearch.md)
 * [✔️ Hashcat](tools/hashcat.md)
 * [✔️ John The Ripper](tools/john-the-ripper.md)
+* [✔️ Medusa](tools/medusa.md)
 * [✔️ Mimikatz](tools/mimikatz.md)
 * [✔️ Rubeus](tools/rubeus.md)
 * [✔️ Proxychains](tools/proxychains.md)

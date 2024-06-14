@@ -188,7 +188,7 @@ hydra -L usernames.txt -P passwords.txt 192.168.1.100 https-form-post "/login:us
 
 ```bash
 # 实例
-hydra -L /usr/share/SecLists/Usernames/top-usernames-shortlist.txt -P /usr/share/SecLists/Passwords/Leaked-Databases/rockyou.txt -u -f 192.168.xxx.xx -s 8080 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
+hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt -u -f 192.168.xxx.xx -s 8080 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
 ```
 
 * \`/login.php:username=^USER^\&password=^PASS^\`：此处需要使用BurpSuite拦截表单请求，根据实际情况进行修改

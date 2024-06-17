@@ -44,3 +44,6 @@ description: 适用于在获取目标域内最高权限后的权限维持 / 后�
 
 
 
+{% hint style="info" %}
+票据传递攻击的本质就是冒充其他账户。
+{% endhint %}

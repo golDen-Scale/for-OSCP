@@ -52,5 +52,6 @@ description: 基于NTLM认证 / 不需要知道明文密码
 
 
 
-
-
+{% hint style="info" %}
+哈希传递攻击的本质就是冒充其他用户。
+{% endhint %}

@@ -21,7 +21,9 @@ description: 适用于在获取目标域内最高权限后的权限维持 / 后�
 
 #### mimikatz
 
-
+```powershell
+// Some code
+```
 
 
 

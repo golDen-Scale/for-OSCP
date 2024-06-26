@@ -105,31 +105,41 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 
 <figure><img src="../.gitbook/assets/13 (4).png" alt=""><figcaption></figcaption></figure>
 
-
-
 ### 漏洞查阅
 
+* 根据Nmap输出信息，没有发现什么东西，所以直接尝试搜索\`rpc.py\`的漏洞利用，发现了一个远程代码执行的漏洞：
 
+<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 阅读代码后，发现可将\`exec\_command()\`函数中的内容直接修改为自己需要的命令：
 
+<figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
+* 将此处命令修改为可以让user用户无需密码即可以root权限运行各个命令：
 
+```bash
+'echo "user ALL=(root) NOPASSWD: ALL" > /etc/sudoers'
+```
 
+<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
+* 这个脚本是直接在exploitdb里下载的，里面每个=后面都有个\`3D\`的乱码得删掉，才能执行成功。
 
 ### ROOT
 
+* 修改好后的脚本传入目标机器，赋予执行权限，直接运行该脚本即可提权成功：
 
+<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
 
+* 获取flag：
 
-
+<figure><img src="../.gitbook/assets/20 (3).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例以为又是一个评级过高的简单机器，因为该机器并没有GET SHELL的过程。在之后的提权阶段需要涉及到反向端口转发和仔细的进行信息枚举，才能发现可被利用的漏洞。

@@ -87,13 +87,13 @@ sudo -l
 
 <figure><img src="../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
 通过查找目标系统上所有由root用户拥有且设置了SUID位的普通文件，和查看当前用户andrew不需要密码就可以执行的文件/命令，可得出：**当前用户可以在无需密码的情况下，使用sudo ruby来运行app.rb文件**
 
-<figure><img src="../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在GTFOBINS 发现可以使用 ruby​​ 获取 shell。
 
@@ -101,7 +101,7 @@ sudo -l
 
 进入到app.rb文件所在的文件夹，查看其权限，可得知当前用户andrew有权写入文件内容：
 
-<figure><img src="../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在写入payload之前，先备份一个app.rb.bak文件，再写入payload：
 
@@ -112,7 +112,7 @@ cp app.rb app.rb.bak
 echo 'exec "/bin/sh"' > app.rb
 ```
 
-<figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -121,7 +121,7 @@ echo 'exec "/bin/sh"' > app.rb
 sudo /usr/bin/ruby /home/andrew/app/aap.rb
 ```
 
-<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

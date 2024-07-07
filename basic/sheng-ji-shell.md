@@ -4,6 +4,13 @@ description: 适用于将功能有限的非交互式shell升级成完全交互�
 
 # ✔️ 升级Shell
 
+## Bash
+
+```bash
+echo os.system('/bin/bash')
+/bin/sh -i
+```
+
 ## Python
 
 ```python

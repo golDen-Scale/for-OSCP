@@ -47,8 +47,8 @@
 
 ## 3️⃣ HackTheBox
 
-* [Page 4](hackthebox/page-4.md)
-* [✔️ Untitled](hackthebox/untitled.md)
+* [AD](hackthebox/ad/README.md)
+  * [✔️ Active](hackthebox/ad/active.md)
 
 ## 4️⃣ OFFSEC
 

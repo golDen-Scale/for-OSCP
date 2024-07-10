@@ -47,6 +47,9 @@
 
 ## 3️⃣ HackTheBox
 
+* [Windows](hackthebox/windows.md)
+* [Linux](hackthebox/linux/README.md)
+  * [✔️ permX](hackthebox/linux/permx.md)
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
   * [✔️ Fuse](hackthebox/ad/fuse.md)

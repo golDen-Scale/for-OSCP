@@ -126,7 +126,13 @@ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/shell.php'
 
 <figure><img src="../../.gitbook/assets/23 (3).png" alt=""><figcaption></figcaption></figure>
 
-* 但是该目标并没有开放3306端口，剩下能利用的是端口22上的ssh
+* 但是该目标并没有开放3306端口，剩下能利用的是端口22上的ssh服务，或许有重用密码的可能，但是用以上的凭证(chamilo:03F6lY3uXAP2bkW8)无法成功登录ssh服务，于是进行进一步信息枚举：
+
+<figure><img src="../../.gitbook/assets/24 (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/25 (2).png" alt=""><figcaption></figcaption></figure>
+
+* 通过以上
 
 
 

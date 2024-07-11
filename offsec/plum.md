@@ -44,21 +44,21 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 将反弹shell的php脚本修改好后，把完整的代码复制粘贴到目标系统的编辑框里：
 
-<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 保存已编辑好的内容，监听好端口，触发页面等待回连：
 
-<figure><img src="../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 成功获得反弹shell：
 
-<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -66,9 +66,9 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 本例并没有常规的利用系统漏洞进行提权的操作，而是在查找local.txt的过程中意外发现了root账户的明文密码，因此直接切换到root账户，获取2个flag:
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

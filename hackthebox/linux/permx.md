@@ -36,15 +36,15 @@ wfuzz -c -u http://permx.htb -H "Host:FUZZ.permx.htb" -w subdomains-top1million-
 
 <figure><img src="../../.gitbook/assets/5 (7).png" alt=""><figcaption></figcaption></figure>
 
+* 先将域名及其子域名和IP都写进hosts文件中：
+
+<figure><img src="../../.gitbook/assets/3 (6).png" alt=""><figcaption></figcaption></figure>
+
 * 找到2个子域，分别登录查看后发现，lms.permx.htb显示的是名为chamilo应用程序的登录界面，并在页面底部返现了管理员的用户名和邮箱（**Administrator : Davis Miller**）：
 
 <figure><img src="../../.gitbook/assets/6 (7).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/7 (8).png" alt=""><figcaption></figcaption></figure>
-
-* 先将域名及其子域名和IP都写进hosts文件中：
-
-<figure><img src="../../.gitbook/assets/3 (6).png" alt=""><figcaption></figcaption></figure>
 
 * 初步查看了以一下lms子域的源码，决定使用gobuster对其隐藏文件/目录进行枚举：
 

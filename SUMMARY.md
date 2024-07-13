@@ -53,6 +53,7 @@
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
   * [✔️ Fuse](hackthebox/ad/fuse.md)
+  * [✔️ Sauna](hackthebox/ad/sauna.md)
 
 ## 4️⃣ OFFSEC
 

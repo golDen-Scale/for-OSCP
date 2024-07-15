@@ -52,8 +52,9 @@
   * [✔️ permX](hackthebox/linux/permx.md)
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
-  * [✔️ Fuse](hackthebox/ad/fuse.md)
   * [✔️ Sauna](hackthebox/ad/sauna.md)
+  * [✔️ Search](hackthebox/ad/search.md)
+  * [✔️ Fuse](hackthebox/ad/fuse.md)
 
 ## 4️⃣ OFFSEC
 

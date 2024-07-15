@@ -70,11 +70,11 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 该页面中的好多php文件在浏览器中不可读，但是看起来都是配置文件，因此后续可能可以利用到，需要关注起来
 
@@ -82,11 +82,11 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 
 * 从之前的枚举信息中已知正在运行的程序是chamilo 1.11版本，因此搜索后发现多个相关的可利用漏洞，从最近的开始尝试：（CVE-2023-4220）
 
-<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 阅读漏洞说明后，发现可以在该应用的特定路径下上传没有任何限制的文件，这意味着我可以直接上传一个php的反弹shell：
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

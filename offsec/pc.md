@@ -133,9 +133,9 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 
 * 修改好后的脚本传入目标机器，赋予执行权限，直接运行该脚本即可提权成功：
 
-<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获取flag：
 

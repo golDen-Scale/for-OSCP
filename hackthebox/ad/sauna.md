@@ -6,6 +6,8 @@ description: Easy / 枚举 /
 
 ## 建立立足点
 
+### 信息收集
+
 * 使用Nmap对目标系统进行开放端口扫描：
 
 ```bash
@@ -104,23 +106,69 @@ evil-winrm -i 10.129.95.180 -u fsmith -p Thestrokes23
 
 ## 权限提升
 
-*
+### 本地信息收集
 
+* 因为systeminfo.exe程序在目标中被限制，所以无法获得信息。随后枚举域内用户账户，得到6个账户：
 
+```bash
+net user /domain
+# 分别枚举这6个账户名，查看它们的组成员关系：
+net user fsmith /domain
+```
 
+<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
+* 因为常规的手动枚举并没有什么其他有用信息，所以决定使用bloodhound对该机器的所有信息进行分析，此时继续使用evil-winrm的upload模块，上传sharphound.exe到目标机器中进行信息收集：
 
+```bash
+# evil-winrm：
+upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
+# 上传完成后直接运行即可，后续会生成一个zip文件：
+.\sharphound.exe
+```
 
+<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
 
+* 将这个压缩文件下载下来，直接拖入Bloodhound里就行了：
 
+```bash
+# evil-winrm:
+download 20240713.............._BloodHound.zip
+```
+
+<figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
+
+* 在查看SVC\_LOANMGR@EGOTISTICAL-BANK.LOCAL这个账户时发现，该账户有权限访问目标域上的所有更改（GetChangesAll / GetChanges），这意味着我可以执行DCsync攻击：
+
+<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
+
+* 接下来继续使用evil-winrm上传winPEAS到目标中进行再次信息收集：
+
+```bash
+upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
+```
+
+<figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
+
+* 输出信息中包含了SVC\_LOANMGR账户的用户名和密码：
+
+<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

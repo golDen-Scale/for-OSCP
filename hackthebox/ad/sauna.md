@@ -1,5 +1,5 @@
 ---
-description: Easy / 枚举 /
+description: Easy / 枚举 / AS-REP Roasting / DCsync
 ---
 
 # ✔️ Sauna

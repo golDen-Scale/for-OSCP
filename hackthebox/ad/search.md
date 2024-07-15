@@ -54,6 +54,32 @@ smbclient -N -L 10.129.65.154
 
 <figure><img src="../../.gitbook/assets/10 (8).png" alt=""><figcaption></figcaption></figure>
 
+* 使用enum4linux枚举所有可收集到的内容，没找到什么特别有用的，获取到了域名和域SID：
+
+```bash
+enum4linux 10.129.65.154
+```
+
+<figure><img src="../../.gitbook/assets/11 (7).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/12 (6).png" alt=""><figcaption></figcaption></figure>
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

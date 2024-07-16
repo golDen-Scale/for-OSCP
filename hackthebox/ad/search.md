@@ -64,17 +64,23 @@ enum4linux 10.129.65.154
 
 <figure><img src="../../.gitbook/assets/12 (6).png" alt=""><figcaption></figcaption></figure>
 
+* 将收集到的用户名及其变种写法全部归纳到一个username.txt文件中，使用Kerbrute暴破出了3个有效用户名：
+
+```bash
+./kerbrute_linux_amd64 userenum --dc 10.129.229.57 -d search.htb username.txt
+```
+
+<figure><img src="../../.gitbook/assets/13 (6).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/14 (5).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+之后实在枚举不出来什么信息了，至此还没找到任何有效凭证。看了网上的提示后，发现一个有效凭证 <mark style="color:red;">**Hope Sharp:IsolationIsKey？**</mark>真的是无语...😑😑😑
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/15 (6).png" alt=""><figcaption></figcaption></figure>
+
 *
-
-
-
-
-
-
-
-
-
-
 
 
 

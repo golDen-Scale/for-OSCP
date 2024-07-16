@@ -50,9 +50,9 @@ smbclient -N -L 10.129.65.154
 
 <figure><img src="../../.gitbook/assets/9 (8).png" alt=""><figcaption></figcaption></figure>
 
-* 尝试使用其他工具进行匿名登录SMB服务，均无收获：
+* 尝试使用crackmapexec工具进行匿名登录SMB服务时，找到了主机名RESEARCH：
 
-<figure><img src="../../.gitbook/assets/10 (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (9).png" alt=""><figcaption></figcaption></figure>
 
 * 使用enum4linux枚举所有可收集到的内容，没找到什么特别有用的，获取到了域名和域SID：
 

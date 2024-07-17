@@ -125,7 +125,7 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 'echo "user ALL=(root) NOPASSWD: ALL" > /etc/sudoers'
 ```
 
-<figure><img src="../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 这个脚本是直接在exploitdb里下载的，里面每个=后面都有个\`3D\`的乱码得删掉，才能执行成功。
 
@@ -133,9 +133,9 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 
 * 修改好后的脚本传入目标机器，赋予执行权限，直接运行该脚本即可提权成功：
 
-<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获取flag：
 

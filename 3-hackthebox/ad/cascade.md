@@ -14,6 +14,34 @@ description: Medium / 枚举 / 解码
 nmap -sC -sV -p- -oA cascade 10.129.63.72 --open
 ```
 
+<figure><img src="../../.gitbook/assets/1 (7).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/2 (7).png" alt=""><figcaption></figcaption></figure>
+
+* 先把域名写入host文件：
+
+<figure><img src="../../.gitbook/assets/4 (9).png" alt=""><figcaption></figcaption></figure>
+
+* 先尝试匿名登录：
+
+```bash
+smbclient -N -L 10.129.63.72
+```
+
+<figure><img src="../../.gitbook/assets/3 (8).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -66,19 +66,29 @@ smbclient -N -L 10.129.63.72
 
 <figure><img src="../../.gitbook/assets/14 (7).png" alt=""><figcaption></figcaption></figure>
 
-* 15个中有11个有效，
+* 15个中有11个有效，至此虽然收集到了很多有效用户名，但是并没有获取到任何密码凭证。本想尝试暴力破解，但是11个用户名感觉不太可能，所以重新开始枚举，这里学习了一个新工具windapsearch，是用来通过LDAP查询来枚举目标中的用户、组、计算机等信息的（也可以用常规的ldapsearch进行枚举）：
 
+```bash
+./windapsearch.py -U --full --dc-ip 10.129.63.72
+```
 
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
+* 在其输出信息中找到了用户ryan的凭证信息，但是密码是被编码过的：<mark style="color:red;">**ryan : clk0bjVldmE=**</mark>
 
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
+* 解码，得到明文密码：<mark style="color:red;">**rY4n5eva**</mark>
 
+```bash
+echo clk0bjVldmE= | base64 -d
+```
 
-
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
-
+* 拿到有效凭证后，直接使用evil-winrm获取shell，确认自己
 
 
 

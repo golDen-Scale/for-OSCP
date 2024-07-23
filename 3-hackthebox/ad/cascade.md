@@ -88,9 +88,32 @@ echo clk0bjVldmE= | base64 -d
 
 ### GET SHELL
 
-* 拿到有效凭证后，直接使用evil-winrm获取shell，确认自己
+* 拿到有效凭证后，直接使用evil-winrm获取shell，确认自己没有输错后，发现该凭证无效。
 
+```bash
+eviL-winrm -i 10.129.63.72 -u ryan -p rY4n5eva
+```
 
+<figure><img src="../../.gitbook/assets/18 (5).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+这种情况就可以尝试密码重用的测试了，hackthebox很喜欢搞这种事情。
+{% endhint %}
+
+* 使用crackmapexec和刚才的username.txt和这个密码，进行密码喷洒：
+
+```bash
+crackmapexec smb 10.129.63.72 -u username.txt -p 'rY4n5eva'
+```
+
+<figure><img src="../../.gitbook/assets/19 (7).png" alt=""><figcaption></figcaption></figure>
+
+* 果然找到了另一个使用该密码的用户：<mark style="color:red;">**r.thompson**</mark>
+* 使用这个有效凭证用evil-winrm进行连接获取shell，还是失败：
+
+<figure><img src="../../.gitbook/assets/20 (6).png" alt=""><figcaption></figcaption></figure>
+
+* 那就换个地方用这个有效凭证，使用smbmap可以&#x20;
 
 
 

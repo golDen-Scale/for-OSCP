@@ -58,11 +58,15 @@ smbclient -N -L 10.129.63.72
 
 <figure><img src="../../.gitbook/assets/12 (8).png" alt=""><figcaption></figcaption></figure>
 
+* 用Kerbrute先跑一遍之前收集到的那个username.txt里面的有效用户名：
 
+```bash
+./kerbrute_linux_amd64 userenum --dc 10.129.63.72 -d cascade.local username.txt
+```
 
+<figure><img src="../../.gitbook/assets/14 (7).png" alt=""><figcaption></figcaption></figure>
 
-
-
+* 15个中有11个有效，
 
 
 

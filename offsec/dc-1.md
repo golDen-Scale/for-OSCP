@@ -72,7 +72,7 @@ droopescan scan drupal -u http://192.168.221.193:80/
 
 ### GET SHELL
 
-<figure><img src="../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -88,13 +88,13 @@ uname -a
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
 将尝试在GTFOBins中查找find和exim4（备选）：
 
-<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

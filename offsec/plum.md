@@ -48,15 +48,15 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 保存已编辑好的内容，监听好端口，触发页面等待回连：
 
-<figure><img src="../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 成功获得反弹shell：
 
-<figure><img src="../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
 

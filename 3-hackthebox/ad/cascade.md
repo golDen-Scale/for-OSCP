@@ -22,7 +22,7 @@ nmap -sC -sV -p- -oA cascade 10.129.63.72 --open
 
 <figure><img src="../../.gitbook/assets/4 (9).png" alt=""><figcaption></figcaption></figure>
 
-* 先尝试匿名登录：
+* 先尝试匿名登录，无收获：
 
 ```bash
 smbclient -N -L 10.129.63.72
@@ -30,13 +30,17 @@ smbclient -N -L 10.129.63.72
 
 <figure><img src="../../.gitbook/assets/3 (8).png" alt=""><figcaption></figcaption></figure>
 
+* 使用enum4linux枚举一下：
 
+<figure><img src="../../.gitbook/assets/5 (9).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/6 (9).png" alt=""><figcaption></figcaption></figure>
 
+* 发现一些用户名和密码策略，用户名可以先收集起来：
 
+<figure><img src="../../.gitbook/assets/7 (11).png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/8 (11).png" alt=""><figcaption></figcaption></figure>
 
 
 

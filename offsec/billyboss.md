@@ -42,7 +42,7 @@ nmap -sC -sV -p- -oA billyboss 192.168.250.61
 
 * 因为此时已经获得了应用程序的版本号，查阅公开漏洞库发现了可能可以利用的漏洞脚本：
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 阅读该脚本后，发现几个需要修改的地方：
 

@@ -47,9 +47,9 @@ rpcclient -U '' 10.129.176.63
 enum4linux 10.129.176.63
 ```
 
-<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 后面复盘时意识到，此处密码策略中的Account Lockout Threshold: None，这意味着可以是用密码暴破而不用担心账户被锁定，是否有意引导我进“兔子洞”？！因为本例中的所有凭证都无需暴破。
@@ -61,7 +61,7 @@ enum4linux 10.129.176.63
 
 * 将刚刚收集到的所有用户名全部整理成一份username.txt文件，待后续使用：
 
-<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 用Kerbrute先过一遍这个username列表，看看哪些用户名是域内有效的。29个用户名25个有效，太多了，看起来不太对，应该不是这么用的：
 

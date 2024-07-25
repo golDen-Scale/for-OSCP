@@ -59,9 +59,9 @@ file backup
 
 <figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 尝试查找ExifTool 12.23的公开已知漏洞，发现确实有一个任意代码执行的漏洞，将其下载后发现是一个用于将反弹shell的payload写入一个jpg文件的脚本：
 
@@ -69,7 +69,7 @@ file backup
 searchsploit exiftool 12.23
 ```
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

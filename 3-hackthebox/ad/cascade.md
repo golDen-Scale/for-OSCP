@@ -46,11 +46,11 @@ smbclient -N -L 10.129.63.72
 
 * 找到了一些内置组信息和组成员关系：
 
-<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 还有本地组信息和组成员关系：
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 

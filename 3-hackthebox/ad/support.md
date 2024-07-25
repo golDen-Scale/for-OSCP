@@ -85,6 +85,26 @@ file UserInfo.exe
 
 <figure><img src="../../.gitbook/assets/13 (9).png" alt=""><figcaption></figcaption></figure>
 
+* 把这个exe文件放入Windows系统中运行试试，这里要把整个解压出来的所有文件都一起放进Windows中，不然会运行不成功：
+
+<figure><img src="../../.gitbook/assets/14 (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/15 (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/16 (6).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### GET SHELL

@@ -24,15 +24,15 @@ description: Windows - Easy：HP Power Manager / Buffer Overflow
 
 初步查到HP Power Manager相关漏洞为缓冲区溢出：
 
-<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 上工具！利用Metasploit搜索相关可利用脚本：
 
-<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 设置远程IP、本地IP、本地端口：
 
-<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SEHLL & ROOT
 

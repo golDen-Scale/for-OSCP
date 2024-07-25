@@ -26,9 +26,26 @@ smbclient -N -L 10.129.230.181
 
 <figure><img src="../../.gitbook/assets/3 (9).png" alt=""><figcaption></figcaption></figure>
 
+* 分别尝试把这些共享文件递归下载到本地，也发现只有/support-tools的可以下载，其他的都拒绝：
 
+```bash
+smbclient //10.129.230.181/support-tools
+RECURSE ON
+PROMPT OFF
+mget *
+```
 
+<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+
+* 下载到Kali本地后，查看发现都是exe文件和一个压缩包文件，名称是UserInfo，猜测可能包含用户信息：
+
+<figure><img src="../../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+
+*
 
 
 

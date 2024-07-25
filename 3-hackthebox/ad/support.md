@@ -69,9 +69,21 @@ smbmap -H 10.129.230.181 -u "" -p ""
 
 <figure><img src="../../.gitbook/assets/11 (8).png" alt=""><figcaption></figcaption></figure>
 
+* 尝试RPC空密码连接被拒绝：
 
+```bash
+rpcclient 10.129.230.181
+```
 
+<figure><img src="../../.gitbook/assets/12 (9).png" alt=""><figcaption></figcaption></figure>
 
+* 回到刚才解压出来的UserInfo.exe，查看其信息：
+
+```bash
+file UserInfo.exe
+```
+
+<figure><img src="../../.gitbook/assets/13 (9).png" alt=""><figcaption></figcaption></figure>
 
 
 

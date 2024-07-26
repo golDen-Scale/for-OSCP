@@ -93,7 +93,13 @@ file UserInfo.exe
 
 <figure><img src="../../.gitbook/assets/16 (6).png" alt=""><figcaption></figcaption></figure>
 
-* 还没收集到有效用户名，z
+* 因为当前没有收集到可以用的用户名，所以直接运行该程序没用：
+
+<figure><img src="../../.gitbook/assets/17 (5).png" alt=""><figcaption></figcaption></figure>
+
+* 把UserInfo.exe放入dnspy中分析其代码：
+
+<figure><img src="../../.gitbook/assets/18 (6).png" alt=""><figcaption></figcaption></figure>
 
 
 

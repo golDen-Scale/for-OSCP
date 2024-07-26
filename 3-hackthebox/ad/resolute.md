@@ -109,7 +109,7 @@ evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 
 <figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -117,17 +117,17 @@ evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 
 * 简单手动枚举无果后，决定上传winPEAS进行信息收集：
 
-<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
 
 * winPEAS也没什么收获，上传sharphound收集，用bloodhound分析：
 
-<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/22 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 至此，仍然无任何明显收获，应该是方向错了。决定从头开始枚举，列出了之前忽略掉的隐藏目录PSTranscripts：
 
@@ -135,7 +135,7 @@ evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 dir -force
 ```
 
-<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 找到了一个txt文件，查看后貌似是一个日志记录的文件，是关于用户ryan的：
 

@@ -135,7 +135,7 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 
 <figure><img src="../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获取flag：
 

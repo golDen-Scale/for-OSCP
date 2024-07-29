@@ -14,9 +14,9 @@ description: Easy / 分析程序文件 / LDAP枚举 /
 nmap -sC -sV -p- -oA support 10.129.230.181 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 先进行SMB匿名登录测试，发现可以登录上去，且有感兴趣的共享文件/support-tools（这种和靶机名称一致的提示还是蛮明显的）：
 
@@ -35,23 +35,23 @@ PROMPT OFF
 mget *
 ```
 
-<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 下载到Kali本地后，查看发现都是exe文件和一个压缩包文件，名称是UserInfo，猜测可能包含用户信息：
 
-<figure><img src="../../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 解压UserInfo.exe.zip，比较感兴趣的有config文件和exe文件：
 
-<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 * config文件，有.NET框架的版本号信息，其他的好像没什么了：
 
-<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 没有预期的任何凭证之类的内容，用enum4linux枚举也无任何收获：
 
@@ -59,7 +59,7 @@ mget *
 enum4linux 10.129.230.181
 ```
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 * smbmap也没有收获：
 

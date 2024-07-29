@@ -106,13 +106,13 @@ curl -v -F myFile=@image.jpg http://192.168.160.183/exiftest.php
 
 成功获得反弹shell，并查找到local.txt文件：
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 提升权限
 
 ### 本地信息收集
 
-<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 当手动枚举无明确收获时，可使用工具进行枚举，如：
 
@@ -130,9 +130,9 @@ chmod +x linenum.sh
 ./linenum.sh
 ```
 
-<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 

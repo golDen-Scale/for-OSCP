@@ -70,15 +70,15 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * 此时已具备了可以修改漏洞脚本的基本项，但是还需要上传一个nc.exe程序，用于后续执行一个反弹shell回来：
 
-<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在Kali机器的对应目录下，存放一个nc64.exe脚本并开启一个简单的服务器：
 
-<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * nc64.exe程序上传成功：
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

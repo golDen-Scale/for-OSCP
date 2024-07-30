@@ -59,6 +59,7 @@
   * [✔️ Cascade](3-hackthebox/ad/cascade.md)
   * [✔️ Support](3-hackthebox/ad/support.md)
   * [✔️ Forest](3-hackthebox/ad/forest.md)
+  * [✔️ Blackfield](3-hackthebox/ad/blackfield.md)
 
 ## 4️⃣ OFFSEC
 

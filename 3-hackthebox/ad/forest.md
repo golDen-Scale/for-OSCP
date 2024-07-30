@@ -1,5 +1,5 @@
 ---
-description: Easy / 枚举 / AS-REP Roasting
+description: Easy / 枚举 / AS-REP Roasting /滥用 WriteDACL / DCSync
 ---
 
 # ✔️ Forest
@@ -104,7 +104,12 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 
 ### 本地信息收集
 
+* 按惯例上传winPEAS进行信息枚举，但是没有什么特别的收获：
 
+```bash
+# evil-winrm:
+upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
+```
 
 
 
@@ -123,5 +128,7 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 
 
 {% hint style="info" %}
-本例属于简单机器，GET SHELL阶段常规的枚举尝试就有收获。
+本例属于简单机器，GET SHELL阶段常规的枚举尝试就有收获。提权过程太艰难了，以为是自己方向搞错了，看了网上提示后发现没有错，各种方式都尝试过了，还是一直报错，暂不清楚原因，后续再更新。
+
+（本例中途重置过IP地址有变化，不影响其过程实现）
 {% endhint %}

@@ -1,5 +1,5 @@
 ---
-description: Easy / 枚举 / AS-REP Roasting /滥用 WriteDACL / DCSync
+description: Easy / 枚举 / AS-REP Roasting /滥用 WriteDACL / DCSync / Bloodhound
 ---
 
 # ✔️ Forest
@@ -119,26 +119,34 @@ upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 
 <figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
 
+* 当前已控制的账户是svc-alfresco，查看最短到域管的路径发现，当前账户属于Service Accounts的成员，而Service Accounts又属于Privileged IT Accounts的成员，Privileged IT Accounts是Account Operators的成员，最后Account Operators的成员又是属于Exchange Windows Permissions的成员：
 
+<figure><img src="../../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
-
-
-
+* 从bloodhound列举出的信息中可知Exchange Windows Permission在当前域中是有WriteDACL权限的，该权限可以允许用户修改对象的访问控制列表，这意味着拥有这个权限的账户可以自己赋予自己/其他账户DCSync同步权限。
 
 {% hint style="info" %}
-本例机器，在GET SHELL阶段常规的枚举尝试就有收获。提权过程太艰难了，以为是自己方向搞错了，看了网上提示后发现没有错，各种方式都尝试过了，还是一直报错，暂不清楚原因，后续再更新。
+本例提权过程中，一种方式是赋予当前以控制的账户svc-alfrescoDCSync同步权限，还有一种是创建一个新的用户账户赋予它DCSync同步权限，已确定成功将相关账户加入到了Exchange Windows Permissions组，但是在用secretsdump提取域内用户账户的哈希密码时，两种均失败，暂不清楚原因。
+{% endhint %}
+
+*
+
+{% hint style="info" %}
+本例机器，在GET SHELL阶段常规的枚举尝试就有收获。提权过程太艰难了，以为是自己方向搞错了，看了网上提示后发现没有错，各种方式都尝试过了，还是一直报错，暂不清楚原因，后续再更新。本例Bloodhound分析过程没有以前的机器简单。
 
 （本例中途重置过IP地址有变化，不影响其过程实现）
 {% endhint %}

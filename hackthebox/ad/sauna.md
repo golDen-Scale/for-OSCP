@@ -124,11 +124,11 @@ net user fsmith /domain
 
 <figure><img src="../../.gitbook/assets/21 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/22 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/22 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/23 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/24 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/24 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 因为常规的手动枚举并没有什么其他有用信息，所以决定使用bloodhound对该机器的所有信息进行分析，此时继续使用evil-winrm的upload模块，上传sharphound.exe到目标机器中进行信息收集：
 
@@ -139,11 +139,11 @@ upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
 .\sharphound.exe
 ```
 
-<figure><img src="../../.gitbook/assets/25 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将这个压缩文件下载下来，直接拖入Bloodhound里就行了：
 
@@ -152,7 +152,7 @@ upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
 download 20240713.............._BloodHound.zip
 ```
 
-<figure><img src="../../.gitbook/assets/28 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/28 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在查看SVC\_LOANMGR@EGOTISTICAL-BANK.LOCAL这个账户时发现，该账户有权限访问目标域上的所有更改（GetChangesAll / GetChanges），这意味着我可以执行DCsync攻击：
 

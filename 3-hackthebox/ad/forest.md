@@ -111,6 +111,16 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 ```
 
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+
+* 上传sharphound进行信息收集，放入bloodhound中分析各个用户、组成员等之间的关系：
+
+<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+
+
+
 
 
 
@@ -128,7 +138,7 @@ upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 
 
 {% hint style="info" %}
-本例属于简单机器，GET SHELL阶段常规的枚举尝试就有收获。提权过程太艰难了，以为是自己方向搞错了，看了网上提示后发现没有错，各种方式都尝试过了，还是一直报错，暂不清楚原因，后续再更新。
+本例机器，在GET SHELL阶段常规的枚举尝试就有收获。提权过程太艰难了，以为是自己方向搞错了，看了网上提示后发现没有错，各种方式都尝试过了，还是一直报错，暂不清楚原因，后续再更新。
 
 （本例中途重置过IP地址有变化，不影响其过程实现）
 {% endhint %}

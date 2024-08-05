@@ -46,9 +46,21 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 <figure><img src="../../.gitbook/assets/13 (11).png" alt=""><figcaption></figcaption></figure>
 
-* 在hash example上查找对应的模式，用于hashcat暴破（不确定是哪种）
+* 在hash example上查找对应的模式，用于hashcat暴破（不确定是哪种就附近几个都试一下）：
 
+<figure><img src="../../.gitbook/assets/14 (9).png" alt=""><figcaption></figcaption></figure>
 
+```bash
+hashcat -m 1700 hashes.txt rockyou.txt
+```
+
+<figure><img src="../../.gitbook/assets/15 (9).png" alt=""><figcaption></figcaption></figure>
+
+* 暴破出明文密码：<mark style="color:red;">**iloveyou1**</mark>，由此获得第一个有效凭证: <mark style="color:red;">**admin : iloveyou1**</mark>
+
+<figure><img src="../../.gitbook/assets/16 (7).png" alt=""><figcaption></figcaption></figure>
+
+* 利用该凭证成功登录80端口的admin
 
 
 

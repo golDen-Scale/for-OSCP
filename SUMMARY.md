@@ -50,6 +50,7 @@
 * [Windows](hackthebox/windows.md)
 * [Linux](hackthebox/linux/README.md)
   * [✔️ permX](hackthebox/linux/permx.md)
+  * [✔️ Greenhorn](3-hackthebox/linux/greenhorn.md)
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
   * [✔️ Sauna](hackthebox/ad/sauna.md)

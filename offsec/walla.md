@@ -14,7 +14,7 @@ description: Linux / 中等难度 / RaspAP v2.5 / CVE-2021-4034
 
 * 发现一个8091的开放端口运行着HTTP服务，查看后是一个登录页面，但是目前没有任何有用凭证和该页面运行的是什么应用的信息：
 
-<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 先对该端口进行扫描，看看是否还有什么隐藏目录/文件：
 

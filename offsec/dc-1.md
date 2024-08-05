@@ -18,7 +18,7 @@ nmap -sV -sC -p- -oA dc1 192.168.221.193 --open
 
 浏览检查目标系统的Web页面，发现其使用的是Drupal：
 
-<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 扫描目标80端口的隐藏文件和目录，获得一下有效路径：
 

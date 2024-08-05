@@ -20,11 +20,13 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 <figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
-* 进入admin面板后发现了pluck的版本（4.7.18），随后尝试几个弱口令
+* 进入admin面板后发现了pluck的版本（4.7.18），随后尝试几个弱口令均失败：
 
+<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
-
+*
 
 
 
@@ -42,9 +44,13 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 ### 漏洞查阅
 
+* 在信息枚举阶段获取到的pluck 4.7.18确实是有一个远程代码执行的漏洞，但是在本例中的漏洞利用阶段仅起到了辅助作用，并未直接利用：
 
+<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
 
+* 从该漏洞脚本中可以确认其上传文件的类型是zip类型，
 
 
 

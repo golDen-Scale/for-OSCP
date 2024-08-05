@@ -18,21 +18,21 @@ description: Windows - Easy：HP Power Manager / Buffer Overflow
 
 登录后，检查各项内容获得其版本号：HP Power Manager 4.2
 
-<figure><img src="../.gitbook/assets/3 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/3 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅&利用（Metasploit）
 
 初步查到HP Power Manager相关漏洞为缓冲区溢出：
 
-<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 上工具！利用Metasploit搜索相关可利用脚本：
 
-<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 设置远程IP、本地IP、本地端口：
 
-<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SEHLL & ROOT
 

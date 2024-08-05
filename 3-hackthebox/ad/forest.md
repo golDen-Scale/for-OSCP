@@ -20,7 +20,7 @@ nmap -sC -sV -p- -oA forest 10.129.154.107 --open
 
 * 把IP地址和域名写入/etc/hosts文件：
 
-<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 通过之前的Nmap扫描结果发现并没有Web应用的相关开放端口，所以直接尝试各种匿名登录，SMB可以登录成功但是无收获，RPC不可以无密码登录：
 
@@ -35,11 +35,11 @@ rpcclient 10.129.154.107
 enum4linux 10.129.154.107
 ```
 
-<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 

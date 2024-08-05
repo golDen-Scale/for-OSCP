@@ -26,17 +26,27 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 <figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
-*
+* 转到3000端口依次对其内容进行信息收集，发现其正在运行的是Gitea 1.21.11并且还有目标系统的源码：
 
+<figure><img src="../../.gitbook/assets/8 (12).png" alt=""><figcaption></figcaption></figure>
 
+* 其中有几个文件可以重点关注：admin.php / login.php
 
+<figure><img src="../../.gitbook/assets/9 (9).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/10 (10).png" alt=""><figcaption></figcaption></figure>
 
+* 在`login.php`这个文件中，其源码描述了关于用户登陆验证的过程。其中使用了SHA-512算法加密了密码(未加盐)，这意味着可以使用暴力破解。并且也指明了密码文件是pass.php：
 
+<figure><img src="../../.gitbook/assets/11 (9).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/12 (10).png" alt=""><figcaption></figcaption></figure>
 
+* `pass.php`位于/data/settings/pass.php该路径下，里面有一个hash密码，把它保存为一个hashes.txt文件用于后续暴破：
 
+<figure><img src="../../.gitbook/assets/13 (11).png" alt=""><figcaption></figcaption></figure>
 
+* 在hash example上查找对应的模式，用于hashcat暴破（不确定是哪种）
 
 
 
@@ -44,15 +54,15 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 ### 漏洞查阅
 
-* 在信息枚举阶段获取到的pluck 4.7.18确实是有一个远程代码执行的漏洞，但是在本例中的漏洞利用阶段仅起到了辅助作用，并未直接利用：
+* 在信息枚举阶段获取到的Web页面运行的pluck 4.7.18确实是有一个远程代码执行的漏洞，但是在本例中的漏洞利用阶段仅起到了辅助作用，并未直接利用：
 
 <figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
 
-* 从该漏洞脚本中可以确认其上传文件的类型是zip类型，
+* 从该漏洞脚本中可以确认其上传文件的类型是zip类型，这为后续上传反弹shell做了提示：
 
-
+<figure><img src="../../.gitbook/assets/7 (12).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

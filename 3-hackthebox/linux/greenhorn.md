@@ -1,5 +1,5 @@
 ---
-description: Easy / 枚举 / 阅读源码 / 图像解析
+description: Easy / 枚举 / 阅读源码 / 文件上传 / 图像解析
 ---
 
 # ✔️ Greenhorn
@@ -114,11 +114,15 @@ zip revershell.zip revershell.php
 
 <figure><img src="../../.gitbook/assets/18 (8).png" alt=""><figcaption></figcaption></figure>
 
-*
+* 在manage modules中的install a module中尝试上传反弹shell：
 
+<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
 
+* 至此，上传成功后即可获得回连的shell：
 
+<figure><img src="../../.gitbook/assets/28 (4).png" alt=""><figcaption></figcaption></figure>
 
 
 

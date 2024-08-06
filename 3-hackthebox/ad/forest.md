@@ -129,9 +129,9 @@ upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 
 <figure><img src="../../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/28.png" alt=""><figcaption></figcaption></figure>
 

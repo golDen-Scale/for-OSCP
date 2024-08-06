@@ -141,9 +141,9 @@ upload /root/Documents/HTB-AD/sauna/tools/sharphound.exe
 
 <figure><img src="../../.gitbook/assets/25 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将这个压缩文件下载下来，直接拖入Bloodhound里就行了：
 

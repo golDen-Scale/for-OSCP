@@ -139,7 +139,7 @@ dir -force
 
 * 找到了一个txt文件，查看后貌似是一个日志记录的文件，是关于用户ryan的：
 
-<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 同时也在这个txt文件中发现了用户<mark style="color:red;">**ryan**</mark>的登录凭证：<mark style="color:red;">**Serv3r4Admin4cc123!**</mark>
 

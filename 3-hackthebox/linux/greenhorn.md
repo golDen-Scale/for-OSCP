@@ -82,7 +82,31 @@ hashcat -m 1700 hashes.txt rockyou.txt
 
 ### 漏洞利用
 
-* 通过之前收集到的信息和发现的可利用脚本，
+* 通过之前收集到的信息和发现的可利用脚本得知，可以往包含漏洞的目标系统上上传利用脚本，这里直接上传常用的一个php的反弹shell脚本（pentestmonkey），修改自己的kali本机IP和端口，做好监听:
+
+<figure><img src="../../.gitbook/assets/21 (5).png" alt=""><figcaption></figcaption></figure>
+
+* 本例中有两个可以上传的功能点，一个是manage files，一个是manage modules，分别尝试等待回连：
+
+<figure><img src="../../.gitbook/assets/22 (5).png" alt=""><figcaption></figcaption></figure>
+
+* 直接上传php脚本可以上传成功，但是无法触发，因为目标做了保护直接在我的脚本后面加了txt后缀：
+
+<figure><img src="../../.gitbook/assets/23 (5).png" alt=""><figcaption></figcaption></figure>
+
+* 根据之前找到的pluck 4.7.18远程代码执行漏洞的脚本提示，需要将上传的文件压缩成ZIP文件才可以成功执行，所以把反弹shell脚本压缩成ZIP文件：
+
+```bash
+zip revershell.zip revershell.php
+```
+
+<figure><img src="../../.gitbook/assets/24 (4).png" alt=""><figcaption></figcaption></figure>
+
+* 再次上传发现还是可以成功，但仍然无法执行回连：
+
+<figure><img src="../../.gitbook/assets/25 (3).png" alt=""><figcaption></figcaption></figure>
+
+
 
 
 

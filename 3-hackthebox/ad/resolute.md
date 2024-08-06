@@ -151,7 +151,7 @@ dir -force
 
 <figure><img src="../../.gitbook/assets/30 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/31 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在ryan账户下，发现了一个note.txt文档，像是一个备忘录之类的文档，没看出什么实际作用：
 

@@ -136,19 +136,21 @@ zip revershell.zip revershell.php
 
 ### 本地信息收集
 
+* 简单的执行手动枚举时，发现当前账户junior并没有一些基本命令的执行权限：
+
+<figure><img src="../../.gitbook/assets/31.png" alt=""><figcaption></figcaption></figure>
+
+* 并且在之前读取user.txt文件时，在其/home目录下还发现了一个PDF文件：Using OpenVAS.pdf
 
 
 
 
-### 漏洞查阅&#x20;
 
 
 
 
 
 
-
-### 漏洞利用
 
 
 

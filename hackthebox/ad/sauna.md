@@ -168,7 +168,7 @@ upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
 
 * 输出信息中包含了SVC\_LOANMGR账户的用户名和密码：
 
-<figure><img src="../../.gitbook/assets/31 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/31 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

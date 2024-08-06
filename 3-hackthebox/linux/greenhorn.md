@@ -128,13 +128,9 @@ zip revershell.zip revershell.php
 
 <figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
 
-* 因为该文件是位于junior用户的/home目录中，而我当前的用户是www-data，
+* 因为该文件是位于junior用户的/home目录中，而我当前的用户是www-data，需要切换到junior账户下才能读取，这里又是一个密码重用的问题：
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

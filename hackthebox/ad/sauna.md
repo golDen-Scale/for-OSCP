@@ -164,7 +164,7 @@ download 20240713.............._BloodHound.zip
 upload upload /root/Documents/HTB-AD/sauna/tools/winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/30 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/30 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 输出信息中包含了SVC\_LOANMGR账户的用户名和密码：
 

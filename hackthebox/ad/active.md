@@ -178,7 +178,7 @@ python3 psexec.py active.htb/Administrator@10.129.138.113
 
 * 获得flag：
 
-<figure><img src="../../.gitbook/assets/30 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/30 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

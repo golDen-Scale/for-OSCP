@@ -106,11 +106,7 @@ zip revershell.zip revershell.php
 
 <figure><img src="../../.gitbook/assets/25 (3).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
+* 切换测试下一个上传点
 
 ### GET SHELL
 
@@ -118,7 +114,7 @@ zip revershell.zip revershell.php
 
 <figure><img src="../../.gitbook/assets/18 (8).png" alt=""><figcaption></figcaption></figure>
 
-
+*
 
 
 

@@ -60,9 +60,13 @@ hashcat -m 1700 hashes.txt rockyou.txt
 
 <figure><img src="../../.gitbook/assets/16 (7).png" alt=""><figcaption></figcaption></figure>
 
-* 利用该凭证成功登录80端口的admin
+* 利用该凭证成功登录80端口的admin界面：
 
+<figure><img src="../../.gitbook/assets/17 (6).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/19 (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/20 (7).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
@@ -78,13 +82,29 @@ hashcat -m 1700 hashes.txt rockyou.txt
 
 ### 漏洞利用
 
-
+* 通过之前收集到的信息和发现的可利用脚本，
 
 
 
 
 
 ### GET SHELL
+
+* 可尝试用之前的有效凭证登录一下ssh服务，但是失败：
+
+<figure><img src="../../.gitbook/assets/18 (8).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

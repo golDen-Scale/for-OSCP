@@ -174,7 +174,7 @@ hashcat -m 13100 hash.txt rockyou.txt
 python3 psexec.py active.htb/Administrator@10.129.138.113 
 ```
 
-<figure><img src="../../.gitbook/assets/29 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 获得flag：
 

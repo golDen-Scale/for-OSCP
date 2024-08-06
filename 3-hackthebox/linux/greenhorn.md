@@ -124,9 +124,11 @@ zip revershell.zip revershell.php
 
 <figure><img src="../../.gitbook/assets/28 (4).png" alt=""><figcaption></figcaption></figure>
 
+* 但是当枚举出user.txt文件后，发现没有权限访问其内容：
 
+<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
 
-
+* 因为该文件是位于junior用户的/home目录中，而我当前的用户是www-data，
 
 
 

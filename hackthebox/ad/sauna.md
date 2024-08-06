@@ -156,7 +156,7 @@ download 20240713.............._BloodHound.zip
 
 * 在查看SVC\_LOANMGR@EGOTISTICAL-BANK.LOCAL这个账户时发现，该账户有权限访问目标域上的所有更改（GetChangesAll / GetChanges），这意味着我可以执行DCsync攻击：
 
-<figure><img src="../../.gitbook/assets/29 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 接下来继续使用evil-winrm上传winPEAS到目标中进行再次信息收集：
 

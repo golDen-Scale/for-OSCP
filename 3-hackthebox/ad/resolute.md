@@ -147,7 +147,7 @@ dir -force
 
 * 使用该凭证登录ryan账户后，枚举一下这个ryan的相关信息：
 
-<figure><img src="../../.gitbook/assets/29.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/29 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/30.png" alt=""><figcaption></figcaption></figure>
 

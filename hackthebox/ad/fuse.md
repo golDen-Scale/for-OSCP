@@ -34,17 +34,23 @@ nmap -sC -sV -p- -oA fuse 10.129.2.5 --open
 
 <figure><img src="../../.gitbook/assets/8 (13).png" alt=""><figcaption></figcaption></figure>
 
+* 使用enum4linux进行信息收集没有什么有用的收获：
 
+```bash
+enum4linux 10.129.2.5
+```
 
+<figure><img src="../../.gitbook/assets/9 (10).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/10 (11).png" alt=""><figcaption></figcaption></figure>
 
+* 检查SMB的无密码登录，可以成功登录但还是无收获：
 
+```bash
+smbclient -N -L //10.129.2.5
+```
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/11 (10).png" alt=""><figcaption></figcaption></figure>
 
 
 

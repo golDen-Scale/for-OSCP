@@ -14,13 +14,13 @@ description: Easy / 枚举 / AS-REP Roasting /滥用 WriteDACL / DCSync / Bloodh
 nmap -sC -sV -p- -oA forest 10.129.154.107 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 把IP地址和域名写入/etc/hosts文件：
 
-<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 通过之前的Nmap扫描结果发现并没有Web应用的相关开放端口，所以直接尝试各种匿名登录，SMB可以登录成功但是无收获，RPC不可以无密码登录：
 
@@ -35,11 +35,11 @@ rpcclient 10.129.154.107
 enum4linux 10.129.154.107
 ```
 
-<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
@@ -51,7 +51,7 @@ enum4linux 10.129.154.107
 ./kerbrute_linux_amd64 username --dc 10.129.154.107 -d htb.local username.txt
 ```
 
-<figure><img src="../../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 31个用户名跑出来18个有效，再把这18个用户名汇总成一个users.txt文件：
 

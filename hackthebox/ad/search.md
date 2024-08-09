@@ -24,7 +24,7 @@ nmap -sC -sV -p- -oA search 10.129.65.154 --open
 gobuster dir -u http://10.129.65.154/ -w /usr/share/wordlists/dirb/common.txt
 ```
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 有几个目录值得关注一下：/staff、/certenroll、/certsrv、/images，分别尝试后都是拒绝访问：
 
@@ -40,7 +40,7 @@ gobuster dir -u http://10.129.65.154/ -w /usr/share/wordlists/dirb/common.txt
 
 * 初步查看网页，找到一些用户名，可以先收集起来，后续也许有用：
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用smbcclient可以匿名登录，但是没有收获：
 

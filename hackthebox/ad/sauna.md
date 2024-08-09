@@ -14,15 +14,15 @@ description: Easy / 枚举 / AS-REP Roasting / DCsync
 nmap -sC -sV -p- -oA sauna 10.129.77.184 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 发现开放目标系统开放了80端口，查看后并没有发现什么特别有用的信息，但是发现了很多用户名，先收集起来也许后续会有用：
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/3 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 对该80端口进行常规的隐藏文件/目录扫描，没什么收获：
 
@@ -30,11 +30,11 @@ nmap -sC -sV -p- -oA sauna 10.129.77.184 --open
 gobuster dir -u http://10.129.77.184/ -w /usr/share/wordlists/dirb/common.txt
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * dirsearch也没有什么收获：
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用多个工具尝试无密码登录SMB服务，倒是成功了，但是还是无收获：
 

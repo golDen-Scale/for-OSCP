@@ -1,5 +1,5 @@
 ---
-description: Easy /
+description: Easy / 枚举 / 永恒之蓝
 ---
 
 # Blue

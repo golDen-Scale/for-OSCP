@@ -47,7 +47,8 @@
 
 ## 3️⃣ HackTheBox
 
-* [Windows](hackthebox/windows.md)
+* [Windows](3-hackthebox/windows/README.md)
+  * [Blue](3-hackthebox/windows/blue.md)
 * [Linux](hackthebox/linux/README.md)
   * [✔️ permX](hackthebox/linux/permx.md)
   * [✔️ Greenhorn](3-hackthebox/linux/greenhorn.md)

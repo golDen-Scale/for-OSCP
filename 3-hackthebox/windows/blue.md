@@ -1,5 +1,5 @@
 ---
-description: Easy / 枚举 / 永恒之蓝
+description: Easy / 枚举 / 命名管道 / 永恒之蓝
 ---
 
 # Blue
@@ -96,11 +96,9 @@ run
 
 * 很遗憾没有扫出来任何命名管道
 
-
-
 ### GET SHELL
 
-
+*
 
 
 
@@ -155,5 +153,5 @@ run
 
 
 {% hint style="info" %}
-
+本例为2刷机器，第一遍用的是Metasploit完成的，所以确实属于简单机器。2刷手动利用的过程不算简单，用Metasploit的辅助模块在考试中是被允许的。
 {% endhint %}

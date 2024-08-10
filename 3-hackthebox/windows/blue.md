@@ -53,19 +53,48 @@ searchsploit ms17-010
 
 <figure><img src="../../.gitbook/assets/8 (14).png" alt=""><figcaption></figcaption></figure>
 
+* 本例选择利用42315.py这个脚本：
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/9 (12).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 在利用该脚本的过程中，从返回的信息中得知还需要一个名为mysmb的模块：
 
+<figure><img src="../../.gitbook/assets/10 (12).png" alt=""><figcaption></figcaption></figure>
 
+* 在用命令行安装过程中始终不成功，所以此处我直接下载了ZIP包到Kali本机，解压后将mysmb.py脚本复制到了pyhton3的dist-packages中，随后该脚本运行成功：
 
+```
+https://github.com/worawit/MS17-010
+```
 
+<figure><img src="../../.gitbook/assets/11 (11).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/12 (11).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/13 (12).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/14 (10).png" alt=""><figcaption></figcaption></figure>
+
+* 但是运行后返回的信息又说明没有找到可访问的命名管道，所以此处借由Metasploit的辅助模块来查找目标主机上的任何命名管道：
+
+```bash
+msfconsole
+search smb pipe auditor
+use 0
+show options
+set RHOSTS 10.129.223.191
+run
+```
+
+<figure><img src="../../.gitbook/assets/15 (10).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/16 (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/17 (7).png" alt=""><figcaption></figcaption></figure>
+
+* 很遗憾没有扫出来任何命名管道
 
 
 

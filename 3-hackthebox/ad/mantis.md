@@ -31,19 +31,27 @@ nmap -sC -sV -p- -oA mantis 10.129.40.77 --open
 
 <figure><img src="../../.gitbook/assets/6 (11).png" alt=""><figcaption></figcaption></figure>
 
+* 页面底部发现登录入口，简单尝试几个弱口令均失败，暂时搁置：
 
+<figure><img src="../../.gitbook/assets/7 (14).png" alt=""><figcaption></figcaption></figure>
 
+* 使用dirsearch扫描8080端口上的隐藏文件/目录：
 
+```bash
+dirsearch -u  http://10.129.111.62:8080 -x 403,404,400
+```
 
+<figure><img src="../../.gitbook/assets/8 (15).png" alt=""><figcaption></figcaption></figure>
 
+* 没有什么特别的收获：
 
+<figure><img src="../../.gitbook/assets/9 (13).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/10 (13).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/11 (12).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+*
 
 
 

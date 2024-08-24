@@ -14,7 +14,7 @@ description: Medium / 枚举 / DNSadmins提权
 nmap -sC -sV -p- -oA resolute 10.129.176.63 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

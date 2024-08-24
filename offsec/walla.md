@@ -10,7 +10,7 @@ description: Linux / 中等难度 / RaspAP v2.5 / CVE-2021-4034
 
 * 使用Nmap对目标系统开放端口进行扫描，获得如下开放端口及其版本信息：
 
-<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 发现一个8091的开放端口运行着HTTP服务，查看后是一个登录页面，但是目前没有任何有用凭证和该页面运行的是什么应用的信息：
 

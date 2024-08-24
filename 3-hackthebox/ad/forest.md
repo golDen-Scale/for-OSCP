@@ -14,7 +14,7 @@ description: Easy / 枚举 / AS-REP Roasting /滥用 WriteDACL / DCSync / Bloodh
 nmap -sC -sV -p- -oA forest 10.129.154.107 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 

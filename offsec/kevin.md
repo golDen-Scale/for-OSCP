@@ -10,7 +10,7 @@ description: Windows - Easy：HP Power Manager / Buffer Overflow
 
 使用Nmap进行开放端口扫描：
 
-<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 检查目标系统80端口上的内容，发现是HP Power Manager的登录界面，尝试弱口令登录（<mark style="color:red;">**admin:admin**</mark>），也可以直接搜索相关软件的默认凭证：
 

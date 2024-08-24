@@ -14,7 +14,7 @@ description: EASY - Linux：Drupal 7（Drupalgeddon）
 nmap -sV -sC -p- -oA dc1 192.168.221.193 --open
 ```
 
-<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 浏览检查目标系统的Web页面，发现其使用的是Drupal：
 

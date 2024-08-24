@@ -14,7 +14,7 @@ description: Easy / 分析程序文件 / LDAP枚举 /
 nmap -sC -sV -p- -oA support 10.129.230.181 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

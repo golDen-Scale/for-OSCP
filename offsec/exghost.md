@@ -10,7 +10,7 @@ description: Easy - Linux：ExifTool 12.23
 
 使用Nmap对目标进行开放端口扫描，获得2个开放端口：
 
-<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 首先对80端口的Web网页进行检查，无收获：
 

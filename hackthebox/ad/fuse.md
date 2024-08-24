@@ -14,7 +14,7 @@ description: Medium / 枚举 / 密码喷洒 / 打印机日志记录
 nmap -sC -sV -p- -oA fuse 10.129.2.5 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 

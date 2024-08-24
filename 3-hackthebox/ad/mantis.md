@@ -17,6 +17,38 @@ nmap -sC -sV -p- -oA mantis 10.129.40.77 --open
 
 <figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/2 (9).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/3 (11).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/4 (11).png" alt=""><figcaption></figcaption></figure>
+
+* 根据上面扫描获得的信息，将域名添加到/etc/hosts文件中：
+
+<figure><img src="../../.gitbook/assets/5 (11).png" alt=""><figcaption></figcaption></figure>
+
+* 因为扫描出了8080端口，先查看其内容发现是一个运行着名为Orchard的CMS系统：
+
+<figure><img src="../../.gitbook/assets/6 (11).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

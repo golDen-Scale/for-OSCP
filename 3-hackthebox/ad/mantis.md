@@ -70,11 +70,16 @@ enum4linux 10.129.208.146
 
 <figure><img src="../../.gitbook/assets/14 (11).png" alt=""><figcaption></figcaption></figure>
 
-*
+* 重新查看Nmap的输出信息，还发现了一个运行着IIS7 Web服务器的端口：1337，此时可考虑换gobuster重新扫描一下8080端口和1337端口上的隐藏文件/目录：
 
+```bash
+gobuster dir -u http://10.129.15.72:8080 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q
+gobuster dir -u http://10.129.15.72:1337 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q
+```
 
-
-
+{% hint style="info" %}
+dirsearch更快但是会有遗漏，gobuster更详细但是很耗时。
+{% endhint %}
 
 
 

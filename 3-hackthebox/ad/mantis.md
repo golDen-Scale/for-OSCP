@@ -51,7 +51,38 @@ dirsearch -u  http://10.129.111.62:8080 -x 403,404,400
 
 <figure><img src="../../.gitbook/assets/11 (12).png" alt=""><figcaption></figcaption></figure>
 
+* 接下来尝试匿名登录一下目标系统的SMB服务，均无收获：
+
+```bash
+smbclient -N -L //10.129.208.146
+smbmap -H 10.129.208.146
+```
+
+<figure><img src="../../.gitbook/assets/12 (12).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/13 (13).png" alt=""><figcaption></figcaption></figure>
+
+* 尝试使用enum4linux枚举一下，无收获：
+
+```bash
+enum4linux 10.129.208.146
+```
+
+<figure><img src="../../.gitbook/assets/14 (11).png" alt=""><figcaption></figcaption></figure>
+
 *
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

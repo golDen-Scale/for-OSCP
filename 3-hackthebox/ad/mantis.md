@@ -1,6 +1,6 @@
 ---
 icon: check
-description: Hard /
+description: Hard / 枚举 / DC / Kerberos票据伪造 /
 ---
 
 # Mantis
@@ -104,5 +104,7 @@ dirsearch -u  http://10.129.111.62:8080 -x 403,404,400
 
 
 {% hint style="info" %}
+本例在初步扫描阶段从开放的端口来看，基本判定为域控机器，8080端口算是个小小的“兔子洞”，还涉及到枚举、解码、Kerberos票据伪造攻击，确实是属于困难级别。
+
 (本例机器中途重置过，IP地址有所改变，不影响其利用过程和实现结果)
 {% endhint %}

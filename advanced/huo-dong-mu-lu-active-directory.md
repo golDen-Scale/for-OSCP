@@ -32,14 +32,14 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 
 ## 工具
 
-* [ ] BloodHound
-* [ ] Adfind
-* [ ] Admod
-* [ ] LDP
+* [x] BloodHound
+* [x] Adfind
+* [x] Admod
+* [x] LDP
 * [x] Ldapsearch
-* [ ] PingCastle
-* [ ] Kekeo
-* [ ] Rubeus
+* [x] PingCastle
+* [x] Kekeo
+* [x] Rubeus
 * [x] mimikatz
 * [x] Impacket
 
@@ -47,12 +47,12 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 
 * [x] 用户名枚举
 * [x] 密码喷洒
-* [ ] AS-REP Roasting
-* [ ] Kerberoasting
-* [ ] 委派
-* [ ] Kerberos Bronze Bit
-* [ ] NTLM Relay
-* [ ] 滥用DCSync
+* [x] AS-REP Roasting
+* [x] Kerberoasting
+* [x] 委派
+* [x] Kerberos Bronze Bit
+* [x] NTLM Relay
+* [x] 滥用DCSync
 * [x] PTH
 * [x] 定位用户登录的主机
 * [ ] 域林渗透
@@ -79,7 +79,7 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 
 ## 权限维持
 
-* [ ] 票据传递
+* [x] 票据传递
 * [ ] 委派
 * [ ] DCShadow
 * [ ] Skelenton Key
@@ -94,6 +94,10 @@ description: Microsoft Windows / System Administrator / 枚举 / 身份验证 / 
 * [ ] Hook
 * [ ] 注入SSP
 
-## MEMO.
 
+
+
+
+{% hint style="info" %}
 * [https://adsecurity.org/](https://adsecurity.org/)
+{% endhint %}

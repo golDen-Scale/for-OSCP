@@ -19,8 +19,7 @@
 * [✔️ Linux权限提升 - Linux Privilege Escalation](intermediate/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)
 * [✔️ Windows文件传输 - Windows File Transfer](intermediate/windows-wen-jian-chuan-shu-windows-file-transfer.md)
 * [✔️ Windows权限提升 - Windows Privilege Escalation](intermediate/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
-* [✔️ 端口转发/重定向 - Port Forwarding](intermediate/duan-kou-zhuan-fa-zhong-ding-xiang-port-forwarding.md)
-* [✔️ 隧道传输 - Tunneling](intermediate/sui-dao-chuan-shu-tunneling.md)
+* [✔️ 端口重定向和隧道 - Port Redirection and Tunneling](intermediate/duan-kou-zhuan-fa-zhong-ding-xiang-port-forwarding.md)
 
 ## 2️⃣ 2️⃣ 2️⃣ 2️⃣ 高级 - ADVANCED <a href="#advanced" id="advanced"></a>
 

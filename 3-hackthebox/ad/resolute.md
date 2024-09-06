@@ -37,9 +37,9 @@ rpcclient -U '' 10.129.176.63
 
 <figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 之前一直没啥大用的enum4linux这次表现不错，收集到了很多有用的信息，如目标上所有的用户名还有密码策略：
 

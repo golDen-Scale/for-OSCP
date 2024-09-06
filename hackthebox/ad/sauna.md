@@ -34,7 +34,7 @@ gobuster dir -u http://10.129.77.184/ -w /usr/share/wordlists/dirb/common.txt
 
 * dirsearch也没有什么收获：
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用多个工具尝试无密码登录SMB服务，倒是成功了，但是还是无收获：
 

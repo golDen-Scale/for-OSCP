@@ -39,11 +39,11 @@ mget *
 
 <figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 下载到Kali本地后，查看发现都是exe文件和一个压缩包文件，名称是UserInfo，猜测可能包含用户信息：
 
-<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 解压UserInfo.exe.zip，比较感兴趣的有config文件和exe文件：
 

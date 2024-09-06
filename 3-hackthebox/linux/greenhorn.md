@@ -74,7 +74,7 @@ hashcat -m 1700 hashes.txt rockyou.txt
 
 <figure><img src="../../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 从该漏洞脚本中可以确认其上传文件的类型是zip类型，这为后续上传反弹shell做了提示：
 

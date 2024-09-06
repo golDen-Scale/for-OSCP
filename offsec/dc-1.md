@@ -64,9 +64,9 @@ droopescan scan drupal -u http://192.168.221.193:80/
 
 使用Metasploit对目标建立基本的立足点：
 
-<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -38,9 +38,9 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 从CVE-2022-25018的漏洞利用步骤描述得知，可在管理员面板的Static Pages这一项直接编辑页面，插入php代码即可：
 
-<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将反弹shell的php脚本修改好后，把完整的代码复制粘贴到目标系统的编辑框里：
 

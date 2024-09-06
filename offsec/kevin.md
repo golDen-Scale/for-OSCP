@@ -32,7 +32,7 @@ description: Windows - Easy：HP Power Manager / Buffer Overflow
 
 设置远程IP、本地IP、本地端口：
 
-<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SEHLL & ROOT
 

@@ -39,13 +39,15 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 * 同时，8080端口上的robots.txt文件也指向了3个文件/目录：
 
+<figure><img src="../.gitbook/assets/8 (16).png" alt=""><figcaption></figcaption></figure>
 
+* 分别查看后，并没有什么特别的发现。
 
+<figure><img src="../.gitbook/assets/9 (14).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/10 (14).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+* 尝试注册一个新用户，查看其是否有可以被利用的功能：
 
 
 
@@ -65,9 +67,11 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 ### 漏洞查阅
 
+* 查看运行的NodeBB的相关漏洞，因为目前还不知道该应用的具体版本号，所以暂时搁置：
 
+<figure><img src="../.gitbook/assets/11 (13).png" alt=""><figcaption></figcaption></figure>
 
-
+*
 
 
 

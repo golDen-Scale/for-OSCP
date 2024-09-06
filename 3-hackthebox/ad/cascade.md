@@ -72,11 +72,11 @@ smbclient -N -L 10.129.63.72
 ./windapsearch.py -U --full --dc-ip 10.129.63.72
 ```
 
-<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在其输出信息中找到了用户ryan的凭证信息，但是密码是被编码过的：<mark style="color:red;">**ryan : clk0bjVldmE=**</mark>
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 解码，得到明文密码：<mark style="color:red;">**rY4n5eva**</mark>
 
@@ -84,7 +84,7 @@ smbclient -N -L 10.129.63.72
 echo clk0bjVldmE= | base64 -d
 ```
 
-<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 

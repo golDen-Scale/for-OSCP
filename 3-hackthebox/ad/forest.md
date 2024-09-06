@@ -111,17 +111,17 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传sharphound进行信息收集，放入bloodhound中分析各个用户、组成员等之间的关系：
 
-<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/22 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 当前已控制的账户是svc-alfresco，查看最短到域管的路径发现，当前账户属于Service Accounts的成员，而Service Accounts又属于Privileged IT Accounts的成员，Privileged IT Accounts是Account Operators的成员，最后Account Operators的成员又是属于Exchange Windows Permissions的成员：
 

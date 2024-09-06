@@ -92,17 +92,17 @@ dirsearch dir -u http://192.168.180.97:8091 -i 200,300-399
 
 <figure><img src="../.gitbook/assets/20 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/21 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/21 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 阅读该脚本后发现不需要修改什么东西，将该漏洞的利用脚本上传到目标机器中直接执行即可获得shell：
 
-<figure><img src="../.gitbook/assets/22 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/22 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
 * root，获得flag：
 
-<figure><img src="../.gitbook/assets/23 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/23 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/24 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

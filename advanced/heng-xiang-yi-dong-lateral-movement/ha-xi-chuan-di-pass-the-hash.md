@@ -1,5 +1,5 @@
 ---
-description: 基于NTLM认证 / 不需要知道明文密码
+description: 基于NTLM认证 / 不需要知道明文密码 / 较旧的系统
 ---
 
 # ✔️ 哈希传递 - Pass The Hash
@@ -30,8 +30,6 @@ description: 基于NTLM认证 / 不需要知道明文密码
 
 ### Mimikatz
 
-*
-
 ```powershell
 mimikatz.exe
 privilege::debug
@@ -40,19 +38,19 @@ sekurlsa::logonpasswords full
 
 
 
-
-
 ### Impacket
 
+* 几个常用脚本，按实际情况在该工具的/examples目录中选择合适脚本：
 
+<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
+### Crackmapexec
 
-
-
+*
 
 ### Metasploit
 
-
+*
 
 
 

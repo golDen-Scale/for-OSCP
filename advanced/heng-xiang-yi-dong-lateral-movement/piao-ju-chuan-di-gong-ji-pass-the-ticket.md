@@ -17,7 +17,7 @@ description: 适用于在获取目标域内最高权限后的权限维持 / 后�
 
 #### Impacket
 
-* 几个常用脚本，按实际情况在该工具的/example目录中选择合适脚本：
+* 几个常用脚本，按实际情况在该工具的/examples目录中选择合适脚本：
 
 <figure><img src="../../.gitbook/assets/1 (11).png" alt=""><figcaption></figcaption></figure>
 
@@ -103,7 +103,6 @@ event::clear
 # 清除内存中的票据
 kerberos::purge
 # 
-
 ```
 
 ### 其他
@@ -112,6 +111,7 @@ kerberos::purge
 # 查域SID
 whoami /user
 whoami /groups
+# 
 ```
 
 {% hint style="info" %}

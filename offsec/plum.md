@@ -18,7 +18,7 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 查看其Web页面发现是一个CMS系统，并且在页面底部发现了管理员登录面板的入口：
 
-<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 简单猜测弱口令，成功登录：
 

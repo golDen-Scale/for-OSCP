@@ -1,6 +1,6 @@
 # 📝 MEMO.
 
-<img src="https://github.com/golDen-Scale/for-OSCP/blob/main/OSCP.png" width="100"> [![Typing SVG](https://readme-typing-svg.demolab.com/?font=Orbitron\&size=30\&duration=4000\&pause=500\&color=E2580C\&background=FFA30C00\&center=true\&vCenter=true\&width=700\&height=60\&lines=TRY+HARDER+!)](https://git.io/typing-svg)
+![](OSCP.png) [![Typing SVG](https://readme-typing-svg.demolab.com/?font=Orbitron\&size=30\&duration=4000\&pause=500\&color=E2580C\&background=FFA30C00\&center=true\&vCenter=true\&width=700\&height=60\&lines=TRY+HARDER+!)](https://git.io/typing-svg)
 
 ## 备忘录.
 
@@ -14,3 +14,4 @@
 * [x] 时间管理：给每台机器设置一个完成的上限时间，到时间后无论完成与否，立刻换下一台
 * [x] 警惕“兔子洞”！若发现某个漏洞很明显，但是始终利用不了，或是查找不到匹配的漏洞利用时，就该停下来看看自己是否掉进了“兔子洞”。有效的策略就是：**继续前进，继续查找其他的可利用漏洞，不要纠缠，不要纠缠，不要纠缠！！**
 * [x] 端口转发很有用
+* [x] 时刻保持向任何人学习，同时谨记：看，就少BB。

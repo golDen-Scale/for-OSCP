@@ -63,23 +63,19 @@ nc -nvv 10.10.xxx.xxx 4444
 
 #### PLINK.exe&#x20;
 
-<pre class="language-powershell"><code class="lang-powershell">plink.exe
+```powershell
+plink.exe
 # 使用plink.exe来建立一个SSH远程端口转发: 
-<strong>    # 要登录主机的用户名和密码
-</strong>    # [目标IP]:[目标端口]:[本地IP]:[本地端口]
+    # 要登录主机的用户名和密码
+    # [目标IP]:[目标端口]:[本地IP]:[本地端口]
     # 目标IP
 plink.exe -ssh -l 用户名 -pw 密码 -R 192.168..xxx:1234:127.0.0.1:1234 192.168.xxx.xxx
-</code></pre>
+```
 
 #### NETSH
 
-```bash
-// Some code
+```powershell
 ```
-
-
-
-
 
 ## SSH隧道
 
@@ -118,12 +114,13 @@ ssh -N -R 1234:192.168.xxx.xxx:3389 admin@10.10.xxx.xxx
 * 通过 SOCKS 代理转发流量，可以代理访问任意远程主机和端口
 
 ```bash
-// Some code
+# 使用proxychains进行ssh端口转发
+
 ```
 
 ## HTTP隧道
 
-
+*
 
 
 
@@ -131,9 +128,10 @@ ssh -N -R 1234:192.168.xxx.xxx:3389 admin@10.10.xxx.xxx
 
 ## HTTPS隧道
 
-
+*
 
 
 
 ## DNS隧道
 
+*

@@ -80,6 +80,7 @@ plink.exe -ssh -l 用户名 -pw 密码 -R 192.168..xxx:1234:127.0.0.1:1234 192.1
 ## SSH隧道
 
 * 既可以基于Unix系统，又可以基于Windows系统（只要有SSH客户端和服务端即可）
+* 适用于目标内网中只开放了端口22，则可考虑使用SSH隧道
 * 作用&优势：
   * 传输数据加密，转发的流量在加密通道中传输
   * 绕过防火墙/IDS等边界设备
@@ -106,38 +107,38 @@ ssh -N -L 1234:192.168.xxx.xxx:3306 admin@10.10.xx.xxx
 ```bash
 # [本地端口]:[目标IP]:[目标端口]
 ssh -N -R 1234:192.168.xxx.xxx:3389 admin@10.10.xxx.xxx
-# 
 ```
 
 ### SSH动态端口转发
 
-* 通过 SOCKS 代理转发流量，可以代理访问任意远程主机和端口
+* 使用Proxychains进行SSH端口转发
 
 ```bash
-
-
+# 需要编辑proxychains.conf文件，要把SOCKS代理加进去
+vim /etc/proxychains.conf
+socks5 127.0.0.1 1234
+# 用以上的设置进行端口转发
+ssh -N -D 127.0.0.1:1234 admin@10.10.xxx.xxx
+# 此时该端口已经代理了所有通过它的流量，使用proxychains进行后续操作
+proxychains nmap -sT -sV -Pn 192.168.xxx.xxx
+proxychains curl http://192.168.xxx.xxx
 ```
 
-* 使用proxychains进行ssh端口转发
+## HTTP / HTTPS隧道
+
+* 适用于目标内网中若只开放了80、443端口，则可考虑使用HTTP/HTTPS隧道
+
+```bash
+```
+
+## DNS隧道
+
+* 适用于目标内网中只开放了53端口，则可考虑使用DNS隧道
 
 ```bash
 // Some code
 ```
 
-## HTTP隧道
-
-*
-
-
-
-
-
-## HTTPS隧道
-
-*
-
-
-
-## DNS隧道
-
-*
+{% hint style="info" %}
+端口转发/创建隧道的本质是为了将网络流量封装在允许的协议中绕过目标的防火墙等安全限制，具体使用哪种隧道，取决于目标网络实际开放的端口和允许的协议。
+{% endhint %}

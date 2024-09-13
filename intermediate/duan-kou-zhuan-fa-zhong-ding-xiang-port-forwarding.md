@@ -63,13 +63,15 @@ nc -nvv 10.10.xxx.xxx 4444
 
 #### PLINK.exe&#x20;
 
-*
-
-
+```powershell
+// Some code
+```
 
 #### NETSH
 
-*
+```bash
+// Some code
+```
 
 
 
@@ -102,15 +104,18 @@ ssh -N -L 1234:192.168.xxx.xxx:3306 admin@10.10.xx.xxx
 * 允许将远程主机的端口流量转发到本地计算机上的指定端口
 
 ```bash
+# [本地端口]:[目标IP]:[目标端口]
+ssh -N -R 1234:192.168.xxx.xxx:3389 admin@10.10.xxx.xxx
+# 
 ```
 
 ### SSH动态端口转发
 
 * 通过 SOCKS 代理转发流量，可以代理访问任意远程主机和端口
 
-
-
-
+```bash
+// Some code
+```
 
 ## HTTP隧道
 

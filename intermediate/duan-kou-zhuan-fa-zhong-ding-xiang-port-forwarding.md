@@ -64,7 +64,8 @@ nc -nvv 10.10.xxx.xxx 4444
 #### PLINK.exe&#x20;
 
 ```powershell
-// Some code
+plink.exe
+# 
 ```
 
 #### NETSH

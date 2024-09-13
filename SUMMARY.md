@@ -1,6 +1,6 @@
 # Table of contents
 
-## 0️⃣ 0️⃣ 0️⃣ 0️⃣ 基础 - BASIC <a href="#basic" id="basic"></a>
+## 0️⃣ 基础 - BASIC <a href="#basic" id="basic"></a>
 
 * [📝 MEMO.](README.md)
 * [✔️ 命令行 - Commands](basic/ming-ling-hang-commands.md)
@@ -10,7 +10,7 @@
 * [✔️ 内网信息收集 - Internal Network Information Gathering](basic/nei-wang-xin-xi-shou-ji-internal-network-information-gathering.md)
 * [✔️ 升级Shell](basic/sheng-ji-shell.md)
 
-## 1️⃣ 1️⃣ 1️⃣ 1️⃣ 进阶 - INTERMEDIATE <a href="#intermediate" id="intermediate"></a>
+## 1️⃣ 进阶 - INTERMEDIATE <a href="#intermediate" id="intermediate"></a>
 
 * [✔️ SQL注入 - SQL Injection](intermediate/sql-zhu-ru-sql-injection.md)
 * [✔️ SQL注入CheatSheet](intermediate/sql-zhu-ru-cheatsheet.md)
@@ -21,7 +21,7 @@
 * [✔️ Windows权限提升 - Windows Privilege Escalation](intermediate/windows-quan-xian-ti-sheng-windows-privilege-escalation.md)
 * [✔️ 端口重定向和隧道 - Port Redirection and Tunneling](intermediate/duan-kou-zhuan-fa-zhong-ding-xiang-port-forwarding.md)
 
-## 2️⃣ 2️⃣ 2️⃣ 2️⃣ 高级 - ADVANCED <a href="#advanced" id="advanced"></a>
+## 2️⃣ 高级 - ADVANCED <a href="#advanced" id="advanced"></a>
 
 * [✔️ 活动目录 - Active Directory](advanced/huo-dong-mu-lu-active-directory.md)
 * [✔️ 域控制器 - Domain Controller](advanced/yu-kong-zhi-qi-domain-controller.md)
@@ -46,23 +46,23 @@
 
 ## 3️⃣ HackTheBox
 
-* [Windows](3-hackthebox/windows/README.md)
-  * [Blue](3-hackthebox/windows/blue.md)
+* [Windows](hackthebox/windows/README.md)
+  * [Blue](hackthebox/windows/blue.md)
 * [Linux](hackthebox/linux/README.md)
   * [✔️ permX](hackthebox/linux/permx.md)
-  * [✔️ Greenhorn](3-hackthebox/linux/greenhorn.md)
+  * [✔️ Greenhorn](hackthebox/linux/greenhorn.md)
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
   * [✔️ Sauna](hackthebox/ad/sauna.md)
   * [✔️ Search](hackthebox/ad/search.md)
   * [✔️ Fuse](hackthebox/ad/fuse.md)
-  * [✔️ Resolute](3-hackthebox/ad/resolute.md)
-  * [✔️ Cascade](3-hackthebox/ad/cascade.md)
-  * [✔️ Support](3-hackthebox/ad/support.md)
-  * [✔️ Forest](3-hackthebox/ad/forest.md)
-  * [✔️ Blackfield](3-hackthebox/ad/blackfield.md)
-  * [✔️ APT](3-hackthebox/ad/apt.md)
-  * [Mantis](3-hackthebox/ad/mantis.md)
+  * [✔️ Resolute](hackthebox/ad/resolute.md)
+  * [✔️ Cascade](hackthebox/ad/cascade.md)
+  * [✔️ Support](hackthebox/ad/support.md)
+  * [✔️ Forest](hackthebox/ad/forest.md)
+  * [✔️ Blackfield](hackthebox/ad/blackfield.md)
+  * [✔️ APT](hackthebox/ad/apt.md)
+  * [Mantis](hackthebox/ad/mantis.md)
 
 ## 4️⃣ OFFSEC
 
@@ -76,10 +76,10 @@
 * [✔️ Plum](offsec/plum.md)
 * [✔️ Walla](offsec/walla.md)
 * [✔️ PC](offsec/pc.md)
-* [Wombo](4-offsec/wombo.md)
-* [Nibbles](4-offsec/nibbles.md)
+* [✔️ Wombo](offsec/wombo.md)
+* [✔️ Nibbles](offsec/nibbles.md)
 
-## 5️⃣ 5️⃣ 5️⃣ 5️⃣ 工具 - TOOLS <a href="#tools" id="tools"></a>
+## 5️⃣ 工具 - TOOLS <a href="#tools" id="tools"></a>
 
 * [📝 在线工具 - Online Tools](tools/zai-xian-gong-ju-online-tools.md)
 * [✔️ 扫描](tools/scanning/README.md)
@@ -99,7 +99,7 @@
 * [✔️ Proxychains](tools/proxychains.md)
 * [✔️ CrackMapExec](tools/crackmapexec.md)
 
-## 6️⃣ 6️⃣ 6️⃣ 6️⃣ 漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
+## 6️⃣  漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
 
 * [✔️ 提权漏洞利用](vulnerabilities/ti-quan-lou-dong-li-yong.md)
 * [✔️ 域内漏洞利用](vulnerabilities/yu-nei-lou-dong-li-yong/README.md)
@@ -111,6 +111,6 @@
   * [✔️ Windows Print Spooler权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/windows-print-spooler-quan-xian-ti-sheng.md)
   * [✔️ CVE-2022-33679权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/cve202233679-quan-xian-ti-sheng.md)
 
-## 7️⃣ 7️⃣ 7️⃣ 7️⃣ 其他 - Others <a href="#others" id="others"></a>
+## 7️⃣ 其他 - Others <a href="#others" id="others"></a>
 
 * [📝 辅助学习资料](others/fu-zhu-xue-xi-zi-liao.md)

@@ -114,8 +114,14 @@ ssh -N -R 1234:192.168.xxx.xxx:3389 admin@10.10.xxx.xxx
 * 通过 SOCKS 代理转发流量，可以代理访问任意远程主机和端口
 
 ```bash
-# 使用proxychains进行ssh端口转发
 
+
+```
+
+* 使用proxychains进行ssh端口转发
+
+```bash
+// Some code
 ```
 
 ## HTTP隧道

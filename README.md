@@ -1,6 +1,6 @@
 # 📝 MEMO.
 <p>
-  <img width="200" src="https://github.com/golDen-Scale/for-OSCP/blob/main/OSCP.png" />  
+  <img width="140" src="https://github.com/golDen-Scale/for-OSCP/blob/main/OSCP.png" />  
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=30&pause=500&color=E2580C&center=true&vCenter=true&width=435&lines=Try+Harder+!" alt="Typing SVG" /></a>
 </p>
 

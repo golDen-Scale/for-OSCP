@@ -113,4 +113,4 @@
 
 ## 7️⃣ 7️⃣ 其他 - Others <a href="#others" id="others"></a>
 
-* [📝 辅助学习资料](others/fu-zhu-xue-xi-zi-liao.md)
+* [📝 辅助资料](others/fu-zhu-xue-xi-zi-liao.md)

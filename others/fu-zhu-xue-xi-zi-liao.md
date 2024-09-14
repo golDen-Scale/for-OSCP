@@ -1,21 +1,10 @@
-# 📝 辅助学习资料
+# 📝 辅助资料
 
-## AD
+## 报告模板
 
-* [https://www.youtube.com/playlist?list=PLk6vOUIjcauXQy0xJ9zrf4B99XkicA8cO](https://www.youtube.com/playlist?list=PLk6vOUIjcauXQy0xJ9zrf4B99XkicA8cO)
-*
+* [https://github.com/noraj/OSCP-Exam-Report-Template-Markdown](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown)
 
+## CheatSheet
 
-
-## Windows权限提升
-
-*
-
-
-
-
-
-## Linux权限提升
-
-* [基本Linux权限提升](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-*
+* [https://pentestmonkey.net/](https://pentestmonkey.net/)
+* [https://github.com/OlivierLaflamme/Cheatsheet-God](https://github.com/OlivierLaflamme/Cheatsheet-God)

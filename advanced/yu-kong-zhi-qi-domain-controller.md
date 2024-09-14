@@ -62,9 +62,9 @@ description: 掌握域控制器意味着可以对整个域内的资源进行全�
 
 ## 常见的、典型的渗透手法
 
-* [ ] PTH（Pass-The-hash）
-* [ ] Golden Ticket（金票）
-* [ ] Kerberos欺骗
-* [ ] DCSync攻击
+* [x] PTH（Pass-The-hash）
+* [x] Golden Ticket（金票）
+* [x] Kerberos欺骗
+* [x] DCSync攻击
 * [ ] Rubeus攻击
 

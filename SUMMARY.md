@@ -13,7 +13,6 @@
 ## 1️⃣ 进阶 - INTERMEDIATE <a href="#intermediate" id="intermediate"></a>
 
 * [✔️ SQL注入 - SQL Injection](intermediate/sql-zhu-ru-sql-injection.md)
-* [✔️ SQL注入CheatSheet](intermediate/sql-zhu-ru-cheatsheet.md)
 * [✔️ 密码攻击 - Password Attacks](intermediate/mi-ma-gong-ji-password-attacks.md)
 * [✔️ Linux文件传输 - Linux File Transfers](intermediate/linux-wen-jian-chuan-shu-linux-file-transfers.md)
 * [✔️ Linux权限提升 - Linux Privilege Escalation](intermediate/linux-quan-xian-ti-sheng-linux-privilege-escalation.md)

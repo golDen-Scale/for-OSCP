@@ -15,6 +15,10 @@ description: Hard / Linux /
 nmap -sC -sV -p- -oA nibbles 192.168.218.47 --open
 ```
 
+{% hint style="info" %}
+网络很差时扫描出奇的慢，但是简单扫描容易遗漏掉开放端口...
+{% endhint %}
+
 * 扫描的同时可尝试直接使用IP地址登录查看是否有Web页面，很幸运有，但是好像没有什么特别的信息。
 
 <figure><img src="../.gitbook/assets/1 (12).png" alt=""><figcaption></figcaption></figure>

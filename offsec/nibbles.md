@@ -23,15 +23,19 @@ nmap -sC -sV -p- -oA nibbles 192.168.218.47 --open
 
 <figure><img src="../.gitbook/assets/3 (12).png" alt=""><figcaption></figcaption></figure>
 
-* 使用dirsearch检查是否有隐藏文件/目录：
+<figure><img src="../.gitbook/assets/5 (12).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/6 (12).png" alt=""><figcaption></figcaption></figure>
+
+* 使用dirsearch检查是否有隐藏文件/目录，没有：
 
 ```bash
 dirsearch -u  http://192.168.218.47 -x 403,404,400
 ```
 
+<figure><img src="../.gitbook/assets/4 (12).png" alt=""><figcaption></figcaption></figure>
 
-
-
+*
 
 
 

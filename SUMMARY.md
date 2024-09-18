@@ -90,6 +90,7 @@
 * [✔️ 密码爆破](tools/bruteforce/README.md)
   * [✔️ Hashcat](tools/bruteforce/hashcat.md)
   * [✔️ John The Ripper](tools/bruteforce/john-the-ripper.md)
+  * [✔️ Kerberoast](tools/bruteforce/kerberoast.md)
   * [✔️ Medusa](tools/bruteforce/medusa.md)
   * [✔️ Hydra](tools/bruteforce/hydra.md)
 * [✔️ 身份验证](tools/authentication/README.md)

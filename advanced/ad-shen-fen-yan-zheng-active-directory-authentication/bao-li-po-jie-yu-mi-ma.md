@@ -20,7 +20,11 @@ description: 针对密码哈希值 / 针对Kerberos票据 / 获取域内目标�
 * 暴破Hash
 
 ```bash
-// Some code
+# 字典文件实际情况选择
+john hash.txt rockyou.txt
+# 也可以先查查格式，再指定格式暴破
+john --list=formats
+john --formats=nt hash.txt rockyou.txt
 ```
 
 * 暴破票据
@@ -41,4 +45,13 @@ description: 针对密码哈希值 / 针对Kerberos票据 / 获取域内目标�
 
 ```bash
 // Some code
+```
+
+### Kerberoast
+
+* 暴破Kerberos票据，常用脚本：**tgsrepcrack.py**
+
+```bash
+# 先用mimikatz提取出Kerberos票据（.kirbi文件）
+
 ```

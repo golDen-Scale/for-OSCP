@@ -20,7 +20,7 @@ description: 针对密码哈希值 / 针对Kerberos票据 / 获取域内目标�
 * 暴破Hash
 
 ```bash
-# 字典文件实际情况选择
+# 字典文件根据实际情况选择
 john hash.txt rockyou.txt
 # 也可以先查查格式，再指定格式暴破
 john --list=formats
@@ -30,7 +30,7 @@ john --formats=nt hash.txt rockyou.txt
 * 暴破票据
 
 ```bash
-// Some code
+john --format=krb5tgs hash.txt rockyou.txt
 ```
 
 ### Hashcat
@@ -38,13 +38,14 @@ john --formats=nt hash.txt rockyou.txt
 * 暴破Hash
 
 ```bash
-// Some code
+# 对应的模式可在hashcat的example hashes上找
+hashcat -m 1000 -a 0 hash.txt rockyou.txt
 ```
 
 * 暴破票据
 
 ```bash
-// Some code
+hashcat -m 13100 -a hash.txt rockyou.txt
 ```
 
 ### Kerberoast

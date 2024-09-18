@@ -50,5 +50,5 @@ mimikatz.exe
 ```
 
 {% hint style="info" %}
-
+Kerberoasting攻击在内网渗透中很常见，
 {% endhint %}

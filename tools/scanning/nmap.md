@@ -6,17 +6,16 @@ description: 信息收集 / 信息枚举 / 漏洞检测
 
 ## 信息收集
 
-<pre class="language-sh"><code class="lang-sh"><strong>// OSCP常用
-</strong><strong>nmap -sV -sC -p- -oA 输出文件名 [Target IP] --open
-</strong></code></pre>
+```sh
+# 常用全端口详细扫描
+nmap -sV -sC -p- -oA 输出文件名 192.168.xxx.xxx --open
+```
 
 ## 指纹识别&版本探测
 
 ```bash
-// Some code
+#
 ```
-
-
 
 ## 渗透测试
 
@@ -42,39 +41,17 @@ nmap -p 445 --script smb-vuln-ms17-010 目标IP
 nmap -p 445 --script=smb-vuln* --script-args=unsafe=1 目标IP
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 漏洞检测
 
 ```bash
 // Some code
 ```
 
-
-
-
-
 ## 数据库
 
 ```bash
 // Some code
 ```
-
-
-
-
 
 ## 其他（非OSCP内容）
 
@@ -87,10 +64,6 @@ nmap -sS -p- -sV -oA 文件名 目标IP
 nmap -sS -p- -sV -A --data-length 20 --randomize-hosts --badsum --spoof-mac Cisco -T0 -Pn -oN 输出.txt 目标IP
 
 ```
-
-
-
-
 
 {% hint style="info" %}
 隐形扫描不隐形，请在获得授权的情况下进行测试。

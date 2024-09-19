@@ -85,6 +85,7 @@
 * [✔️ 扫描](tools/scanning/README.md)
   * [✔️ Nmap](tools/scanning/nmap.md)
   * [✔️ Dirsearch](tools/scanning/dirsearch.md)
+  * [✔️ Wfuzz](tools/scanning/wfuzz.md)
 * [✔️ 信息枚举](tools/information-gathering/README.md)
   * [✔️ Kerbrute](tools/information-gathering/kerbrute.md)
 * [✔️ 密码爆破](tools/bruteforce/README.md)

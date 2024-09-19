@@ -1,5 +1,5 @@
 ---
-description: 信息收集、信息枚举、漏洞检测
+description: 信息收集 / 信息枚举 / 漏洞检测
 ---
 
 # ✔️ Nmap

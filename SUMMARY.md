@@ -31,7 +31,7 @@
   * [✔️ 查找当前已登录的用户账户](advanced/mei-ju-ad-huan-jing-active-directory-enumeration/cha-zhao-dang-qian-yi-deng-lu-de-yong-hu-zhang-hu.md)
   * [✔️ 通过服务主体名进行枚举（SPN）](advanced/mei-ju-ad-huan-jing-active-directory-enumeration/tong-guo-fu-wu-zhu-ti-ming-jin-hang-mei-ju-spn.md)
 * [✔️ AD身份验证 - Active Directory Authentication](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/README.md)
-  * [✔️ 获取域内有效凭证](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/huo-qu-yu-nei-you-xiao-ping-zheng.md)
+  * [✔️ 枚举域内有效凭证](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/huo-qu-yu-nei-you-xiao-ping-zheng.md)
   * [✔️ 暴力破解域内账户密码](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/bao-li-po-jie-yu-mi-ma.md)
   * [✔️ AS-REP Roasting攻击](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/asrep-roasting-gong-ji.md)
   * [✔️ Kerberoasting攻击](advanced/ad-shen-fen-yan-zheng-active-directory-authentication/kerberoasting-gong-ji.md)

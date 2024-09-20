@@ -10,7 +10,7 @@ description: 基于Kerberos认证 / NTLM认证 / 枚举用户名 + 密码喷洒 
 2. 对这些用户名进行密码喷洒
 3. 获得有效域内用户凭证：
    1. 明文密码
-   2. 密码Hash，
+   2. 密码Hash
 
 ## 获取明文身份凭证
 
@@ -22,7 +22,7 @@ description: 基于Kerberos认证 / NTLM认证 / 枚举用户名 + 密码喷洒 
 
 ### LSASS Process
 
-
+*
 
 
 

@@ -30,7 +30,7 @@ nmap -sC -sV -p- -oA fuse 10.129.2.5 --open
 
 <figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/8 (13).png" alt=""><figcaption></figcaption></figure>
 

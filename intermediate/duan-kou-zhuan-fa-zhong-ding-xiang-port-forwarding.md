@@ -1,5 +1,5 @@
 ---
-description: 用于绕过防火墙和访问控制策略，以实现对目标系统内部资源的访问  / 持久访问
+description: 用于绕过防火墙和访问控制策略，以实现对目标系统内部资源的访问  / 实现持久访问
 ---
 
 # ✔️ 端口重定向和隧道 - Port Redirection and Tunneling

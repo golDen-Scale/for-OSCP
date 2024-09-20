@@ -37,7 +37,7 @@ rpcclient -U '' 10.129.176.63
 
 <figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -47,9 +47,9 @@ rpcclient -U '' 10.129.176.63
 enum4linux 10.129.176.63
 ```
 
-<figure><img src="../../.gitbook/assets/8 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 后面复盘时意识到，此处密码策略中的Account Lockout Threshold: None，这意味着可以是用密码暴破而不用担心账户被锁定，是否有意引导我进“兔子洞”？！因为本例中的所有凭证都无需暴破。

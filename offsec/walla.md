@@ -36,7 +36,7 @@ dirsearch dir -u http://192.168.180.97:8091 -i 200,300-399
 
 * 登录成功，并且发现其版本号信息：
 
-<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/8 (6).png" alt=""><figcaption></figcaption></figure>
 

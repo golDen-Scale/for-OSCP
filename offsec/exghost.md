@@ -57,11 +57,11 @@ file backup
 * 已成功上传了一个testme.jpg的图片
 * 使用的是<mark style="color:red;">**ExifTool**</mark>，其版本号为：<mark style="color:red;">**12.23**</mark>
 
-<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 尝试查找ExifTool 12.23的公开已知漏洞，发现确实有一个任意代码执行的漏洞，将其下载后发现是一个用于将反弹shell的payload写入一个jpg文件的脚本：
 

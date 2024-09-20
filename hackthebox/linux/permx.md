@@ -52,7 +52,7 @@ wfuzz -c -u http://permx.htb -H "Host:FUZZ.permx.htb" -w subdomains-top1million-
 gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 ```
 
-<figure><img src="../../.gitbook/assets/8 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 有好几个文件都值得关注一下：
   * \`/documentation\`
@@ -60,7 +60,7 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
   * \`/web.config\`
 * 查看\`/robots.txt\`可得知：
 
-<figure><img src="../../.gitbook/assets/9 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 进入\`/documentation\`页面后，发现其运行的chamilo应用程序的版本号：1.11
 

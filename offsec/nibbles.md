@@ -1,6 +1,6 @@
 ---
 icon: check
-description: Hard / Linux /
+description: Medium / Linux / PostgreSQL
 ---
 
 # ✔️ Nibbles
@@ -12,12 +12,10 @@ description: Hard / Linux /
 * 使用Nmap对目标系统的开放端口进行扫描：
 
 ```bash
-nmap -sC -sV -p- -oA nibbles 192.168.218.47 --open
+nmap -sC -sV -p- -oA nibbles 192.168.215.47 --open
 ```
 
-{% hint style="info" %}
-网络很差时扫描出奇的慢，但是简单扫描容易遗漏掉开放端口...
-{% endhint %}
+<figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
 
 * 扫描的同时可尝试直接使用IP地址登录查看是否有Web页面，很幸运有，但是好像没有什么特别的信息。
 
@@ -39,13 +37,19 @@ dirsearch -u  http://192.168.218.47 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/4 (12).png" alt=""><figcaption></figcaption></figure>
 
-*
+* 根据Nmap的扫描结果，发现21端口正运行着FTP服务，尝试匿名登录，失败：
 
+```bash
+ftp 192.168.215.47
+```
 
+<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
+* 在5437端口上正在运行的是PostgreSQL 11.3-11.9版本的服务，搜索公开已知的漏洞发现了一个远程命令执行的漏洞正好适用于当前版本：
 
+<figure><img src="../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
 
-
+* 下载下来查看脚本
 
 
 

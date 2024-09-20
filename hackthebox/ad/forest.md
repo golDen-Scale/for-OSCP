@@ -59,7 +59,7 @@ enum4linux 10.129.154.107
 ./kerbrute_linux_amd64 username --dc 10.129.154.107 -d htb.local username.txt
 ```
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 

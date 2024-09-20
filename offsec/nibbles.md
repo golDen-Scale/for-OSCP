@@ -45,51 +45,24 @@ ftp 192.168.215.47
 
 <figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
+### 漏洞查阅
+
 * 在5437端口上正在运行的是PostgreSQL 11.3-11.9版本的服务，搜索公开已知的漏洞发现了一个远程命令执行的漏洞正好适用于当前版本：
 
 <figure><img src="../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
 
-* 下载下来查看脚本
+* 下载下来查看脚本使用说明：
 
+```bash
+searchsploit -m 50847.py
+python3 50847.py -h
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 漏洞查阅
-
-
-
-
-
-
-
-
+<figure><img src="../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
-
+*
 
 
 

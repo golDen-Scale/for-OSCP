@@ -88,7 +88,7 @@ uname -a
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 

@@ -61,7 +61,7 @@ enum4linux 10.129.176.63
 
 * 将刚刚收集到的所有用户名全部整理成一份username.txt文件，待后续使用：
 
-<figure><img src="../../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 用Kerbrute先过一遍这个username列表，看看哪些用户名是域内有效的。29个用户名25个有效，太多了，看起来不太对，应该不是这么用的：
 

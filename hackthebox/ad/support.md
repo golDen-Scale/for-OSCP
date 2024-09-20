@@ -59,7 +59,7 @@ mget *
 enum4linux 10.129.230.181
 ```
 
-<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * smbmap也没有收获：
 

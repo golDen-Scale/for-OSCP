@@ -69,7 +69,7 @@ file backup
 searchsploit exiftool 12.23
 ```
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

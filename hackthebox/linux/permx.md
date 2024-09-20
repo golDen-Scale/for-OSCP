@@ -64,7 +64,7 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 
 * 进入\`/documentation\`页面后，发现其运行的chamilo应用程序的版本号：1.11
 
-<figure><img src="../../.gitbook/assets/10 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 接下来依次查看了各个隐藏文件/目录的相关页面，信息如下：
 

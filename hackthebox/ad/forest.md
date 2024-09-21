@@ -79,11 +79,11 @@ enum4linux 10.129.154.107
 hashcat -m 18200 hashes.txt rockyou.txt
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
@@ -96,7 +96,7 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 
 * 成功登录，并找到了第一个flag：
 
-<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/18 (7).png" alt=""><figcaption></figcaption></figure>
 

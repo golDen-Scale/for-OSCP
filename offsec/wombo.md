@@ -45,17 +45,17 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/10 (14).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 尝试注册一个新用户，查看其是否有可以被利用的功能，也没有任何收获：
 
 <figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
@@ -65,9 +65,9 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 * 目前看来，两个Web相关的端口没有任何发现。6379端口运行的是Redis 5.0.9，通过查找得到一个远程执行的公开漏洞：
 
-<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 因为从exploitDB中搜索出的相关漏洞是使用的Metasploit，本例决定手动执行漏洞利用。

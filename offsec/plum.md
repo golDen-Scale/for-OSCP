@@ -66,9 +66,9 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 本例并没有常规的利用系统漏洞进行提权的操作，而是在查找local.txt的过程中意外发现了root账户的明文密码，因此直接切换到root账户，获取2个flag:
 
-<figure><img src="../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

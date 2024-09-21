@@ -57,7 +57,7 @@ enum4linux 10.129.176.63
 
 * 在enum4linux的输出结果中，就已经找到了一个有效凭证：<mark style="color:red;">**Marko Novak : Welcome123!**</mark>
 
-<figure><img src="../../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将刚刚收集到的所有用户名全部整理成一份username.txt文件，待后续使用：
 

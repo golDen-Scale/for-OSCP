@@ -61,9 +61,9 @@ enum4linux 10.129.154.107
 
 <figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用Impacket的脚本GetNPUsers.py尝试获取每个用户的哈希值：
 

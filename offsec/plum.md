@@ -56,9 +56,9 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 成功获得反弹shell：
 
-<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

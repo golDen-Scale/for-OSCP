@@ -62,9 +62,17 @@ python3 50847.py -h
 
 ### 漏洞利用
 
+* 脚本利用始终失败，但是该端口运行的postgresql服务有弱口令登录，用上述脚本中的默认凭证可以成功登录该服务：
+
+<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+
+```bash
+psql -h 192.168.210.47 -p 5437 -U postgres
+```
+
+<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+
 *
-
-
 
 
 

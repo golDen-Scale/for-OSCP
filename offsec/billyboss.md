@@ -46,13 +46,13 @@ nmap -sC -sV -p- -oA billyboss 192.168.250.61
 
 * 阅读该脚本后，发现几个需要修改的地方：
 
-<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 但是在之前的信息枚举的过程中完全没有发现任何可利用用户凭证信息，所以决定使用Hydra进行爆破：
 
 1. 先用BurpSuite拦截一下POST表单查看路径和用户名、密码处的格式：
 
-<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2. 用户名密码处用Base64编码了，在构造hydra命令时应注意用:username=<mark style="color:red;">**^USER64^**</mark>spassw0rd=<mark style="color:red;">**^PASS64^**</mark>：
 

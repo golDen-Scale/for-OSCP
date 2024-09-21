@@ -52,7 +52,7 @@ smbclient -N -L 10.129.63.72
 
 <figure><img src="../../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 域组和域成员关系：
 

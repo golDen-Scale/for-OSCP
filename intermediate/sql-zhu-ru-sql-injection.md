@@ -2,7 +2,7 @@
 
 ## PostgreSQL
 
-### CVE-2019-9193
+### CVE-2019-9193 命令执行
 
 ```bash
 # 登录了postgres之后 (默认凭证postgres:postgres)

@@ -4,6 +4,7 @@
 
 * [📝 MEMO.](README.md)
 * [✔️ 命令行 - Commands](basic/ming-ling-hang-commands.md)
+* [✔️ 数据库命令](basic/shu-ju-ku-ming-ling.md)
 * [✔️ Shell脚本编程 - Shell Scripting](basic/shell-jiao-ben-bian-cheng-shell-scripting.md)
 * [✔️ 端口和服务 - Ports and Services](basic/duan-kou-he-fu-wu-ports-and-services.md)
 * [✔️ 信息收集和枚举 - Information Gathering](basic/xin-xi-shou-ji-he-mei-ju-information-gathering.md)

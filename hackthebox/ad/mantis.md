@@ -15,7 +15,7 @@ description: Hard / 枚举 / DC / Kerberos票据伪造 /
 nmap -sC -sV -p- -oA mantis 10.129.40.77 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/2 (9).png" alt=""><figcaption></figcaption></figure>
 

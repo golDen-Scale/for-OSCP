@@ -18,15 +18,17 @@ nmap -sC -sV -p- -oA image 192.168.210.178 --open
 
 * 根据尝试上传图片的返回信息，目标系统只接受后缀为JPEG和PNG格式的图片文件：
 
+<figure><img src="../.gitbook/assets/3 (13).png" alt=""><figcaption></figcaption></figure>
 
+* 上传成功一个测试图片后，发现返回了当前正在运行的ImageMagick的版本号：6.9.6-4
 
+<figure><img src="../.gitbook/assets/4 (13).png" alt=""><figcaption></figcaption></figure>
 
+* 搜索公开已知的漏洞发现有一个命令注入的漏洞：
 
+<figure><img src="../.gitbook/assets/5 (13).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+*
 
 
 

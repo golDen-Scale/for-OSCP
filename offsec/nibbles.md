@@ -15,7 +15,7 @@ description: Medium / Linux / PostgreSQL命令执行 / CVE-2019-9193
 nmap -sC -sV -p- -oA nibbles 192.168.215.47 --open
 ```
 
-<figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 扫描的同时可尝试直接使用IP地址登录查看是否有Web页面，很幸运有，但是好像没有什么特别的信息。
 
@@ -43,13 +43,13 @@ dirsearch -u  http://192.168.218.47 -x 403,404,400
 ftp 192.168.215.47
 ```
 
-<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
 * 在5437端口上正在运行的是PostgreSQL 11.3-11.9版本的服务，搜索公开已知的漏洞发现了一个远程命令执行的漏洞正好适用于当前版本：
 
-<figure><img src="../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 下载下来查看脚本使用说明：
 
@@ -58,27 +58,27 @@ searchsploit -m 50847.py
 python3 50847.py -h
 ```
 
-<figure><img src="../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
 * 脚本利用始终失败，但是该端口运行的postgresql服务有弱口令登录，用上述脚本中的默认凭证可以成功登录该服务：
 
-<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 psql -h 192.168.210.47 -p 5437 -U postgres
 ```
 
-<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 根据上述搜索出的利用脚本得知漏洞为CVE-2019-9193，搜索找到可手动利用的步骤：
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 验证结果说明目标确实存在着命令执行漏洞：
 

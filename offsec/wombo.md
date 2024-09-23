@@ -21,9 +21,9 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 
 * 通过扫描结果发现了2个运行web的端口：80和8080，80端口运行的是一个nginx的web服务器，8080端口运行的是一个名为NodeBB的CMS Web应用：
 
-<figure><img src="../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 分别针对80和8080端口进行隐藏文件/目录扫描，发现8080端口扫出了很多东西：
 
@@ -31,9 +31,9 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 ```
 
-<figure><img src="../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 同时，8080端口上的robots.txt文件也指向了3个文件/目录：
 
@@ -45,7 +45,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/10 (14).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
@@ -53,9 +53,9 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 * 尝试注册一个新用户，查看其是否有可以被利用的功能，也没有任何收获：
 
-<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 

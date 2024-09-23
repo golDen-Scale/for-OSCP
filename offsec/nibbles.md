@@ -99,7 +99,7 @@ DROP TABLE IF EXISTS cmd_exec;
 
 <figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

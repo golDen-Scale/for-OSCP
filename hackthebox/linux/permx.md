@@ -102,7 +102,7 @@ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/shell.php'
 
 * 这里使用的是一个我在靶机训练中常用的一个反弹shell的php脚本（pentestmonkey），修改脚本中kali端的IP及监听端口后，即可上传：
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 监听好自己设置的端口，上传该脚本等待回连：
 

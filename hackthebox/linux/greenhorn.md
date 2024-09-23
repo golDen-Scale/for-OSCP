@@ -116,9 +116,9 @@ zip revershell.zip revershell.php
 
 * 在manage modules中的install a module中尝试上传反弹shell：
 
-<figure><img src="../../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/26 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/27 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 至此，上传成功后即可获得回连的shell：
 

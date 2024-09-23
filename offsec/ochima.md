@@ -20,13 +20,13 @@ nmap -sC -sV -p- -oA ochima 192.168.228.32 --open
 
 <figure><img src="../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
 
-* 可检查一下80端口上是否有隐藏文件/目录：
+* 可检查一下80端口上是否有隐藏文件/目录，啥也没有：
 
 ```bash
 dirsearch -u  http://192.168.228.32 -x 403,404,400
 ```
 
-
+<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
 *
 

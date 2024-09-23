@@ -18,7 +18,7 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 * 检查80端口上的内容，发现正在运行的服务及其版本号为：htmlawed 1.2.5
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 

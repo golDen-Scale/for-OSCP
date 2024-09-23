@@ -18,7 +18,7 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 * 将IP和域名添加到/etc/hosts文件后，开始检查80端口上的内容，发现了目标正在运行的软件pluck和admin登录的入口：
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 进入admin面板后发现了pluck的版本（4.7.18），随后尝试几个弱口令均失败：
 

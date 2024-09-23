@@ -16,7 +16,7 @@ nmap -sC -sV -p- -oA resolute 10.129.176.63 --open
 
 <figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Nmap扫描结果中已获得了目标域名：<mark style="color:red;">**megabank.local**</mark>&#x20;
 

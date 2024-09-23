@@ -16,7 +16,7 @@ nmap -sC -sV -p- -oA fuse 10.129.2.5 --open
 
 <figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将域名和IP写入/etc/hosts文件：
 

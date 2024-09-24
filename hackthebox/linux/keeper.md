@@ -14,7 +14,7 @@ description: Easy /
 nmap -sC -sV -p- -oA keeper 10.129.8.148 --open
 ```
 
-
+<figure><img src="../../.gitbook/assets/6 (14).png" alt=""><figcaption></figcaption></figure>
 
 * 在扫描的同时可尝试查看目标的80端口上是否有内容，发现有一个链接，指向域名tickets.keeper.htb，将其添加到hosts文件里：
 

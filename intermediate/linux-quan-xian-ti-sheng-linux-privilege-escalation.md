@@ -8,10 +8,9 @@ description: 通过收集目标系统本地信息，可以辅助查找到合适�
 
 ### 自动化工具收集
 
-1. LinPEAS
-2.
-
-
+1. LinPEAS.sh
+2. LinEnum.sh
+3. linux-exploit-suggerster.sh
 
 ### 手工收集
 
@@ -228,10 +227,4 @@ find / -name netcat*
 find / -name tftp*
 find / -name ftp
 ```
-
-####
-
-
-
-
 

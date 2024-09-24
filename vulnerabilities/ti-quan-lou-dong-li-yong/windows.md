@@ -6,11 +6,19 @@ description: Windows系统中常见的提权漏洞
 
 ## 利用内核漏洞（Kernel Exploits）
 
+### 绕过UAC
+
+*
 
 
 
 
 
+## 计划任务（Schedule Tasks）
+
+## 可执行文件（Executable Files）
+
+## 服务权限（Service Permissions）
 
 ## 密码搜索（Password Hunting）
 
@@ -32,31 +40,19 @@ description: Windows系统中常见的提权漏洞
 
 
 
-## 可执行文件（Executable Files）
 
 
 
 
 
-## 计划任务（Schedule Tasks）
 
 
 
 
 
-## DLL劫持（DLL Hijacking）
 
 
 
-
-
-## 服务权限（Service Permissions）
-
-
-
-
-
-## WSL
 
 
 

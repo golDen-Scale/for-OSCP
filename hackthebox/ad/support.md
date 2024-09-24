@@ -103,7 +103,7 @@ file UserInfo.exe
 
 * 在protected目录下的.cctor()中找到编码后的密码：
 
-<figure><img src="../../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * python IDLE终端解码后得到明文密码：'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz'
 

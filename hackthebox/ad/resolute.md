@@ -109,7 +109,7 @@ evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 
 <figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

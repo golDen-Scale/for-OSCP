@@ -22,7 +22,17 @@ nmap -sC -sV -p- -oA keeper 10.129.229.41 --open
 
 <figure><img src="../../.gitbook/assets/1 (16).png" alt=""><figcaption></figcaption></figure>
 
-* 再次点击链接，
+* 再次点击链接，会跳转到[http://tickets.keeper.htb/rt/](http://tickets.keeper.htb/rt/)，一个登录界面：
+
+<figure><img src="../../.gitbook/assets/2 (13).png" alt=""><figcaption></figcaption></figure>
+
+* 该界面底部有当前正在运行的服务及其版本号：RT 4.4.4，尝试了几个弱口令均失败
+
+
+
+
+
+
 
 
 

@@ -110,7 +110,9 @@
 
 ## 6️⃣ 漏洞 - Vulnerabilities <a href="#vulnerabilities" id="vulnerabilities"></a>
 
-* [✔️ 提权漏洞利用](vulnerabilities/ti-quan-lou-dong-li-yong.md)
+* [✔️ 提权漏洞利用](vulnerabilities/ti-quan-lou-dong-li-yong/README.md)
+  * [✔️ Windows](vulnerabilities/ti-quan-lou-dong-li-yong/windows.md)
+  * [✔️ Linux](vulnerabilities/ti-quan-lou-dong-li-yong/linux.md)
 * [✔️ 域内漏洞利用](vulnerabilities/yu-nei-lou-dong-li-yong/README.md)
   * [✔️ MS14-068 权限提升](vulnerabilities/yu-nei-lou-dong-li-yong/ms14068-quan-xian-ti-sheng.md)
   * [✔️ CVE-20119-1040 NTLM MIC绕过](vulnerabilities/yu-nei-lou-dong-li-yong/cve201191040-ntlm-mic-rao-guo.md)

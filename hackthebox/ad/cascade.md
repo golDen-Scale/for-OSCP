@@ -84,7 +84,7 @@ smbclient -N -L 10.129.63.72
 echo clk0bjVldmE= | base64 -d
 ```
 
-<figure><img src="../../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 

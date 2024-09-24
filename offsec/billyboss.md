@@ -78,9 +78,9 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 
 * nc64.exe程序上传成功：
 
-<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 

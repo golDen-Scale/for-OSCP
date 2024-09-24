@@ -102,7 +102,7 @@ evil-winrm -i 10.129.95.180 -u fsmith -p Thestrokes23
 
 <figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -116,7 +116,7 @@ net user /domain
 net user fsmith /domain
 ```
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

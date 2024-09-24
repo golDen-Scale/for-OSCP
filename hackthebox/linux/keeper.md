@@ -34,51 +34,34 @@ nmap -sC -sV -p- -oA keeper 10.129.8.148 --open
 
 <figure><img src="../../.gitbook/assets/5 (14).png" alt=""><figcaption></figcaption></figure>
 
-*
+* 在检查RT系统中的各项内容时，在Admin——Users中发现可两个用户账户信息界面，**root**和**lnorgaard**，并且找到了用户lnorgaard的明文密码：<mark style="color:red;">**Welcome2023!**</mark>
 
+<figure><img src="../../.gitbook/assets/7 (16).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/8 (18).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/9 (16).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-### 漏洞查阅
-
-
-
-
-
-
-
-
-
-### 漏洞利用
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/10 (16).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
+* 因为当前已经有两个有效凭证了，根据Nmap的扫描结果来看，还有一个运行着SSH服务的22号端口，可以分别用这两个有效凭证尝试登录：
 
+```bash
+# 密码：Welcome2023!
+ssh lnorgaard@10.129.8.148
+```
 
+<figure><img src="../../.gitbook/assets/11 (15).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/12 (14).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 本地信息收集
 
-
+*
 
 
 

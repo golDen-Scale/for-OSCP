@@ -1,5 +1,5 @@
 ---
-description: Easy /
+description: Easy / 枚举 / RT 4.4.4 /
 ---
 
 # ✔️ Keeper
@@ -61,7 +61,25 @@ ssh lnorgaard@10.129.8.148
 
 ### 本地信息收集
 
+* 在之前检查RT时发现Admin——Tools——System Configuration里面有一些目标系统信息，手动枚举也没有什么收获：
+
+<figure><img src="../../.gitbook/assets/13 (15).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+
+* 上传linpeas.sh进行信息收集：
+
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+
 *
+
+
+
+
+
+
 
 
 
@@ -86,5 +104,7 @@ ssh lnorgaard@10.129.8.148
 
 
 {% hint style="info" %}
-（本例机器中途重置过，IP地址有变化，但不影响漏洞利用及其实现结果）
+Get Shell阶段只需要简单的枚举即可获得shell。
+
+(本例机器中途重置过，IP地址有变化，但不影响漏洞利用及其实现结果)
 {% endhint %}

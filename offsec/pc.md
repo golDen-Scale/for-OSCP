@@ -109,15 +109,15 @@ nmap -sC -sV -p 65432 127.0.0.1 -A -sT
 
 * 根据Nmap输出信息，没有发现什么东西，所以直接尝试搜索\`rpc.py\`的漏洞利用，发现了一个远程代码执行的漏洞：
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
 * 阅读代码后，发现可将\`exec\_command()\`函数中的内容直接修改为自己需要的命令：
 
-<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将此处命令修改为可以让user用户无需密码即可以root权限运行各个命令：
 

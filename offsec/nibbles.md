@@ -78,7 +78,7 @@ psql -h 192.168.210.47 -p 5437 -U postgres
 
 <figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 验证结果说明目标确实存在着命令执行漏洞：
 
@@ -91,7 +91,7 @@ SELECT * FROM cmd_exec;
 DROP TABLE IF EXISTS cmd_exec; 
 ```
 
-<figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例尝试用手动利用和脚本利用均无法成功反弹shell，暂不清楚原因先搁置...

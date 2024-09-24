@@ -79,11 +79,11 @@ enum4linux 10.129.154.107
 hashcat -m 18200 hashes.txt rockyou.txt
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 

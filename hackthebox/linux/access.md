@@ -42,11 +42,13 @@ dirsearch -u  http://10.129.8.225 -x 403,404,400
 
 <figure><img src="../../.gitbook/assets/9 (17).png" alt=""><figcaption></figcaption></figure>
 
-*
+{% hint style="info" %}
+FTP中的文件始终下载不成功，不知道什么原因，暂时搁置...
+{% endhint %}
 
 
 
-
+***
 
 
 

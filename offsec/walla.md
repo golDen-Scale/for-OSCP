@@ -28,7 +28,7 @@ dirsearch dir -u http://192.168.180.97:8091 -i 200,300-399
 
 <figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 尝试搜索该应用的默认凭证，发现是<mark style="color:red;">**admin:secret**</mark>
 

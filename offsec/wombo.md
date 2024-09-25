@@ -23,7 +23,7 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 
 <figure><img src="../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 分别针对80和8080端口进行隐藏文件/目录扫描，发现8080端口扫出了很多东西：
 

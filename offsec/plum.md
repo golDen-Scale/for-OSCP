@@ -32,7 +32,7 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 搜索发现当前的pluxml 5.8.7有两个可利用的已知公开漏洞：CVE-2022-25018和CVE-2021-38603，先从最近的漏洞开始尝试：
 
-<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

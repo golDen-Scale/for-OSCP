@@ -35,7 +35,7 @@ rpcclient 10.129.176.63
 rpcclient -U '' 10.129.176.63
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/7 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -30,11 +30,19 @@ dirsearch -u  http://10.129.8.225 -x 403,404,400
 
 <figure><img src="../../.gitbook/assets/4 (15).png" alt=""><figcaption></figcaption></figure>
 
+* 从Nmap的输出结果，端口21开放了FTP服务尝试匿名登录成功：
+
+<figure><img src="../../.gitbook/assets/6 (15).png" alt=""><figcaption></figcaption></figure>
+
+* 分别查看这两个目录中的内容，并且把它们下载到本地：
+
+<figure><img src="../../.gitbook/assets/7 (17).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/8 (19).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/9 (17).png" alt=""><figcaption></figcaption></figure>
+
 *
-
-
-
-
 
 
 

@@ -67,6 +67,7 @@
   * [✔️ Blackfield](hackthebox/ad/blackfield.md)
   * [✔️ APT](hackthebox/ad/apt.md)
   * [Mantis](hackthebox/ad/mantis.md)
+  * [✔️ Return](hackthebox/ad/return.md)
 
 ## 4️⃣ OFFSEC
 

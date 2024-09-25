@@ -41,9 +41,9 @@ enum4linux 10.129.154.107
 
 <figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/8 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将这些用户名收集起来，试试哪些是域内有效的：
 
@@ -59,11 +59,11 @@ enum4linux 10.129.154.107
 ./kerbrute_linux_amd64 username --dc 10.129.154.107 -d htb.local username.txt
 ```
 
-<figure><img src="../../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用Impacket的脚本GetNPUsers.py尝试获取每个用户的哈希值：
 
@@ -79,7 +79,7 @@ enum4linux 10.129.154.107
 hashcat -m 18200 hashes.txt rockyou.txt
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 

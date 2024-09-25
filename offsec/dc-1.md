@@ -68,11 +68,11 @@ droopescan scan drupal -u http://192.168.221.193:80/
 
 <figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
-<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -88,13 +88,13 @@ uname -a
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
 将尝试在GTFOBins中查找find和exim4（备选）：
 
-<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -102,17 +102,17 @@ find / -perm -u=s -type f 2>/dev/null
 
 本例中，虽然是利用的SUID的漏洞，但我发现可以直接在目标系统中使用shell的payload进行提权操作，此方法没有错误输出，也不需要重新用Metasploit连接shell会话，可直接得到root shell：
 
-<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
 获取到了local.txt：
 
-<figure><img src="../.gitbook/assets/13 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 获取到了proof.txt：
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 MEMO.

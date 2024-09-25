@@ -47,11 +47,11 @@ mget *
 
 * 解压UserInfo.exe.zip，比较感兴趣的有config文件和exe文件：
 
-<figure><img src="../../.gitbook/assets/8 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * config文件，有.NET框架的版本号信息，其他的好像没什么了：
 
-<figure><img src="../../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 没有预期的任何凭证之类的内容，用enum4linux枚举也无任何收获：
 
@@ -59,7 +59,7 @@ mget *
 enum4linux 10.129.230.181
 ```
 
-<figure><img src="../../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * smbmap也没有收获：
 

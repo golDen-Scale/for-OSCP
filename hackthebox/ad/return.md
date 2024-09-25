@@ -1,3 +1,7 @@
+---
+description: Easy / LDAP明文传输 /
+---
+
 # ✔️ Return
 
 ## 建立立足点
@@ -30,59 +34,51 @@ nmap -sC -sV -p- -oA return 10.129.95.241 --open
 
 <figure><img src="../../.gitbook/assets/7 (18).png" alt=""><figcaption></figcaption></figure>
 
+* 先尝试使用不同工具进行匿名登录SMB均无收获，enum4linux信息收集也没有什么收获：
 
+<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
 
+* 回到打印机settings的界面，它设置的端口389是LDAP协议，该打印机是通过LDAP连接到目标域进行身份验证的，这意味着用户svc-printer是一个域内用户账户，且LDAP是明文传输，因此当我们修改目标服务器地址为Kali本机地址时，并在本机做好监听后，即可读取到传输的明文密码内容：
 
+<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
-### 漏洞查阅
-
-
-
-
-
-
-
-### 漏洞利用
-
-
-
-
-
-
-
-
+* 此时已获得一个有效凭证：<mark style="color:red;">**svc-printer:1edFg43012!!**</mark>&#x20;
 
 ### GET SHELL
 
+* 通常当有了一个有效凭证后就可以尝试用evil-winrm来获取shell了（虽然并不总是管用）：
 
+```bash
+evil-winrm -i return.local -u svc-printer -p '1edFg43012!!'
+```
 
+<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 本地信息收集
 
+* 上传winPEAS进行信息收集：
+
+```bash
+# evil-winrm
+upload /root/Documents/HTB-AD/return/info/winPEASx64.exe
+.\winPEASx64.exe
+```
+
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+
+*
 
 
 
 
-
-
-### 漏洞利用
 
 
 

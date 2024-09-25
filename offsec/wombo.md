@@ -45,7 +45,7 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 <figure><img src="../.gitbook/assets/10 (14).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -53,9 +53,9 @@ dirsearch -u  http://192.168.197.69:8080 -x 403,404,400
 
 * 尝试注册一个新用户，查看其是否有可以被利用的功能，也没有任何收获：
 
-<figure><img src="../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 

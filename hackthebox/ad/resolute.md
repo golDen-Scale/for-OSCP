@@ -85,7 +85,7 @@ crackmapexec smb 10.129.96.155 -u marko -p 'Welcome123!'
 evil-winrm -i 10.129.96.155 -u marko -p Welcome123!
 ```
 
-<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 几次尝试确认自己没有输错后，发现该账户确实登录不上去，决定密码喷洒来找出是否还有其他用户账号也是用的这个密码：
 
@@ -107,9 +107,9 @@ crackmapexec smb 10.129.96.155 -u username.txt -p 'Welcome123!'
 evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 ```
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -117,7 +117,7 @@ evil-winrm -i 10.129.96.155 -u melanie -p Welcome123!
 
 * 简单手动枚举无果后，决定上传winPEAS进行信息收集：
 
-<figure><img src="../../.gitbook/assets/20 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/21 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

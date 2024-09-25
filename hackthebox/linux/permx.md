@@ -82,11 +82,11 @@ gobuster dir -u http://lms.permx.htb/ -w /usr/share/wordlists/dirb/common.txt
 
 * 从之前的枚举信息中已知正在运行的程序是chamilo 1.11版本，因此搜索后发现多个相关的可利用漏洞，从最近的开始尝试：（CVE-2023-4220）
 
-<figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 阅读漏洞说明后，发现可以在该应用的特定路径下上传没有任何限制的文件，这意味着我可以直接上传一个php的反弹shell：
 
-<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -102,7 +102,7 @@ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/shell.php'
 
 * 这里使用的是一个我在靶机训练中常用的一个反弹shell的php脚本（pentestmonkey），修改脚本中kali端的IP及监听端口后，即可上传：
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 监听好自己设置的端口，上传该脚本等待回连：
 

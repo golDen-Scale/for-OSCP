@@ -90,7 +90,7 @@ ldapsearch -x -H LDAP://10.129.95.180 -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -s sub
 
 <figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
@@ -100,9 +100,9 @@ ldapsearch -x -H LDAP://10.129.95.180 -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -s sub
 evil-winrm -i 10.129.95.180 -u fsmith -p Thestrokes23
 ```
 
-<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -116,11 +116,11 @@ net user /domain
 net user fsmith /domain
 ```
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/20 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/21 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

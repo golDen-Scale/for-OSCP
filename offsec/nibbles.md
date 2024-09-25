@@ -91,15 +91,15 @@ SELECT * FROM cmd_exec;
 DROP TABLE IF EXISTS cmd_exec; 
 ```
 
-<figure><img src="../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 本例尝试用手动利用和脚本利用均无法成功反弹shell，暂不清楚原因先搁置...
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

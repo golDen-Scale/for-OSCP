@@ -67,19 +67,19 @@ ssh lnorgaard@10.129.8.148
 
 <figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
 
 * 上传linpeas.sh进行信息收集：
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (2).png" alt=""><figcaption></figcaption></figure>
 
 * 从linpeas的输出信息中发现，以下文件目录是与root用户账户相关联的，可能包含敏感信息，但是却被放在了低权限用户的/home目录中：
 
-<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 把RT30000.zip下载到本地过程巨慢，直接解压缩后获得两个文件：KeePassDumpFull.dmp、passcodes.kdbx
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

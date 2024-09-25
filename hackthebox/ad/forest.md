@@ -81,9 +81,9 @@ hashcat -m 18200 hashes.txt rockyou.txt
 
 <figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/16 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
@@ -96,7 +96,7 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 
 * 成功登录，并找到了第一个flag：
 
-<figure><img src="../../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/18 (7).png" alt=""><figcaption></figcaption></figure>
 
@@ -111,11 +111,11 @@ evil-winrm -i htb.local -u svc-alfresco -p 's3rvice'
 upload /root/Documents/HTB-AD/forest/tools/winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 上传sharphound进行信息收集，放入bloodhound中分析各个用户、组成员等之间的关系：
 
-<figure><img src="../../.gitbook/assets/20 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/21 (1) (1).png" alt=""><figcaption></figcaption></figure>
 

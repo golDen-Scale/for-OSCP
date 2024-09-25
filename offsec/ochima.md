@@ -14,9 +14,11 @@ description: 中等
 nmap -sC -sV -p- -oA ochima 192.168.228.32 --open
 ```
 
-{% hint style="info" %}
-扫描太慢了........
-{% endhint %}
+
+
+
+
+
 
 * 扫描同时可尝试查看目标80端口是否开放，发现是一个Apache的默认界面：
 

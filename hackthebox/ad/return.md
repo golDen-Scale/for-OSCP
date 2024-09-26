@@ -105,13 +105,30 @@ impacket-secretsdump -sam sam.hive -system system.hive LOCAL
 
 <figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
 
-* 最后使用获取到的Administrator账户的哈希，利用evil-winrm进行登录，至此提权成功！
+* 最后使用获取到的Administrator账户的哈希，利用evil-winrm进行登录，以为是网络原因登录不成功，但换了时间尝试多次发现该账户应该是不能用hash进行登录：
 
 ```bash
 evil-winrm -i return.local -u "Administrator" -H "34386a771aaca697f447754e4863d38a"
 ```
 
+<figure><img src="../../.gitbook/assets/21 (7).png" alt=""><figcaption></figcaption></figure>
 
+* 因此重新搜索关于SeBackupPrivilege的漏洞利用脚本，发现Acl-FullControl.ps1脚本适用于SeBackupPrivilege提权，它是在当前用户的权限下，修改访问控制列表的指定路径，给低权限用户添加高权限，赋予它完全的控制权，从而达到提权的效果。
+* 该命令将当前的svc-printer用户的访问控制权指向到c:\users\administrator\，执行成功的话就意味着我们对这个目录及其内容有完全控制权：
+
+```powershell
+Import-module .\Acl-FullControl.ps1; Acl-FullControl -user svc-printer -path c:\users\administrator\
+```
+
+<figure><img src="../../.gitbook/assets/22 (7).png" alt=""><figcaption></figcaption></figure>
+
+* 上传脚本，并执行：
+
+<figure><img src="../../.gitbook/assets/23 (7).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/24 (6).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/25 (5).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Get Shell阶段除了常规的枚举之外，还应注意那些最直接的信息。提权阶段锁定漏洞时，有时手动枚举可能会比工具枚举来的更快一些。特别是网络状况不太好时，传输文件会极其的慢。

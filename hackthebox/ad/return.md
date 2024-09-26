@@ -113,7 +113,7 @@ evil-winrm -i return.local -u "Administrator" -H "34386a771aaca697f447754e4863d3
 
 <figure><img src="../../.gitbook/assets/21 (7).png" alt=""><figcaption></figcaption></figure>
 
-* 因此重新搜索关于SeBackupPrivilege的漏洞利用脚本，发现Acl-FullControl.ps1脚本适用于SeBackupPrivilege提权，它是在当前用户的权限下，修改访问控制列表的指定路径，给低权限用户添加高权限，赋予它完全的控制权，从而达到提权的效果。
+* 因此重新搜索关于SeBackupPrivilege的漏洞利用脚本，发现Acl-FullControl.ps1脚本适用于SeBackupPrivilege提权，它是在当前用户的权限下，修改指定路径的访问控制列表(ACL)，给低权限用户添加高权限，赋予它完全的控制权，从而达到提权的效果。
 * 该命令将当前的svc-printer用户的访问控制权指向到c:\users\administrator\，执行成功的话就意味着我们对这个目录及其内容有完全控制权：
 
 ```powershell

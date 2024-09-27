@@ -26,7 +26,7 @@ nmap -sC -sV -p- -oA plum 192.168.185.28 --open
 
 * 发现了目标系统正在运行的是PluXml 5.8.7的应用程序，下一步查找是否有公开已知漏洞：
 
-<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 

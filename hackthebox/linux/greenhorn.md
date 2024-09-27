@@ -24,7 +24,7 @@ nmap -sC -sV -p- -oA greenhorn 10.129.61.36 --open
 
 <figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 转到3000端口依次对其内容进行信息收集，发现其正在运行的是Gitea 1.21.11并且还有目标系统的源码：
 

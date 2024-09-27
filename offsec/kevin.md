@@ -28,7 +28,7 @@ description: Windows - Easy：HP Power Manager / Buffer Overflow
 
 上工具！利用Metasploit搜索相关可利用脚本：
 
-<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 设置远程IP、本地IP、本地端口：
 

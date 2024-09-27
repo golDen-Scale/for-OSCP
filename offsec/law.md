@@ -28,7 +28,7 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 * 得知htmlawed 1.2.5版本存在着CVE-2022-35914的漏洞，该漏洞说明了htmlawed是属于GLPI软件中的一个第三方库，其中包含了一个可用于执行系统命令的测试文件的默认路径：**vendor/htmlawed/htmlawed/htmLawedTest.php**，这意味着我们可以未经身份验证就能执行远程代码执行：
 
-<figure><img src="../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 

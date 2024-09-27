@@ -24,9 +24,9 @@ nmap -sC -sV -p- -oA redcross 10.129.9.55 --open
 dirsearch -u  http://10.129.9.55 -x 403,404,400
 ```
 
+<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
-
-
+*
 
 
 

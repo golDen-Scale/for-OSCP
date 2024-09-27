@@ -72,9 +72,9 @@ hashcat -m 1700 hashes.txt rockyou.txt
 
 * 在信息枚举阶段获取到的Web页面运行的pluck 4.7.18确实是有一个远程代码执行的漏洞，但是在本例中的漏洞利用阶段仅起到了辅助作用，并未直接利用：
 
-<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/6 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 从该漏洞脚本中可以确认其上传文件的类型是zip类型，这为后续上传反弹shell做了提示：
 

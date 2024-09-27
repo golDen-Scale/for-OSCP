@@ -32,7 +32,7 @@ hydra -C /usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpass
 {% hint style="info" %}
 本例中关于目标FTP服务开启了被动模式，因此登录后并不能下载目标文件，需要关闭这个被动模式，才能成功下载。
 
-<img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 ```bash
 // 登录FTP后，直接输入：
@@ -40,7 +40,7 @@ passive
 ```
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 // FTP服务中：
@@ -57,7 +57,7 @@ file backup
 * 已成功上传了一个testme.jpg的图片
 * 使用的是<mark style="color:red;">**ExifTool**</mark>，其版本号为：<mark style="color:red;">**12.23**</mark>
 
-<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/8 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

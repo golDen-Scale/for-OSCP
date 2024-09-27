@@ -14,7 +14,7 @@ description: Easy /
 nmap -sC -sV -p- -oA access 10.129.8.225 --open
 ```
 
-<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 扫描同时尝试查看80端口上是否有web页面，发现只有一张图片，扫描隐藏文件/目录也没有收获：
 

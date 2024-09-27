@@ -30,17 +30,17 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 <figure><img src="../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
 * 直接访问该路径失败，没找到这个页面：
 
-<figure><img src="../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 同时找到了适用于CVE-2022-35914的PoC，但利用没有成功：
 
-<figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 

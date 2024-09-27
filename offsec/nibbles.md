@@ -15,7 +15,7 @@ description: Medium / Linux / PostgreSQL命令执行 / CVE-2019-9193
 nmap -sC -sV -p- -oA nibbles 192.168.215.47 --open
 ```
 
-<figure><img src="../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 扫描的同时可尝试直接使用IP地址登录查看是否有Web页面，很幸运有，但是好像没有什么特别的信息。
 

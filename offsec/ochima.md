@@ -22,7 +22,7 @@ nmap -sC -sV -p- -oA ochima 192.168.228.32 --open
 
 * 扫描同时可尝试查看目标80端口是否开放，发现是一个Apache的默认界面：
 
-<figure><img src="../.gitbook/assets/1 (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (28).png" alt=""><figcaption></figcaption></figure>
 
 * 可检查一下80端口上是否有隐藏文件/目录，啥也没有：
 
@@ -30,7 +30,7 @@ nmap -sC -sV -p- -oA ochima 192.168.228.32 --open
 dirsearch -u  http://192.168.228.32 -x 403,404,400
 ```
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 *
 

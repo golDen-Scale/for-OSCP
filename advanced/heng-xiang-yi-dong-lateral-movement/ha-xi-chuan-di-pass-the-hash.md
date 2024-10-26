@@ -48,7 +48,7 @@ pth-winexe -U Administrator%00000000000000000000000000000000:123CDVEE.....NDFE66
 
 * 几个常用脚本，按实际情况在该工具的/examples目录中选择合适脚本：
 
-<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Crackmapexec
 

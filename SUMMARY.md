@@ -56,6 +56,7 @@
   * [✔️ Keeper](hackthebox/linux/keeper.md)
   * [✔️ Access](hackthebox/linux/access.md)
   * [✔️ RedCross](hackthebox/linux/redcross.md)
+  * [✔️ Editorial](hackthebox/linux/editorial.md)
 * [AD](hackthebox/ad/README.md)
   * [✔️ Active](hackthebox/ad/active.md)
   * [✔️ Sauna](hackthebox/ad/sauna.md)
@@ -69,6 +70,7 @@
   * [✔️ APT](hackthebox/ad/apt.md)
   * [Mantis](hackthebox/ad/mantis.md)
   * [✔️ Return](hackthebox/ad/return.md)
+  * [✔️ Cicada](hackthebox/ad/cicada.md)
 
 ## 4️⃣ OFFSEC
 

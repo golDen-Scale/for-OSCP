@@ -19,7 +19,7 @@ description: 适用于在获取目标域内最高权限后的权限维持 / 后�
 
 * 几个常用脚本，按实际情况在该工具的/examples目录中选择合适脚本：
 
-<figure><img src="../../.gitbook/assets/1 (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (24).png" alt=""><figcaption></figcaption></figure>
 
 #### mimikatz.exe
 

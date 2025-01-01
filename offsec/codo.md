@@ -20,7 +20,7 @@ nmap -sC -sV -p- -oA codo 192.168.200.23 --open
 
 <figure><img src="../.gitbook/assets/2 (18).png" alt=""><figcaption></figcaption></figure>
 
-尝试枚举80端口上的隐藏文件/目录，并在**/admin**路径上发现登录界面：
+尝试枚举80端口上的隐藏文件/目录，并&#x5728;**/admin**路径上发现登录界面：
 
 ```bash
 dirsearch -u http://192.168.200.23

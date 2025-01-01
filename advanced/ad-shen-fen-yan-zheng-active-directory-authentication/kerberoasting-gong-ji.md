@@ -61,7 +61,7 @@ sekurlsa::tickets /export
 
 ### kerberoast
 
-* 常用脚本：**tgscrepcrack.py、**GetUserSPNs.ps1、GetUserSPNs.vbs
+* 常用脚本：**tgscrepcrack.py、**&#x47;etUserSPNs.ps1、GetUserSPNs.vbs
 
 ```bash
 # 离线暴破

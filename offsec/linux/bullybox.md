@@ -14,7 +14,7 @@ description: Easy - Linux / BoxBilling 4.22.1.5 / CVE-2022-3552 / sudo su提权
 nmap -sC -sV -p- -oA bullybox 192.168.149.27 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将域名添加到hosts文件中：
 
@@ -24,7 +24,7 @@ echo "192.168.149.27   bullybox.local" | tee -a /etc/hosts
 
 * 检查/robots.txt文件，发现一些隐藏目录，依次查看没有任何收获：
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在80端口的登录界面进行注册：
 
@@ -33,11 +33,11 @@ echo "192.168.149.27   bullybox.local" | tee -a /etc/hosts
 - fiii : Test123456
 ```
 
-<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 登录后并没有任何发现，只得知当前系统使用的是boxbilling程序：
 
-<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 枚举80端口上的隐藏文件/目录，这里发现一些/.git目录：
 
@@ -45,7 +45,7 @@ echo "192.168.149.27   bullybox.local" | tee -a /etc/hosts
 gobuster dir -u http://bullybox.local -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (2).png" alt=""><figcaption></figcaption></figure>
 
 * 使用git-dumper提取目标网站的git中的内容：
 
@@ -53,7 +53,7 @@ gobuster dir -u http://bullybox.local -w /usr/share/seclists/Discovery/Web-Conte
 git-dumper http://bullybox.local/.git .
 ```
 
-<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/7 .png" alt=""><figcaption></figcaption></figure>
 
@@ -64,26 +64,26 @@ git-dumper http://bullybox.local/.git .
 - admin@bullybox.local
 ```
 
-<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用该有效凭证进入admin的管理界面后，获取到当前运行的软件BoxBilling及其版本号：**BoxBilling 4.22.1.5**
 
 <figure><img src="../../.gitbook/assets/9 .png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
 * 根据应用及其版本号，查询到公开漏洞：CVE-2022-3552
 * BoxBilling<=4.22.1.5 - Remote Code Execution
 
-<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
 * [https://www.exploit-db.com/exploits/51108](https://www.exploit-db.com/exploits/51108)
 
-<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

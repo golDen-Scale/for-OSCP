@@ -18,7 +18,7 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 * 检查80端口上的内容，发现正在运行的服务及其版本号为：htmlawed 1.2.5
 
-<figure><img src="../../.gitbook/assets/2 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
@@ -28,21 +28,21 @@ nmap -sC -sV -p- -oA law 192.168.210.190 --open
 
 * 得知htmlawed 1.2.5版本存在着CVE-2022-35914的漏洞，该漏洞说明了htmlawed是属于GLPI软件中的一个第三方库，其中包含了一个可用于执行系统命令的测试文件的默认路径：**vendor/htmlawed/htmlawed/htmLawedTest.php**，这意味着我们可以未经身份验证就能执行远程代码执行：
 
-<figure><img src="../../.gitbook/assets/4 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/5 (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
 * 直接访问该路径失败，没找到这个页面：
 
-<figure><img src="../../.gitbook/assets/6 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 同时找到了适用于CVE-2022-35914的PoC，但利用没有成功：
 
 <figure><img src="../../.gitbook/assets/7 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/8 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 分别使用dirsearch和gobuster没有扫出来任何文件/目录，推测目标系统中没有这个路径，因此尝试修改脚本中的默认路径为根目录：
 

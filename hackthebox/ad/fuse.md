@@ -20,7 +20,7 @@ nmap -sC -sV -p- -oA fuse 10.129.2.5 --open
 
 * 将域名和IP写入/etc/hosts文件：
 
-<figure><img src="../../.gitbook/assets/3 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 因为扫描结果中有一个80端口，先查看其内容后发现当前目标运行的是一个打印机日志记录的应用PaperCut，并且还发现了一组用户名，先收集下来后续可能会用到：
 

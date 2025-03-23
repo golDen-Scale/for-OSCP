@@ -42,7 +42,7 @@ wfuzz -c -u https://intra.redcross.htb -H "Host:FUZZ.redcross.htb" -w subdomains
 
 <figure><img src="../../.gitbook/assets/6 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 找到的两个登录界面也没有查看到所使用的公开已知的软件信息，因此无法通过常规的搜寻公开已知漏洞进行利用。在当前没有任何有效凭证的情况下，尝试暴力破解无果。决定从头枚举，发现遗漏了对443端口的扫描：
 

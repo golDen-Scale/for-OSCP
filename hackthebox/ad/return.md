@@ -38,13 +38,13 @@ nmap -sC -sV -p- -oA return 10.129.95.241 --open
 
 <figure><img src="../../.gitbook/assets/8 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/10 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 回到打印机settings的界面，它设置的端口389是LDAP协议，该打印机是通过LDAP连接到目标域进行身份验证的，这意味着用户svc-printer是一个域内用户账户，且LDAP是明文传输，因此当我们修改目标服务器地址为Kali本机地址时，并在本机做好监听后，即可读取到传输的明文密码内容：
 
-<figure><img src="../../.gitbook/assets/11 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 此时已获得一个有效凭证：<mark style="color:red;">**svc-printer:1edFg43012!!**</mark>&#x20;
 
@@ -56,9 +56,9 @@ nmap -sC -sV -p- -oA return 10.129.95.241 --open
 evil-winrm -i return.local -u svc-printer -p '1edFg43012!!'
 ```
 
-<figure><img src="../../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/13 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 

@@ -14,9 +14,9 @@ description: AD枚举 / SeBackupPrivilege /
 nmap -sC -sV -p- -oA cicada 10.129.5.101 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 根据Nmap的输出信息和开放端口，判断该机器应该是域控，先将域名添加进/hosts文件中：
 

@@ -76,6 +76,7 @@
 
 * [Linux](offsec/linux/README.md)
   * [✔️ Astronaut](offsec/linux/astronaut.md)
+  * [✔️ Bullybox](offsec/linux/bullybox.md)
   * [✔️ DC-1](offsec/linux/dc-1.md)
   * [✔️ Exghost](offsec/linux/exghost.md)
   * [✔️ PC](offsec/linux/pc.md)

@@ -30,7 +30,7 @@ nmap -sC -sV -p- -oA ochima 192.168.228.32 --open
 dirsearch -u  http://192.168.228.32 -x 403,404,400
 ```
 
-<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 *
 

@@ -36,9 +36,9 @@ nmap -sC -sV -p- -oA return 10.129.95.241 --open
 
 * 先尝试使用不同工具进行匿名登录SMB均无收获，enum4linux信息收集也没有什么收获：
 
-<figure><img src="../../.gitbook/assets/8 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/10 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -58,7 +58,7 @@ evil-winrm -i return.local -u svc-printer -p '1edFg43012!!'
 
 <figure><img src="../../.gitbook/assets/12 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/13 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -72,7 +72,7 @@ upload /root/Documents/HTB-AD/return/info/winPEASx64.exe
 .\winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在winPEAS的输出信息中，找到了当前账户的所有的权限中有sebackupprivilege权限，这意味着当前用户在目标系统中有了读取文件和数据的能力。因此，决定从目标系统的SAM中提取高权限用户的哈希，并以此作为登录的凭证：
 
@@ -91,11 +91,11 @@ reg save hklm\sam C:\temp\sam.hive
 reg save hklm\system C:\temp\system.hive
 ```
 
-<figure><img src="../../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 再使用impacket-secretsdump获取NTLM哈希：
 
@@ -103,7 +103,7 @@ reg save hklm\system C:\temp\system.hive
 impacket-secretsdump -sam sam.hive -system system.hive LOCAL
 ```
 
-<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 最后使用获取到的Administrator账户的哈希，利用evil-winrm进行登录，以为是网络原因登录不成功，但换了时间尝试多次发现该账户应该是不能用hash进行登录：
 

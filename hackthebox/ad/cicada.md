@@ -36,7 +36,7 @@ mget *
 
 <figure><img src="../../.gitbook/assets/5 (3).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/6 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -50,7 +50,7 @@ mget *
 enum4linux 10.129.5.101
 ```
 
-<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 此时已经获取到了一个有效密码，但是还没有有效用户名，使用nxc进行暴破得到一串用户名：
 
@@ -78,7 +78,7 @@ nxc smb 10.129.5.101 -u users.txt -p 'Cicada$M6Corpb*@Lp#nZp!8'
 
 <figure><img src="../../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/13 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 已获取到了一个有效凭证：<mark style="color:red;">**michael.wrightson :Cicada$M6Corpb\*@Lp#nZp!8**</mark>
 * 通过用户michael查询目标系统上更多的用户信息，找到了用户david的密码：

@@ -81,6 +81,7 @@
   * [✔️ Detection](offsec/linux/detection.md)
   * [✔️ DC-1](offsec/linux/dc-1.md)
   * [✔️ Exghost](offsec/linux/exghost.md)
+  * [✔️ Levram](offsec/linux/levram.md)
   * [✔️ PC](offsec/linux/pc.md)
   * [✔️ Pebbles](offsec/linux/pebbles.md)
   * [✔️ Plum](offsec/linux/plum.md)

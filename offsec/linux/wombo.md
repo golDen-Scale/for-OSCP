@@ -16,7 +16,7 @@ nmap -sC -sV -p- -oA wombo 192.168.197.69 --open
 
 <figure><img src="../../.gitbook/assets/2 (4).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 通过扫描结果发现了2个运行web的端口：80和8080，80端口运行的是一个nginx的web服务器，8080端口运行的是一个名为NodeBB的CMS Web应用：
 

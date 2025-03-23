@@ -16,7 +16,7 @@ nmapm -sC -sV -p- -oA pebbles 192.168.244.52 --open
 
 * 简单尝试输入IP地址查看是否有Web页面，发现有个pebbles登录框，尝试几个弱口令后登录失败，所以暂时先搁置：
 
-<figure><img src="../.gitbook/assets/Snipaste_2024-06-15_19-31-12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snipaste_2024-06-15_19-31-12.png" alt=""><figcaption></figcaption></figure>
 
 * 枚举该Web页面是否有其他隐藏文件/目录，使用gobuster扫描后发现一个/zm目录：
 
@@ -24,17 +24,17 @@ nmapm -sC -sV -p- -oA pebbles 192.168.244.52 --open
 gobuster dir -u http://192.168.244.52 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q
 ```
 
-<figure><img src="../.gitbook/assets/Snipaste_2024-06-15_20-41-21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snipaste_2024-06-15_20-41-21.png" alt=""><figcaption></figcaption></figure>
 
 * 发现了一个正在运行的程序：ZoneMinder Console，其版本号为：v1.29.0
 
-<figure><img src="../.gitbook/assets/Snipaste_2024-06-15_20-51-56.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snipaste_2024-06-15_20-51-56.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查找
 
 * 查找相关漏洞，发现该版本的ZoneMinder有个SQL注入的可利用漏洞：
 
-<figure><img src="../.gitbook/assets/Snipaste_2024-06-15_20-55-37.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snipaste_2024-06-15_20-55-37.png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

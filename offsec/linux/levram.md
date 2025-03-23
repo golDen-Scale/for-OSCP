@@ -1,5 +1,7 @@
 ---
-description: Easy - Linux / Gerapy 0.9.7 / CVE-2021-43857 /
+description: >-
+  Easy - Linux / Gerapy 0.9.7 / CVE-2021-43857 / Capabilities提权 - cap_setuid
+  python
 ---
 
 # ✔️ Levram

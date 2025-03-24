@@ -28,7 +28,7 @@ nmap -sC -sV -p- -oA redcross 10.129.9.55 --open
 dirsearch -u  http://10.129.9.55 -x 403,404,400
 ```
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用Wfuzz尝试扫描子域，发现有两个结果：
 

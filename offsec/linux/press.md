@@ -14,11 +14,11 @@ description: Easy - Linux / FlatPress version 1.2.1 / 文件上传+RCE / NOPASSW
 nmap -sC -sV -p- -oA press 192.168.102.29 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查80端口上的内容，没什么收获：
 
-<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 枚举80端口上的隐藏文件/目录，依次查看没什么收获：
 
@@ -26,11 +26,11 @@ nmap -sC -sV -p- -oA press 192.168.102.29 --open
 dirsearch -u http://192.168.102.29 -x 404,403,401,302,301
 ```
 
-<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查8089端口上的内容，尝试弱口令**admin:password**登录成功：
 
-<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 

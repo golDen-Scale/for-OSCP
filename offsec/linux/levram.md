@@ -16,19 +16,19 @@ description: >-
 nmap -sC -sV -oA levram 192.168.124.24 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查8000端口上的内容，尝试弱口令登录成功： **admin : admin**
 
-<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 并发现了当前正在运行的程序及其版本号：**Gerapy v0.9.7**
 
-<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 枚举8000端口上的隐藏文件/目录，找到了/admin目录：
 
-<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在8000端口上的/robots.txt里的/admin目录对应上：
 

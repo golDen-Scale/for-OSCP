@@ -14,11 +14,11 @@ description: Easy - Linux / SuiteCRM 7.12.3 / CVE-2022-23940 / NOPASSWD提权
 nmap -sC -sV -p- -oA crane 192.168.178.146 --open 
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查80端口上的内容，尝试弱口令成功：**admin : admin**
 
-<figure><img src="../../.gitbook/assets/2 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -28,9 +28,9 @@ nmap -sC -sV -p- -oA crane 192.168.178.146 --open
 
 * 查看/robots.txt文件，返现一个名为 **/ical\_server.php** 的php文件，将其下载到本地：
 
-<figure><img src="../../.gitbook/assets/3 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/4 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞查阅
 

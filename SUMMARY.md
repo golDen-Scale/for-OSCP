@@ -79,6 +79,7 @@
   * [✔️ Bullybox](offsec/linux/bullybox.md)
   * [✔️ Crane](offsec/linux/crane.md)
   * [✔️ CVE-2023-6019](offsec/linux/cve-2023-6019.md)
+  * [✔️ CVE-2023-33831](offsec/linux/cve-2023-33831.md)
   * [✔️ Detection](offsec/linux/detection.md)
   * [✔️ DC-1](offsec/linux/dc-1.md)
   * [✔️ Exghost](offsec/linux/exghost.md)

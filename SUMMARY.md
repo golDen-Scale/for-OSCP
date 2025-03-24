@@ -85,6 +85,7 @@
   * [✔️ PC](offsec/linux/pc.md)
   * [✔️ Pebbles](offsec/linux/pebbles.md)
   * [✔️ Plum](offsec/linux/plum.md)
+  * [✔️ Press](offsec/linux/press.md)
   * [✔️ RubyDome](offsec/linux/rubydome.md)
   * [✔️ Codo](offsec/linux/codo.md)
   * [✔️ Walla](offsec/linux/walla.md)

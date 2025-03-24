@@ -36,7 +36,7 @@ mget *
 
 <figure><img src="../../.gitbook/assets/5 (3).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/7 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/6 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -50,7 +50,7 @@ mget *
 enum4linux 10.129.5.101
 ```
 
-<figure><img src="../../.gitbook/assets/9 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 此时已经获取到了一个有效密码，但是还没有有效用户名，使用nxc进行暴破得到一串用户名：
 

@@ -14,7 +14,7 @@ description: Easy - Linux / BoxBilling 4.22.1.5 / CVE-2022-3552 / sudo su提权
 nmap -sC -sV -p- -oA bullybox 192.168.149.27 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将域名添加到hosts文件中：
 

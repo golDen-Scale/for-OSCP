@@ -14,7 +14,7 @@ description: Easy - Linux / SuiteCRM 7.12.3 / CVE-2022-23940 / NOPASSWD提权
 nmap -sC -sV -p- -oA crane 192.168.178.146 --open 
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查80端口上的内容，尝试弱口令成功：**admin : admin**
 

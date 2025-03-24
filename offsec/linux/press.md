@@ -14,7 +14,7 @@ description: Easy - Linux / FlatPress version 1.2.1 / 文件上传+RCE / NOPASSW
 nmap -sC -sV -p- -oA press 192.168.102.29 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查80端口上的内容，没什么收获：
 

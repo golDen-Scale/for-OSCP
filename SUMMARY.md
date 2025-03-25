@@ -82,6 +82,7 @@
   * [✔️ CVE-2023-33831](offsec/linux/cve-2023-33831.md)
   * [✔️ CVE-2023-40582](offsec/linux/cve-2023-40582.md)
   * [✔️ CVE-2023-46818](offsec/linux/cve-2023-46818.md)
+  * [✔️ CVE-2024-51482](offsec/linux/cve-2024-51482.md)
   * [✔️ Detection](offsec/linux/detection.md)
   * [✔️ DC-1](offsec/linux/dc-1.md)
   * [✔️ Exghost](offsec/linux/exghost.md)

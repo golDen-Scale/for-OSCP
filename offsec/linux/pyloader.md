@@ -14,7 +14,7 @@ description: Easy - Linux / pyLoad 0.5 / RCE / CVE-2023-0297
 nmap -sC -sV -p- -oA pyloader 192.168.183.26 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 枚举9666端口上的隐藏文件/目录，依次查看无收获：
 

@@ -28,7 +28,7 @@ nmap -sC -sV -p- -oA redcross 10.129.9.55 --open
 dirsearch -u  http://10.129.9.55 -x 403,404,400
 ```
 
-<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 使用Wfuzz尝试扫描子域，发现有两个结果：
 
@@ -36,7 +36,7 @@ dirsearch -u  http://10.129.9.55 -x 403,404,400
 wfuzz -c -u https://intra.redcross.htb -H "Host:FUZZ.redcross.htb" -w subdomains-top1million-110000.txt --hc 404 -t 200 --hl
 ```
 
-<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 将以上子域也添加到/hosts文件中，再访问admin这个子域就获得了一个管理登录界面，简单尝试几个弱口令均失败：
 

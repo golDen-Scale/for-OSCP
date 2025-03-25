@@ -14,7 +14,7 @@ description: 中等 / htmlawed 1.2.5 / CVE-2022-35914 / 远程命令执行 / 计
 nmap -sC -sV -p- -oA law 192.168.210.190 --open
 ```
 
-<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 检查80端口上的内容，发现正在运行的服务及其版本号为：htmlawed 1.2.5
 

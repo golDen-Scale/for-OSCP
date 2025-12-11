@@ -68,7 +68,7 @@
   * [✔️ Forest](hackthebox/ad/forest.md)
   * [✔️ Blackfield](hackthebox/ad/blackfield.md)
   * [✔️ APT](hackthebox/ad/apt.md)
-  * [Mantis](hackthebox/ad/mantis.md)
+  * [✔️ Mantis](hackthebox/ad/mantis.md)
   * [✔️ Return](hackthebox/ad/return.md)
   * [✔️ Cicada](hackthebox/ad/cicada.md)
   * [✔️ Retro](hackthebox/ad/retro.md)

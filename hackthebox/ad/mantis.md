@@ -1,9 +1,8 @@
 ---
-icon: check
 description: Hard / 枚举 / DC / Kerberos票据伪造 /
 ---
 
-# Mantis
+# ✔️ Mantis
 
 ## 建立立足点
 

@@ -4,7 +4,7 @@ description: DC / SMB枚举 / ESC1 / Easy
 
 # ✔️ Retro
 
-## 建立立足点
+## ![](../../.gitbook/assets/18.png)建立立足点
 
 ### 1. 基本信息收集&枚举：
 
@@ -75,41 +75,45 @@ crackmapexec smb -u username.txt -p password.txt -d retro.vl 10.129.234.44
 
 <figure><img src="../../.gitbook/assets/13 (31).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
 #### 其他服务：
 
+* 使用trainee凭证继续尝试登录其他服务，可以登录LDAP：
 
+```bash
+nxc ldap 10.129.234.44 -u "trainee" -p "trainee"
+```
+
+<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+
+*
 
 
 
 ### 2. Get Shell：
 
+* 使用trainee的凭证登录访问/Notes共享文件夹，可以找到第一个Flag：
 
+```bash
+smbclient \\\\10.129.234.44\\Notes -U "trainee%trainee"
+```
 
+<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
 ### 1. 域内信息收集&枚举：
 
+* 根据在/Notes文件夹中找到的另一个文件/ToDo.txt的内容提示，域内有一台跟银行软件相关的主机账户创建的年代久远，且一直都没有做账户清理：
 
+<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
 
+* 利用之前暴破出来的有效用户名，再次枚举域内有效用户账户：
 
-
-
+```
+// Some codb
+```
 
 
 

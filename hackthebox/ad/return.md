@@ -72,11 +72,11 @@ upload /root/Documents/HTB-AD/return/info/winPEASx64.exe
 .\winPEASx64.exe
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 在winPEAS的输出信息中，找到了当前账户的所有的权限中有sebackupprivilege权限，这意味着当前用户在目标系统中有了读取文件和数据的能力。因此，决定从目标系统的SAM中提取高权限用户的哈希，并以此作为登录的凭证：
 
-<figure><img src="../../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/16 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -93,7 +93,7 @@ reg save hklm\system C:\temp\system.hive
 
 <figure><img src="../../.gitbook/assets/17 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/19 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

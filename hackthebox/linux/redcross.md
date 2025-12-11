@@ -69,7 +69,7 @@ dirbuster -u https://intra.redcross.htb:443 -l /usr/share/wordlists/dirbuster/di
 
 <figure><img src="../../.gitbook/assets/13 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 然后开始构建注入语句，先简单测试一下和本机是否通信：
 
@@ -80,9 +80,9 @@ dirbuster -u https://intra.redcross.htb:443 -l /usr/share/wordlists/dirbuster/di
 nc -lvnp 8888
 ```
 
-<figure><img src="../../.gitbook/assets/16 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 然后构建一个尝试获取有效的会话cookie的语句，当能获取到有效的cookie时，我们就能将该cookie放入自己的浏览器中，绕过原有的密码输入，伪装成该用户进行登录：
 
@@ -92,7 +92,7 @@ nc -lvnp 8888
 
 <figure><img src="../../.gitbook/assets/17 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### GET SHELL
 

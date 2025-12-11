@@ -70,15 +70,15 @@ dirsearch -u http://192.168.102.29:8089 -x 404,403,401,302,301
 
 <figure><img src="../../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/15 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 
 * 现在将exploit.py脚本中的一句话木马改为具有完全交互式反弹shell的PHP脚本内容：
 
-<figure><img src="../../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/16 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Get Shell
 
@@ -96,7 +96,7 @@ dirsearch -u http://192.168.102.29:8089 -x 404,403,401,302,301
 sudo -l
 ```
 
-<figure><img src="../../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/18 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 漏洞利用
 

@@ -72,6 +72,7 @@
   * [✔️ Return](hackthebox/ad/return.md)
   * [✔️ Cicada](hackthebox/ad/cicada.md)
   * [✔️ Retro](hackthebox/ad/retro.md)
+  * [✔️ Administrator](hackthebox/ad/administrator.md)
 
 ## 4️⃣ OFFSEC
 
